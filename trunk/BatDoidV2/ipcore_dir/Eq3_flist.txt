@@ -1,0 +1,16 @@
+# Output products list for <Eq3>
+Eq3.asy
+Eq3.gise
+Eq3.mif
+Eq3.ngc
+Eq3.sym
+Eq3.vhd
+Eq3.vho
+Eq3.xco
+Eq3.xise
+Eq3COEFF_auto0_0.mif
+Eq3_flist.txt
+Eq3_readme.txt
+Eq3_xmdf.tcl
+Eq3filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

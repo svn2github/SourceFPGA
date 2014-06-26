@@ -1,0 +1,16 @@
+# Output products list for <Eq4>
+Eq4.asy
+Eq4.gise
+Eq4.mif
+Eq4.ngc
+Eq4.sym
+Eq4.vhd
+Eq4.vho
+Eq4.xco
+Eq4.xise
+Eq4COEFF_auto0_0.mif
+Eq4_flist.txt
+Eq4_readme.txt
+Eq4_xmdf.tcl
+Eq4filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

@@ -1,0 +1,16 @@
+# Output products list for <Eq8>
+Eq8.asy
+Eq8.gise
+Eq8.mif
+Eq8.ngc
+Eq8.sym
+Eq8.vhd
+Eq8.vho
+Eq8.xco
+Eq8.xise
+Eq8COEFF_auto0_0.mif
+Eq8_flist.txt
+Eq8_readme.txt
+Eq8_xmdf.tcl
+Eq8filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

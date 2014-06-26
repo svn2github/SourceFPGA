@@ -1,0 +1,16 @@
+# Output products list for <Eq5>
+Eq5.asy
+Eq5.gise
+Eq5.mif
+Eq5.ngc
+Eq5.sym
+Eq5.vhd
+Eq5.vho
+Eq5.xco
+Eq5.xise
+Eq5COEFF_auto0_0.mif
+Eq5_flist.txt
+Eq5_readme.txt
+Eq5_xmdf.tcl
+Eq5filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs
