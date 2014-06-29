@@ -1,0 +1,93 @@
+WARNING:sim:991 - The project IP instance 'BigMem' for IP 'MIG Virtex-6 and
+   Spartan-6 v3.92' was generated with a different version of the IP than is
+   currently in the IP Catalog. It was originally generated using IP with the
+   packaged timestamp '2013-03-27+03:45'; the IP in the current catalog has a
+   different packaged timestamp '2013-10-13+18:46'. This mismatch is due to
+   changes made to the IP in the user repositories. It may affect some
+   functionality of the IP, if there are differences between these two versions
+   of the IP.
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+Customizing IP...
+Finished Customizing.
+Resolving generic values...
+Finished resolving generic values.
+INFO:sim:993 - The selected IP does not support an ASY schematic symbol.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+WARNING:sim - The chosen IP does not support an SYM schematic symbol.
+Generating metadata file...
+Generating ISE project...
+XCO file found: BigMem.xco
+XMDF file found: BigMem_xmdf.tcl
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/BigMem.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/BigMem.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/iodrp_controller.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/iodrp_controller.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/iodrp_mcb_controller.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/iodrp_mcb_controller.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/mcb_raw_wrapper.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/mcb_raw_wrapper.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/mcb_soft_calibration.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/mcb_soft_calibration.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/mcb_soft_calibration_top.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/mcb_soft_calibration_top.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/memc3_infrastructure.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/memc3_infrastructure.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/rtl/memc3_wrapper.vhd -view all -origin_type created
+INFO:HDLCompiler:1061 - Parsing VHDL file
+   "E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_de
+   sign/rtl/memc3_wrapper.vhd" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding
+E:/Source/BatDroidV2/SourceFPGA/BatDroidV2/ipcore_dir/tmp/_cg/BigMem/user_design
+/par/BigMem.ucf -view all -origin_type created
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/BigMem"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'BigMem'.

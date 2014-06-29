@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.ncd
-OUTFILE=E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.bit
-FAMILY=Spartan6
-PART=xc6slx45-2csg324
-WORKINGDIR=E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2
-LICENSE=WebPack
-USER_INFO=210654129_0_0_800
