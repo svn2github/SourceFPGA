@@ -1,3 +1,0 @@
-vhdl work "ipcore_dir/Decimator.vhd"
-vhdl work "BatDecimator.vhd"
-vhdl work "TestDC_tb.vhd"

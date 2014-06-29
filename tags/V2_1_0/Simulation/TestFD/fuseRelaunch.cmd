@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "secureip" -o "E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFD/FDTestbench_isim_beh.exe" -prj "E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFD/FDTestbench_beh.prj" "work.FDTestbench" 

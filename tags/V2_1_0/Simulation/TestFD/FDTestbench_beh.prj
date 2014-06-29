@@ -1,4 +1,0 @@
-vhdl work "ipcore_dir/FDFilter.vhd"
-vhdl work "BatDither.vhd"
-vhdl work "BatFreqDiv.vhd"
-vhdl work "TestFD_tb.vhd"
