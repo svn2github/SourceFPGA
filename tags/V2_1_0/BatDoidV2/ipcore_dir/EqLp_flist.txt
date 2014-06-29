@@ -1,0 +1,19 @@
+# Output products list for <EqLp>
+EqLp.asy
+EqLp.gise
+EqLp.mif
+EqLp.mif_0
+EqLp.mif_1
+EqLp.ngc
+EqLp.sym
+EqLp.vhd
+EqLp.vho
+EqLp.xco
+EqLp.xise
+EqLpCOEFF_auto0_0.mif
+EqLpCOEFF_auto1_0.mif
+EqLp_flist.txt
+EqLp_readme.txt
+EqLp_xmdf.tcl
+EqLpfilt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

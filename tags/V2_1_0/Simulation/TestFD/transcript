@@ -1,0 +1,730 @@
+# Reading C:/Progs/modeltech_pe_edu_10.3/tcl/vsim/pref.tcl 
+# do {FDTestbench.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 12:40:37 on Jan 26,2014
+# vcom -reportprogress 300 -explicit -93 ipcore_dir/FDFilter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FDFilter
+# -- Compiling architecture FDFilter_a of FDFilter
+# -- Loading package bip_utils_pkg_v2_0
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package fir_compiler_v5_0_sim_pkg
+# -- Loading package ul_utils
+# -- Loading package fir_compiler_v5_0_sim_comps
+# -- Loading entity fir_compiler_v5_0
+# End time: 12:40:38 on Jan 26,2014
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 12:40:38 on Jan 26,2014
+# vcom -reportprogress 300 -explicit -93 BatDither.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BatDither
+# -- Compiling architecture Behavioral of BatDither
+# End time: 12:40:39 on Jan 26,2014
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 12:40:39 on Jan 26,2014
+# vcom -reportprogress 300 -explicit -93 BatFreqDiv.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BatFreqDiv
+# -- Compiling architecture Behavioral of BatFreqDiv
+# End time: 12:40:39 on Jan 26,2014
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 12:40:39 on Jan 26,2014
+# vcom -reportprogress 300 -explicit -93 TestFD_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FDTestbench
+# -- Compiling architecture behavior of FDTestbench
+# End time: 12:40:40 on Jan 26,2014
+# Errors: 0, Warnings: 0
+# //  ModelSim PE Student Edition 10.3 Jan  6 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim -lib work -voptargs=""+acc"" -t 1ps work.FDTestbench 
+# Start time: 12:40:40 on Jan 26,2014
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fdtestbench(behavior)
+# Loading work.batfreqdiv(behavioral)
+# Loading xilinxcorelib.bip_utils_pkg_v2_0(body)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.fir_compiler_v5_0_sim_pkg(body)
+# Loading xilinxcorelib.ul_utils(body)
+# Loading xilinxcorelib.fir_compiler_v5_0_sim_comps
+# Loading work.fdfilter(fdfilter_a)
+# Loading xilinxcorelib.fir_compiler_v5_0(behavioral)
+# Loading xilinxcorelib.fir_compiler_v5_0_mac_fir(behavioral)
+# Loading work.batdither(behavioral)
+# ** Warning: Design size of 28069 statements or 2 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DATA_VALID, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DATA_VALID.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I(23 downto 0), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I(23 downto 0).
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q(24 downto 0), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q(24 downto 0).
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_16.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_16.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_16.
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Region: /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/g_dpaths_in(0)/g_dpages_1
+run -all
+run -continue
+run -continue
+run -continue
+add wave -position end  sim:/fdtestbench/uut/s_ActValFilt_R
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFD/wave.do
+run
+# Break key hit 
+run -all
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFD/wave.do
+# Break key hit 
+# Break key hit 
+# Load canceled
+restart -f
+# ** Warning: Design size of 14427 statements or 2 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DATA_VALID, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DATA_VALID.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I(23 downto 0), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I(23 downto 0).
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q(24 downto 0), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q(24 downto 0).
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_16.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_I_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_I_16.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/DOUT_Q_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /fdtestbench/uut/inst_FDFilter/U0/DOUT_Q_16.
+# 
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Region: /fdtestbench/uut/inst_FDFilter/U0/g_mac/mac/g_dpaths_in(0)/g_dpages_1
+run -continue
+run -continue
+# Break key hit 
+# Break key hit 
+run -all
+run -continue
+# Break key hit 
+# Simulation stop requested.

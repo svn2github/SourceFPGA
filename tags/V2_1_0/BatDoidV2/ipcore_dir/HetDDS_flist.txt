@@ -1,0 +1,15 @@
+# Output products list for <HetDDS>
+HetDDS.asy
+HetDDS.gise
+HetDDS.ngc
+HetDDS.sym
+HetDDS.vhd
+HetDDS.vho
+HetDDS.xco
+HetDDS.xise
+HetDDS\doc\dds_compiler_v4_0_vinfo.html
+HetDDS\doc\dds_ds558.pdf
+HetDDS_flist.txt
+HetDDS_readme.txt
+HetDDS_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

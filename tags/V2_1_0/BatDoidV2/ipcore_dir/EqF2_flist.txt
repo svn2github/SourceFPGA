@@ -1,0 +1,16 @@
+# Output products list for <EqF2>
+EqF2.asy
+EqF2.gise
+EqF2.mif
+EqF2.ngc
+EqF2.sym
+EqF2.vhd
+EqF2.vho
+EqF2.xco
+EqF2.xise
+EqF2COEFF_auto0_0.mif
+EqF2_flist.txt
+EqF2_readme.txt
+EqF2_xmdf.tcl
+EqF2filt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs
