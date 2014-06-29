@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.5 Trace  (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Progs\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3
+C:\Progs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3
 -s 2 -n 3 -fastpaths -xml BatListener.twx BatListener.ncd -o BatListener.twr
 BatListener.pcf -ucf BatListener.ucf
 
 Design file:              BatListener.ncd
 Physical constraint file: BatListener.pcf
-Device,package,speed:     xc6slx45,csg324,C,-2 (PRODUCTION 1.23 2013-03-26)
+Device,package,speed:     xc6slx45,csg324,C,-2 (PRODUCTION 1.23 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -2089,14 +2089,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Sun Mar 02 10:39:25 2014 
+Analysis completed Sun Jun 29 13:17:55 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 434 MB
+Peak Memory Usage: 436 MB
 
 
 

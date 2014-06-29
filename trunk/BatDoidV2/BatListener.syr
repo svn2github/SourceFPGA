@@ -1,16 +1,16 @@
-Release 14.5 - xst P.58f (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.23 secs
  
 --> Reading design: BatListener.prj
 
@@ -108,92 +108,92 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_mcb_controller.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_mcb_controller.vhd" into library work
 Parsing entity <iodrp_mcb_controller>.
 Parsing architecture <trans> of entity <iodrp_mcb_controller>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_controller.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_controller.vhd" into library work
 Parsing entity <iodrp_controller>.
 Parsing architecture <trans> of entity <iodrp_controller>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" into library work
 Parsing entity <mcb_soft_calibration>.
 Parsing architecture <trans> of entity <mcb_soft_calibration>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd" into library work
 Parsing entity <mcb_soft_calibration_top>.
 Parsing architecture <trans> of entity <mcb_soft_calibration_top>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" into library work
 Parsing entity <mcb_raw_wrapper>.
 Parsing architecture <aarch> of entity <mcb_raw_wrapper>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" into library work
 Parsing entity <memc3_wrapper>.
 Parsing architecture <acch> of entity <memc3_wrapper>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_infrastructure.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_infrastructure.vhd" into library work
 Parsing entity <memc3_infrastructure>.
 Parsing architecture <syn> of entity <memc3_infrastructure>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd" into library work
 Parsing entity <BigMem>.
 Parsing architecture <arc> of entity <bigmem>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\HetDDS.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\HetDDS.vhd" into library work
 Parsing entity <HetDDS>.
 Parsing architecture <HetDDS_a> of entity <hetdds>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BatFFTLut.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BatFFTLut.vhd" into library work
 Parsing entity <BatFFTLut>.
 Parsing architecture <BatFFTLut_a> of entity <batfftlut>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BatInpBR.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BatInpBR.vhd" into library work
 Parsing entity <BatInpBR>.
 Parsing architecture <BatInpBR_a> of entity <batinpbr>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BatOutpBR.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BatOutpBR.vhd" into library work
 Parsing entity <BatOutpBR>.
 Parsing architecture <BatOutpBR_a> of entity <batoutpbr>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BatFFT.vhd" into library work
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\HetMult.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BatFFT.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\HetMult.vhd" into library work
 Parsing entity <HetMult>.
 Parsing architecture <HetMult_a> of entity <hetmult>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BatInpBR1.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BatInpBR1.vhd" into library work
 Parsing entity <BatInpBR1>.
 Parsing architecture <BatInpBR1_a> of entity <batinpbr1>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\Sqrt.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\Sqrt.vhd" into library work
 Parsing entity <Sqrt>.
 Parsing architecture <Sqrt_a> of entity <sqrt>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\FftMult.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\FftMult.vhd" into library work
 Parsing entity <FftMult>.
 Parsing architecture <FftMult_a> of entity <fftmult>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\HDFilter.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\HDFilter.vhd" into library work
 Parsing entity <HDFilter>.
 Parsing architecture <HDFilter_a> of entity <hdfilter>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\FDFilter.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\FDFilter.vhd" into library work
 Parsing entity <FDFilter>.
 Parsing architecture <FDFilter_a> of entity <fdfilter>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\Decimator.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\Decimator.vhd" into library work
 Parsing entity <Decimator>.
 Parsing architecture <Decimator_a> of entity <decimator>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\lfsr_pkg.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\lfsr_pkg.vhd" into library work
 Parsing package <lfsr_pkg>.
 Parsing package body <lfsr_pkg>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDither.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDither.vhd" into library work
 Parsing entity <BatDither>.
 Parsing architecture <Behavioral> of entity <batdither>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatRandom.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatRandom.vhd" into library work
 Parsing entity <BatRandom>.
 Parsing architecture <Behavioral> of entity <batrandom>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatHet.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatHet.vhd" into library work
 Parsing entity <BatHet>.
 Parsing architecture <Behavioral> of entity <bathet>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFreqDiv.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFreqDiv.vhd" into library work
 Parsing entity <BatFreqDiv>.
 Parsing architecture <Behavioral> of entity <batfreqdiv>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd" into library work
 Parsing entity <BatFFTMod>.
 Parsing architecture <Behavioral> of entity <batfftmod>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDecimator.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDecimator.vhd" into library work
 Parsing entity <BatDecimator>.
 Parsing architecture <Behavioral> of entity <batdecimator>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDACXS.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDACXS.vhd" into library work
 Parsing entity <BatDAC>.
 Parsing architecture <Behavioral> of entity <batdac>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatADC.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatADC.vhd" into library work
 Parsing entity <BatADC>.
 Parsing architecture <Behavioral> of entity <batadc>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" into library work
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" into library work
 Parsing entity <BatListener>.
 Parsing architecture <Behavioral> of entity <batlistener>.
 
@@ -238,15 +238,15 @@ Elaborating entity <BatFFTLut> (architecture <BatFFTLut_a>) from library <work>.
 Elaborating entity <BatInpBR> (architecture <BatInpBR_a>) from library <work>.
 
 Elaborating entity <BatInpBR1> (architecture <BatInpBR1_a>) from library <work>.
-WARNING:HDLCompiler:89 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" Line 125: <batfft> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd" Line 141: <batfft> remains a black-box since it has no binding entity.
 
 Elaborating entity <BatOutpBR> (architecture <BatOutpBR_a>) from library <work>.
 
 Elaborating entity <Sqrt> (architecture <Sqrt_a>) from library <work>.
 
 Elaborating entity <FftMult> (architecture <FftMult_a>) from library <work>.
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" Line 725. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" Line 790. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd" Line 741. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd" Line 806. Case statement is complete. others clause is never selected
 
 Elaborating entity <BigMem> (architecture <arc>) with generics from library <work>.
 
@@ -255,62 +255,62 @@ Elaborating entity <memc3_infrastructure> (architecture <syn>) with generics fro
 Elaborating entity <memc3_wrapper> (architecture <acch>) with generics from library <work>.
 
 Elaborating entity <mcb_raw_wrapper> (architecture <aarch>) with generics from library <work>.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 582: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3207: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3495: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3757: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3964: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 582: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3207: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3495: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3757: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 3964: Comparison between arrays of unequal length always returns FALSE.
 
 Elaborating entity <mcb_soft_calibration_top> (architecture <trans>) with generics from library <work>.
 
 Elaborating entity <mcb_soft_calibration> (architecture <trans>) with generics from library <work>.
-WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 559: Assignment to half_mv_du ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 561: Assignment to half_mv_dd ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 559: Assignment to half_mv_du ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 561: Assignment to half_mv_dd ignored, since the identifier is never used
 
 Elaborating entity <iodrp_controller> (architecture <trans>) from library <work>.
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_controller.vhd" Line 352. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_controller.vhd" Line 352. Case statement is complete. others clause is never selected
 
 Elaborating entity <iodrp_mcb_controller> (architecture <trans>) from library <work>.
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_mcb_controller.vhd" Line 496. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 623: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 911: Assignment to state_start_dyncal_r1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 968: Assignment to mcb_uodatavalid_u ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 1012: Assignment to iodrpctrlr_use_bkst ignored, since the identifier is never used
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd" Line 395: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 6992: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7024: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7050: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7075: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7086: Comparison between arrays of unequal length always returns FALSE.
-WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7091: Comparison between arrays of unequal length always returns FALSE.
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" Line 1306. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_mcb_controller.vhd" Line 496. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 623: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 911: Assignment to state_start_dyncal_r1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 968: Assignment to mcb_uodatavalid_u ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" Line 1012: Assignment to iodrpctrlr_use_bkst ignored, since the identifier is never used
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd" Line 395: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 6992: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7024: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7050: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7075: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7086: Comparison between arrays of unequal length always returns FALSE.
+WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7091: Comparison between arrays of unequal length always returns FALSE.
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" Line 1322. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <BatListener>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd".
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p0_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line 812: Output port <c3_p1_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd".
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p0_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatListener.vhd" line 828: Output port <c3_p1_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
     Found 2-bit register for signal <s_ResetSync2>.
     Found 1-bit register for signal <s_ResetUserClk>.
     Found 3-bit register for signal <s_FSMC_NWE_a>.
@@ -467,54 +467,54 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line
     Found 8-bit subtractor for signal <s_Beep_VolFsmc[7]_unary_minus_263_OUT<7:0>> created at line 0.
     Found 4x4-bit Read Only RAM for signal <s_AdcWAddr[1]_GND_5_o_wide_mux_130_OUT>
     Found 32x2-bit Read Only RAM for signal <_n1565>
-    Found 1-bit 3-to-1 multiplexer for signal <s_WState[1]_GND_5_o_Mux_66_o> created at line 1129.
-    Found 1-bit 4-to-1 multiplexer for signal <s_RState[1]_PWR_5_o_Mux_73_o> created at line 1180.
-    Found 1-bit 3-to-1 multiplexer for signal <s_RState[1]_s_WState[1]_Mux_76_o> created at line 1180.
-    Found 32-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_AD_R_DataADC[7]_wide_mux_129_OUT> created at line 1289.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[7]_Mux_147_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[6]_Mux_148_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[5]_Mux_149_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[4]_Mux_150_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[3]_Mux_151_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[2]_Mux_152_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[1]_Mux_153_o> created at line 1334.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[0]_Mux_154_o> created at line 1334.
-    Found 1-bit 3-to-1 multiplexer for signal <s_DacState[1]_s_AdcWState[3]_Mux_224_o> created at line 1407.
-    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[5]_s_DA_R_DataFreqDiv[23]_wide_mux_254_OUT> created at line 1477.
-    Found 24-bit 3-to-1 multiplexer for signal <s_REG_Ctrl[1]_s_DA_DataMem[23]_wide_mux_256_OUT> created at line 1472.
-    Found 24-bit 3-to-1 multiplexer for signal <s_REG_Ctrl[1]_s_DA_DataMem[23]_wide_mux_257_OUT> created at line 1472.
-    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 959
-    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 967
-    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 967
+    Found 1-bit 3-to-1 multiplexer for signal <s_WState[1]_GND_5_o_Mux_66_o> created at line 1145.
+    Found 1-bit 4-to-1 multiplexer for signal <s_RState[1]_PWR_5_o_Mux_73_o> created at line 1196.
+    Found 1-bit 3-to-1 multiplexer for signal <s_RState[1]_s_WState[1]_Mux_76_o> created at line 1196.
+    Found 32-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_AD_R_DataADC[7]_wide_mux_129_OUT> created at line 1305.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[7]_Mux_147_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[6]_Mux_148_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[5]_Mux_149_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[4]_Mux_150_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[3]_Mux_151_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[2]_Mux_152_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[1]_Mux_153_o> created at line 1350.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[0]_Mux_154_o> created at line 1350.
+    Found 1-bit 3-to-1 multiplexer for signal <s_DacState[1]_s_AdcWState[3]_Mux_224_o> created at line 1423.
+    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[5]_s_DA_R_DataFreqDiv[23]_wide_mux_254_OUT> created at line 1493.
+    Found 24-bit 3-to-1 multiplexer for signal <s_REG_Ctrl[1]_s_DA_DataMem[23]_wide_mux_256_OUT> created at line 1488.
+    Found 24-bit 3-to-1 multiplexer for signal <s_REG_Ctrl[1]_s_DA_DataMem[23]_wide_mux_257_OUT> created at line 1488.
+    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 975
+    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 983
+    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 983
     Summary:
 	inferred   2 RAM(s).
 	inferred   6 Adder/Subtractor(s).
@@ -525,7 +525,7 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatListener.vhd" line
 Unit <BatListener> synthesized.
 
 Synthesizing Unit <BatRandom>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatRandom.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatRandom.vhd".
         width = 32
     Found 32-bit register for signal <RandomProc.rand_temp>.
     Summary:
@@ -533,12 +533,12 @@ Synthesizing Unit <BatRandom>.
 Unit <BatRandom> synthesized.
 
 Synthesizing Unit <BatDither_1>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDither.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDither.vhd".
         dBits = 24
         qBits = 16
         ditherBits = 9
     Found 16-bit register for signal <q>.
-    Found 25-bit adder for signal <n0014> created at line 46.
+    Found 25-bit adder for signal <n0014> created at line 62.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
@@ -546,7 +546,7 @@ Synthesizing Unit <BatDither_1>.
 Unit <BatDither_1> synthesized.
 
 Synthesizing Unit <BatADC>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatADC.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatADC.vhd".
     Found 1-bit register for signal <AD_L_SDI>.
     Found 1-bit register for signal <AD_R_SDI>.
     Found 6-bit register for signal <s_BitCnt>.
@@ -585,10 +585,10 @@ Synthesizing Unit <BatADC>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 6-bit adder for signal <s_BitCnt[5]_GND_12_o_add_23_OUT> created at line 289.
-    Found 6-bit adder for signal <s_WBitCnt[5]_GND_12_o_add_39_OUT> created at line 346.
-    Found 32-bit 3-to-1 multiplexer for signal <s_AdcWState[1]_X_11_o_wide_mux_45_OUT> created at line 314.
-    Found 6-bit comparator greater for signal <n0068> created at line 342
+    Found 6-bit adder for signal <s_BitCnt[5]_GND_12_o_add_23_OUT> created at line 306.
+    Found 6-bit adder for signal <s_WBitCnt[5]_GND_12_o_add_39_OUT> created at line 363.
+    Found 32-bit 3-to-1 multiplexer for signal <s_AdcWState[1]_X_11_o_wide_mux_45_OUT> created at line 331.
+    Found 6-bit comparator greater for signal <n0068> created at line 359
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 183 D-type flip-flop(s).
@@ -598,7 +598,7 @@ Synthesizing Unit <BatADC>.
 Unit <BatADC> synthesized.
 
 Synthesizing Unit <BatDAC>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDACXS.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDACXS.vhd".
     Found 1-bit register for signal <DA_LRCK>.
     Found 1-bit register for signal <s_LRCK>.
     Found 2-bit register for signal <s_WDataState>.
@@ -651,16 +651,16 @@ Synthesizing Unit <BatDAC>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <s_DivCnt[7]_GND_14_o_add_20_OUT> created at line 206.
-    Found 8-bit adder for signal <s_Dcnt[7]_GND_14_o_add_47_OUT> created at line 227.
-    Found 5-bit adder for signal <CommandProc.v_cnt_wr[4]_GND_14_o_add_54_OUT> created at line 282.
-    Found 2-bit adder for signal <s_DivCsDel[1]_GND_14_o_add_58_OUT> created at line 295.
-    Found 4-bit adder for signal <s_cnt[3]_GND_14_o_add_88_OUT> created at line 333.
-    Found 5-bit subtractor for signal <GND_14_o_GND_14_o_sub_5_OUT<4:0>> created at line 177.
-    Found 1-bit 24-to-1 multiplexer for signal <GND_14_o_X_12_o_Mux_5_o> created at line 179.
-    Found 1-bit 24-to-1 multiplexer for signal <GND_14_o_X_12_o_Mux_6_o> created at line 181.
-    Found 8-bit comparator equal for signal <s_DivCnt_Max[7]_s_DivCnt[7]_equal_3_o> created at line 163
-    Found 5-bit comparator greater for signal <n0091> created at line 278
+    Found 8-bit adder for signal <s_DivCnt[7]_GND_14_o_add_20_OUT> created at line 222.
+    Found 8-bit adder for signal <s_Dcnt[7]_GND_14_o_add_47_OUT> created at line 243.
+    Found 5-bit adder for signal <CommandProc.v_cnt_wr[4]_GND_14_o_add_54_OUT> created at line 298.
+    Found 2-bit adder for signal <s_DivCsDel[1]_GND_14_o_add_58_OUT> created at line 311.
+    Found 4-bit adder for signal <s_cnt[3]_GND_14_o_add_88_OUT> created at line 349.
+    Found 5-bit subtractor for signal <GND_14_o_GND_14_o_sub_5_OUT<4:0>> created at line 193.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_14_o_X_12_o_Mux_5_o> created at line 195.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_14_o_X_12_o_Mux_6_o> created at line 197.
+    Found 8-bit comparator equal for signal <s_DivCnt_Max[7]_s_DivCnt[7]_equal_3_o> created at line 179
+    Found 5-bit comparator greater for signal <n0091> created at line 294
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred 116 D-type flip-flop(s).
@@ -670,7 +670,7 @@ Synthesizing Unit <BatDAC>.
 Unit <BatDAC> synthesized.
 
 Synthesizing Unit <BatDecimator>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDecimator.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDecimator.vhd".
 WARNING:Xst:647 - Input <i_DC_Random<31:25>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <s_ND>.
     Found 24-bit register for signal <s_FilterIn>.
@@ -707,7 +707,7 @@ WARNING:Xst:647 - Input <i_DC_Random<31:25>> is never used. This port will be pr
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit 4-to-1 multiplexer for signal <s_FState[1]_s_RdyForData_Mux_10_o> created at line 176.
+    Found 1-bit 4-to-1 multiplexer for signal <s_FState[1]_s_RdyForData_Mux_10_o> created at line 192.
     Summary:
 	inferred 100 D-type flip-flop(s).
 	inferred   9 Multiplexer(s).
@@ -715,12 +715,12 @@ WARNING:Xst:647 - Input <i_DC_Random<31:25>> is never used. This port will be pr
 Unit <BatDecimator> synthesized.
 
 Synthesizing Unit <BatDither_2>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDither.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDither.vhd".
         dBits = 48
         qBits = 24
         ditherBits = 25
     Found 24-bit register for signal <q>.
-    Found 49-bit adder for signal <n0014> created at line 46.
+    Found 49-bit adder for signal <n0014> created at line 62.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
@@ -728,7 +728,7 @@ Synthesizing Unit <BatDither_2>.
 Unit <BatDither_2> synthesized.
 
 Synthesizing Unit <BatFreqDiv>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFreqDiv.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFreqDiv.vhd".
 WARNING:Xst:647 - Input <i_FD_Random<31:28>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 24-bit register for signal <s_ActValFilt_R>.
     Found 24-bit register for signal <s_MaxPos_R>.
@@ -774,19 +774,19 @@ WARNING:Xst:647 - Input <i_FD_Random<31:28>> is never used. This port will be pr
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <s_NullCnt_R[3]_GND_24_o_add_9_OUT> created at line 210.
-    Found 4-bit adder for signal <s_NullCnt_L[3]_GND_24_o_add_38_OUT> created at line 258.
+    Found 4-bit adder for signal <s_NullCnt_R[3]_GND_24_o_add_9_OUT> created at line 226.
+    Found 4-bit adder for signal <s_NullCnt_L[3]_GND_24_o_add_38_OUT> created at line 274.
     Found 24-bit subtractor for signal <s_MaxPos_R[23]_unary_minus_8_OUT<23:0>> created at line 0.
     Found 24-bit subtractor for signal <s_MaxPos_L[23]_unary_minus_37_OUT<23:0>> created at line 0.
-    Found 1-bit 4-to-1 multiplexer for signal <s_FState[1]_s_RdyForData_Mux_69_o> created at line 287.
-    Found 24-bit comparator greater for signal <n0002> created at line 191
-    Found 24-bit comparator lessequal for signal <i_FD_R_DataIn[23]_s_MaxPos_R[23]_LessThan_4_o> created at line 193
-    Found 24-bit comparator greater for signal <s_MaxPos_R[23]_s_Threshold[23]_LessThan_6_o> created at line 199
-    Found 4-bit comparator greater for signal <n0007> created at line 200
-    Found 24-bit comparator greater for signal <n0046> created at line 239
-    Found 24-bit comparator lessequal for signal <i_FD_L_DataIn[23]_s_MaxPos_L[23]_LessThan_33_o> created at line 241
-    Found 24-bit comparator greater for signal <s_MaxPos_L[23]_s_Threshold[23]_LessThan_35_o> created at line 247
-    Found 4-bit comparator greater for signal <n0051> created at line 248
+    Found 1-bit 4-to-1 multiplexer for signal <s_FState[1]_s_RdyForData_Mux_69_o> created at line 303.
+    Found 24-bit comparator greater for signal <n0002> created at line 207
+    Found 24-bit comparator lessequal for signal <i_FD_R_DataIn[23]_s_MaxPos_R[23]_LessThan_4_o> created at line 209
+    Found 24-bit comparator greater for signal <s_MaxPos_R[23]_s_Threshold[23]_LessThan_6_o> created at line 215
+    Found 4-bit comparator greater for signal <n0007> created at line 216
+    Found 24-bit comparator greater for signal <n0046> created at line 255
+    Found 24-bit comparator lessequal for signal <i_FD_L_DataIn[23]_s_MaxPos_L[23]_LessThan_33_o> created at line 257
+    Found 24-bit comparator greater for signal <s_MaxPos_L[23]_s_Threshold[23]_LessThan_35_o> created at line 263
+    Found 4-bit comparator greater for signal <n0051> created at line 264
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 207 D-type flip-flop(s).
@@ -796,12 +796,12 @@ WARNING:Xst:647 - Input <i_FD_Random<31:28>> is never used. This port will be pr
 Unit <BatFreqDiv> synthesized.
 
 Synthesizing Unit <BatDither_3>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatDither.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatDither.vhd".
         dBits = 48
         qBits = 24
         ditherBits = 28
     Found 24-bit register for signal <q>.
-    Found 52-bit adder for signal <n0014> created at line 46.
+    Found 52-bit adder for signal <n0014> created at line 62.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  24 D-type flip-flop(s).
@@ -809,7 +809,7 @@ Synthesizing Unit <BatDither_3>.
 Unit <BatDither_3> synthesized.
 
 Synthesizing Unit <BatHet>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatHet.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatHet.vhd".
 WARNING:Xst:647 - Input <i_HD_Random<31:28>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Register <s_HetCState> equivalent to <s_DDS_WE> has been removed
     Found 3-bit register for signal <s_HetState>.
@@ -870,8 +870,8 @@ WARNING:Xst:647 - Input <i_HD_Random<31:28>> is never used. This port will be pr
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <s_CycleCnt[3]_GND_29_o_add_10_OUT> created at line 320.
-    Found 1-bit 4-to-1 multiplexer for signal <s_FState[1]_s_FilterRFD_Mux_38_o> created at line 348.
+    Found 4-bit adder for signal <s_CycleCnt[3]_GND_29_o_add_10_OUT> created at line 336.
+    Found 1-bit 4-to-1 multiplexer for signal <s_FState[1]_s_FilterRFD_Mux_38_o> created at line 364.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred 180 D-type flip-flop(s).
@@ -880,10 +880,10 @@ WARNING:Xst:647 - Input <i_HD_Random<31:28>> is never used. This port will be pr
 Unit <BatHet> synthesized.
 
 Synthesizing Unit <BatFFTMod>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd".
 WARNING:Xst:647 - Input <i_FFT_Random<31:9>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" line 331: Output port <edone> of the instance <inst_BatFFT> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" line 331: Output port <done> of the instance <inst_BatFFT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd" line 347: Output port <edone> of the instance <inst_BatFFT> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\BatFFTMod.vhd" line 347: Output port <done> of the instance <inst_BatFFT> is unconnected or connected to loadless signal.
     Found 10-bit register for signal <s_InAddr1>.
     Found 10-bit register for signal <s_InpAddr>.
     Found 9-bit register for signal <s_LUTAddr>.
@@ -1006,26 +1006,26 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" line 3
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <s_MultLutCycleCnt[3]_GND_35_o_add_19_OUT> created at line 525.
+    Found 4-bit adder for signal <s_MultLutCycleCnt[3]_GND_35_o_add_19_OUT> created at line 541.
     Found 10-bit adder for signal <s_InAddr[9]_GND_35_o_add_29_OUT> created at line 1241.
     Found 10-bit adder for signal <s_InAddr1[9]_GND_35_o_add_30_OUT> created at line 1241.
-    Found 48-bit adder for signal <s_tmp_rr[47]_s_tmp_ii[47]_add_129_OUT> created at line 716.
-    Found 5-bit adder for signal <s_MultCycleCnt[4]_GND_35_o_add_133_OUT> created at line 722.
+    Found 48-bit adder for signal <s_tmp_rr[47]_s_tmp_ii[47]_add_129_OUT> created at line 732.
+    Found 5-bit adder for signal <s_MultCycleCnt[4]_GND_35_o_add_133_OUT> created at line 738.
     Found 9-bit adder for signal <s_MaxAmpIdx[8]_GND_35_o_add_186_OUT> created at line 1241.
-    Found 5-bit adder for signal <s_SqrtCycleCnt[4]_GND_35_o_add_187_OUT> created at line 787.
-    Found 58-bit adder for signal <_n0647> created at line 718.
-    Found 58-bit adder for signal <s_RMSquads[57]_GND_35_o_add_131_OUT> created at line 718.
+    Found 5-bit adder for signal <s_SqrtCycleCnt[4]_GND_35_o_add_187_OUT> created at line 803.
+    Found 58-bit adder for signal <_n0647> created at line 734.
+    Found 58-bit adder for signal <s_RMSquads[57]_GND_35_o_add_131_OUT> created at line 734.
     Found 24-bit shifter logical left for signal <s_FFTOutVal_r[15]_s_BlkExp[4]_shift_left_88_OUT> created at line 2973
     Found 24-bit shifter logical left for signal <s_FFTOutVal_i[15]_s_BlkExp[4]_shift_left_89_OUT> created at line 2973
     Found 24-bit shifter logical left for signal <s_FFTOutVal_r[15]_s_BlkExp_save[4]_shift_left_121_OUT> created at line 2973
     Found 24-bit shifter logical left for signal <s_FFTOutVal_i[15]_s_BlkExp_save[4]_shift_left_122_OUT> created at line 2973
     Found 24-bit shifter logical right for signal <n0529> created at line 2964
-    Found 9-bit 3-to-1 multiplexer for signal <s_GetState[1]_X_23_o_wide_mux_164_OUT> created at line 672.
-    Found 10-bit comparator lessequal for signal <n0001> created at line 457
-    Found 24-bit comparator lessequal for signal <i_FFT_DataIn[23]_s_MaxAmpl0[23]_LessThan_4_o> created at line 463
-    Found 24-bit comparator lessequal for signal <i_FFT_DataIn[23]_s_MaxAmpl1[23]_LessThan_6_o> created at line 466
-    Found 10-bit comparator lessequal for signal <n0016> created at line 502
-    Found 24-bit comparator greater for signal <s_MaxAmpVal[23]_s_SqrtOut[23]_LessThan_175_o> created at line 752
+    Found 9-bit 3-to-1 multiplexer for signal <s_GetState[1]_X_23_o_wide_mux_164_OUT> created at line 688.
+    Found 10-bit comparator lessequal for signal <n0001> created at line 473
+    Found 24-bit comparator lessequal for signal <i_FFT_DataIn[23]_s_MaxAmpl0[23]_LessThan_4_o> created at line 479
+    Found 24-bit comparator lessequal for signal <i_FFT_DataIn[23]_s_MaxAmpl1[23]_LessThan_6_o> created at line 482
+    Found 10-bit comparator lessequal for signal <n0016> created at line 518
+    Found 24-bit comparator greater for signal <s_MaxAmpVal[23]_s_SqrtOut[23]_LessThan_175_o> created at line 768
     Summary:
 	inferred   9 Adder/Subtractor(s).
 	inferred 741 D-type flip-flop(s).
@@ -1036,7 +1036,7 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\BatFFTMod.vhd" line 3
 Unit <BatFFTMod> synthesized.
 
 Synthesizing Unit <BigMem>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd".
         C3_P0_MASK_SIZE = 4
         C3_P0_DATA_PORT_SIZE = 32
         C3_P1_MASK_SIZE = 4
@@ -1051,13 +1051,13 @@ Synthesizing Unit <BigMem>.
         C3_NUM_DQ_PINS = 16
         C3_MEM_ADDR_WIDTH = 13
         C3_MEM_BANKADDR_WIDTH = 3
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd" line 513: Output port <selfrefresh_mode> of the instance <memc3_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd" line 513: Output port <selfrefresh_mode> of the instance <memc3_wrapper_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <BigMem> synthesized.
 
 Synthesizing Unit <memc3_infrastructure>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_infrastructure.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_infrastructure.vhd".
         C_INCLK_PERIOD = 50000
         C_RST_ACT_LOW = 0
         C_INPUT_CLK_TYPE = "SINGLE_ENDED"
@@ -1079,7 +1079,7 @@ WARNING:Xst:647 - Input <sys_clk_n> is never used. This port will be preserved a
 Unit <memc3_infrastructure> synthesized.
 
 Synthesizing Unit <memc3_wrapper>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd".
         C_MEMCLK_PERIOD = 3333
         C_P0_MASK_SIZE = 4
         C_P0_DATA_PORT_SIZE = 32
@@ -1155,71 +1155,71 @@ Synthesizing Unit <memc3_wrapper>.
         C_MC_CALIBRATION_DELAY = "HALF"
         C_CALIB_SOFT_IP = "TRUE"
 WARNING:Xst:647 - Input <selfrefresh_enter> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <status> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_data_valid> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_cmd_ready_in> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_refrsh_flag> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_cal_start> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_sdo> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_count> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_data> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <status> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p2_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p3_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p4_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_cmd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_cmd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_underrun> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_wr_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_full> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_empty> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_overflow> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <p5_rd_error> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_data_valid> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_cmd_ready_in> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_refrsh_flag> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_cal_start> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\memc3_wrapper.vhd" line 635: Output port <uo_sdo> of the instance <memc3_mcb_raw_wrapper_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <memc3_wrapper> synthesized.
 
 Synthesizing Unit <mcb_raw_wrapper>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd".
         C_MEMCLK_PERIOD = 3333
         C_PORT_ENABLE = "000011"
         C_MEM_ADDR_ORDER = "ROW_BANK_COLUMN"
@@ -1390,7 +1390,7 @@ WARNING:Xst:647 - Input <ui_ldqs_dec> is never used. This port will be preserved
 Unit <mcb_raw_wrapper> synthesized.
 
 Synthesizing Unit <mcb_soft_calibration_top>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd".
         C_MEM_TZQINIT_MAXCNT = "1000010000"
         C_MC_CALIBRATION_MODE = "CALIBRATION"
         SKIP_IN_TERM_CAL = 0
@@ -1398,7 +1398,7 @@ Synthesizing Unit <mcb_soft_calibration_top>.
         SKIP_DYN_IN_TERM = 1
         C_SIMULATION = "FALSE"
         C_MEM_TYPE = "DDR3"
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd" line 291: Output port <Max_Value> of the instance <mcb_soft_calibration_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration_top.vhd" line 291: Output port <Max_Value> of the instance <mcb_soft_calibration_inst> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <ZIO_IN_R2>.
     Found 1-bit register for signal <RZQ_IN_R1>.
     Found 1-bit register for signal <RZQ_IN_R2>.
@@ -1408,7 +1408,7 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\use
 Unit <mcb_soft_calibration_top> synthesized.
 
 Synthesizing Unit <mcb_soft_calibration>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd".
         C_MEM_TZQINIT_MAXCNT = "1000010000"
         SKIP_IN_TERM_CAL = 0
         SKIP_DYNAMIC_CAL = 0
@@ -1433,8 +1433,8 @@ WARNING:Xst:647 - Input <MCB_UODATA> is never used. This port will be preserved 
 WARNING:Xst:647 - Input <MCB_UODATAVALID> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MCB_UOCMDREADY> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <MCB_UO_CAL_START> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" line 583: Output port <DRP_BKST> of the instance <iodrp_controller_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" line 601: Output port <read_data> of the instance <iodrp_mcb_controller_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" line 583: Output port <DRP_BKST> of the instance <iodrp_controller_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" line 601: Output port <read_data> of the instance <iodrp_mcb_controller_inst> is unconnected or connected to loadless signal.
     Register <MCB_UIUDQSINC> equivalent to <MCB_UILDQSINC> has been removed
     Register <MCB_UIUDQSDEC> equivalent to <MCB_UILDQSDEC> has been removed
     Found 1-bit register for signal <Block_Reset>.
@@ -1561,7 +1561,7 @@ INFO:Xst:1799 - State 111010 is never reached in FSM <STATE>.
 Unit <mcb_soft_calibration> synthesized.
 
 Synthesizing Unit <iodrp_controller>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_controller.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_controller.vhd".
     Found 8-bit register for signal <data_reg>.
     Found 1-bit register for signal <rd_not_write_reg>.
     Found 8-bit register for signal <shift_through_reg>.
@@ -1595,7 +1595,7 @@ Synthesizing Unit <iodrp_controller>.
 Unit <iodrp_controller> synthesized.
 
 Synthesizing Unit <iodrp_mcb_controller>.
-    Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_mcb_controller.vhd".
+    Related source file is "E:\Source\BatDroidV2\SourceFPGA\SourceFPGA\BatDoidV2\ipcore_dir\BigMem\user_design\rtl\iodrp_mcb_controller.vhd".
     Set property "fsm_encoding = gray" for signal <state>.
     Set property "fsm_encoding = gray" for signal <nextstate>.
 WARNING:Xst:647 - Input <drp_ioi_addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1890,7 +1890,7 @@ The following registers are absorbed into counter <s_InAddr1>: 1 register on sig
 Unit <BatFFTMod> synthesized (advanced).
 
 Synthesizing (advanced) Unit <BatListener>.
-INFO:Xst:3231 - The small RAM <Mram_s_AdcWAddr[1]_GND_5_o_wide_mux_130_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <s_AdcWAddr> prevents it from being combined with the RAM <Mram_s_AdcWAddr[1]_GND_5_o_wide_mux_130_OUT> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -2589,43 +2589,43 @@ Top Level Output File Name         : BatListener.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6745
-#      GND                         : 30
-#      INV                         : 167
-#      LUT1                        : 207
-#      LUT2                        : 638
-#      LUT3                        : 1277
-#      LUT4                        : 725
+# BELS                             : 11851
+#      GND                         : 83
+#      INV                         : 239
+#      LUT1                        : 291
+#      LUT2                        : 1433
+#      LUT3                        : 1325
+#      LUT4                        : 1205
 #      LUT5                        : 506
 #      LUT6                        : 1383
-#      MULT_AND                    : 7
-#      MUXCY                       : 759
+#      MULT_AND                    : 535
+#      MUXCY                       : 2219
 #      MUXCY_D                     : 99
 #      MUXCY_L                     : 134
 #      MUXF7                       : 61
 #      MUXF8                       : 23
-#      VCC                         : 7
-#      XORCY                       : 722
-# FlipFlops/Latches                : 5461
+#      VCC                         : 57
+#      XORCY                       : 2258
+# FlipFlops/Latches                : 6715
 #      FD                          : 828
 #      FDC                         : 44
 #      FDC_1                       : 2
 #      FDCE                        : 42
 #      FDCE_1                      : 64
-#      FDE                         : 2166
+#      FDE                         : 3226
 #      FDP                         : 27
 #      FDR                         : 398
-#      FDRE                        : 1877
+#      FDRE                        : 2071
 #      FDS                         : 9
 #      FDSE                        : 4
 # RAMS                             : 175
 #      RAM16X1D                    : 153
 #      RAMB16BWER                  : 9
 #      RAMB8BWER                   : 13
-# Shift Registers                  : 816
-#      SRL16E                      : 124
-#      SRLC16E                     : 642
-#      SRLC32E                     : 50
+# Shift Registers                  : 1250
+#      SRL16E                      : 316
+#      SRLC16E                     : 862
+#      SRLC32E                     : 72
 # Clock Buffers                    : 4
 #      BUFG                        : 3
 #      BUFGMUX                     : 1
@@ -2637,8 +2637,8 @@ Primitive and Black Box Usage:
 #      OBUF                        : 15
 #      OBUFT                       : 24
 #      OBUFTDS                     : 1
-# DSPs                             : 39
-#      DSP48A1                     : 39
+# DSPs                             : 43
+#      DSP48A1                     : 43
 # Others                           : 76
 #      BUFPLL_MCB                  : 1
 #      IODRP2                      : 2
@@ -2656,18 +2656,18 @@ Selected Device : 6slx45csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            5461  out of  54576    10%  
- Number of Slice LUTs:                 6025  out of  27288    22%  
-    Number used as Logic:              4903  out of  27288    17%  
-    Number used as Memory:             1122  out of   6408    17%  
+ Number of Slice Registers:            6715  out of  54576    12%  
+ Number of Slice LUTs:                 7938  out of  27288    29%  
+    Number used as Logic:              6382  out of  27288    23%  
+    Number used as Memory:             1556  out of   6408    24%  
        Number used as RAM:              306
-       Number used as SRL:              816
+       Number used as SRL:             1250
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   8085
-   Number with an unused Flip Flop:    2624  out of   8085    32%  
-   Number with an unused LUT:          2060  out of   8085    25%  
-   Number of fully used LUT-FF pairs:  3401  out of   8085    42%  
+ Number of LUT Flip Flop pairs used:  11252
+   Number with an unused Flip Flop:    4537  out of  11252    40%  
+   Number with an unused LUT:          3314  out of  11252    29%  
+   Number of fully used LUT-FF pairs:  3401  out of  11252    30%  
    Number of unique control sets:       176
 
 IO Utilization: 
@@ -2677,8 +2677,8 @@ IO Utilization:
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               16  out of    116    13%  
     Number using Block RAM only:         16
- Number of BUFG/BUFGCTRL/BUFHCEs:         4  out of     16    25%  
- Number of DSP48A1s:                     39  out of     58    67%  
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                     43  out of     58    74%  
  Number of PLL_ADVs:                      1  out of      4    25%  
 
 ---------------------------
@@ -2913,12 +2913,12 @@ p_AD_SCO             |    8.554|    4.063|    5.624|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 91.00 secs
-Total CPU time to Xst completion: 91.06 secs
+Total REAL time to Xst completion: 126.00 secs
+Total CPU time to Xst completion: 126.16 secs
  
 --> 
 
-Total memory usage is 387348 kilobytes
+Total memory usage is 359380 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  338 (   0 filtered)

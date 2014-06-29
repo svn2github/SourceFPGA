@@ -1,11 +1,12 @@
-Release 14.5 ngdbuild P.58f (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: C:\Progs\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+Command Line: C:\Progs\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc BatListener.ucf -p
 xc6slx45-csg324-2 BatListener.ngc BatListener.ngd
 
-Reading NGO file "E:/Source/BatDroidV2/SourceFPGA/BatDoidV2/BatListener.ngc" ...
+Reading NGO file
+"E:/Source/BatDroidV2/SourceFPGA/SourceFPGA/BatDoidV2/BatListener.ngc" ...
 Loading design module "ipcore_dir/Decimator.ngc"...
 Loading design module "ipcore_dir/BatOutpBR.ngc"...
 Loading design module "ipcore_dir/BatFFT.ngc"...
@@ -76,7 +77,7 @@ WARNING:NgdBuild:1211 - User specified non-default attribute value (0.005) was
    "inst_BigMem/memc3_infrastructure_inst/u_pll_adv".  This is not consistent
    with the computed value (2e-005) from the PERIOD constraint (<TIMESPEC
    TS_p_AD_SCO = PERIOD "p_AD_SCO" 50ns HIGH 50% INPUT_JITTER 1ps;>
-   [BatListener.ucf(297)]).  The uncertainty calculation will use the
+   [BatListener.ucf(307)]).  The uncertainty calculation will use the
    non-default attribute value.  This could result in incorrect uncertainty
    calculated for PLL output clocks.
 Checking expanded design ...
@@ -129,10 +130,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  21
 
-Total memory usage is 252068 kilobytes
+Total memory usage is 253628 kilobytes
 
 Writing NGD file "BatListener.ngd" ...
-Total REAL time to NGDBUILD completion:  17 sec
-Total CPU time to NGDBUILD completion:   17 sec
+Total REAL time to NGDBUILD completion:  23 sec
+Total CPU time to NGDBUILD completion:   23 sec
 
 Writing NGDBUILD log file "BatListener.bld"...

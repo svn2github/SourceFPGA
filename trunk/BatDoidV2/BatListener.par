@@ -1,21 +1,21 @@
-Release 14.5 par P.58f (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MICHI::  Sun Mar 02 10:37:02 2014
+MICHI::  Sun Jun 29 13:13:58 2014
 
 par -w -intstyle ise -ol high -mt off BatListener_map.ncd BatListener.ncd
 BatListener.pcf 
 
 
 Constraints file: BatListener.pcf.
-Loading device for application Rf_Device from file '6slx45.nph' in environment C:\Progs\Xilinx\14.5\ISE_DS\ISE\.
+Loading device for application Rf_Device from file '6slx45.nph' in environment C:\Progs\Xilinx\14.7\ISE_DS\ISE\.
    "BatListener" is an NCD, version 3.2, device xc6slx45, package csg324, speed -2
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
 
 
-Device speed data version:  "PRODUCTION 1.23 2013-03-26".
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 
 
 
@@ -104,35 +104,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 15 secs 
-Finished initial Timing Analysis.  REAL time: 16 secs 
+Starting initial Timing Analysis.  REAL time: 27 secs 
+Finished initial Timing Analysis.  REAL time: 28 secs 
 
 Starting Router
 
 
-Phase  1  : 43257 unrouted;      REAL time: 17 secs 
+Phase  1  : 43257 unrouted;      REAL time: 30 secs 
 
-Phase  2  : 32804 unrouted;      REAL time: 21 secs 
+Phase  2  : 32804 unrouted;      REAL time: 36 secs 
 
-Phase  3  : 11396 unrouted;      REAL time: 52 secs 
+Phase  3  : 11396 unrouted;      REAL time: 1 mins 30 secs 
 
-Phase  4  : 11410 unrouted; (Setup:1152, Hold:0, Component Switching Limit:0)     REAL time: 59 secs 
+Phase  4  : 11410 unrouted; (Setup:1152, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 41 secs 
 
 Updating file: BatListener.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:1183, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 29 secs 
+Phase  5  : 0 unrouted; (Setup:1183, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 32 secs 
 
-Phase  6  : 0 unrouted; (Setup:1183, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 32 secs 
+Phase  6  : 0 unrouted; (Setup:1183, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 36 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 51 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 7 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 51 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 7 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 52 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 7 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 54 secs 
-Total REAL time to Router completion: 1 mins 55 secs 
-Total CPU time to Router completion: 1 mins 59 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 12 secs 
+Total REAL time to Router completion: 3 mins 12 secs 
+Total CPU time to Router completion: 3 mins 18 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -280,10 +280,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 1 mins 57 secs 
-Total CPU time to PAR completion: 2 mins 2 secs 
+Total REAL time to PAR completion: 3 mins 16 secs 
+Total CPU time to PAR completion: 3 mins 23 secs 
 
-Peak Memory Usage:  616 MB
+Peak Memory Usage:  635 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
