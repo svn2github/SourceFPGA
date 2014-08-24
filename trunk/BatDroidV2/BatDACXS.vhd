@@ -87,9 +87,9 @@ architecture Behavioral of BatDAC is
 --#
 --##################################################################################
 
--- Dividers for 78125 Hz DAC Sample rate
+-- Dividers for 62500 Hz DAC Sample rate
 constant	DIV_SCLK1		: integer := 5;			-- SCLK = USERCLK/10	= (100/10) = 10 MHz (max 27 MHz)
-constant	DIV_LRCK1		: integer := 64;			-- divisor for LRCK of 128, taken from SCLK
+constant	DIV_LRCK1		: integer := 80;			-- divisor for LRCK of 160, taken from SCLK
 
 -- Dividers for 31250 Hz DAC Sample rate
 constant	DIV_SCLK2		: integer := 5;			-- SCLK = USERCLK/10	= (100/10) = 10 MHz (max 27 MHz)

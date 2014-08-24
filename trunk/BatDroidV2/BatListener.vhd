@@ -134,8 +134,8 @@ constant	CTRL_MODE_BL				: integer := 0;								-- lower bit of mode for control
 constant	CTRL_MODE_BH				: integer := 1;								-- higher bit of mode for control word
 constant	CTRL_MODE_OFF				: std_logic_vector(1 downto 0):= "00";	-- Operation mode OFF: No REC, no hearing
 constant	CTRL_MODE_REC				: std_logic_vector(1 downto 0):= "01";	-- Operation mode REC: RECording, no hearing
-constant	CTRL_MODE_RECH				: std_logic_vector(1 downto 0):= "10";	-- Operation mode Rec + Hearing
-constant	CTRL_MODE_PLAY				: std_logic_vector(1 downto 0):= "11";	-- Operation mode Play back
+constant	CTRL_MODE_PLAY_PITCH		: std_logic_vector(1 downto 0):= "10";	-- Operation mode Rec + Hearing
+constant	CTRL_MODE_PLAY_MIX		: std_logic_vector(1 downto 0):= "11";	-- Operation mode Play back
 constant	CTRL_RESWADR				: integer := 2;								-- reset ADC write address and ADROVL
 constant	CTRL_EQ_OFF					: integer := 3;								-- Switch Equalizer on/off
 constant	CTRL_STEREO_BL				: integer := 4;								-- lower bit of stereo mode for control word
@@ -166,7 +166,7 @@ constant	REG_ADC_INS 				: std_logic_vector(4 downto 0):= "00010";		-- 4		W	ADC 
 constant	REG_CTRL 					: std_logic_vector(4 downto 0):= "00011";		-- 6		R	Control register
 constant	REG_ADCWADRL				: std_logic_vector(4 downto 0):= "00100";		-- 8		R	Current ADC write address: to be read
 constant	REG_ADCWADRH				: std_logic_vector(4 downto 0):= "00101";		-- 10		R	Current ADC write address: to be read
-constant	REG_DAC_DIV					: std_logic_vector(4 downto 0):= "00110";		-- 12		W	DAC Divisor, only bit 0: 0= 78125Hz, 1: 31250 Hz DAC sample rate
+constant	REG_DAC_DIV					: std_logic_vector(4 downto 0):= "00110";		-- 12		W	DAC Divisor, only bit 0: 0= 62500 Hz, 1: 31250 Hz DAC sample rate
 constant	REG_DAC_INS					: std_logic_vector(4 downto 0):= "00111";		-- 14		W	DAC Command: Instruction and command in higher and lower byte
 constant	REG_DAC_RADDRL				: std_logic_vector(4 downto 0):= "01000";		-- 16		RW	DAC Read address: from which address the DAC is reading for play
 constant	REG_DAC_RADDRH				: std_logic_vector(4 downto 0):= "01001";		-- 18		RW	DAC Read address: from which address the DAC is reading for play
@@ -543,6 +543,9 @@ signal s_AD_L_Data					: std_logic_vector(23 downto 0);
 signal s_AD_R_DataADC				: std_logic_vector(23 downto 0);
 signal s_AD_L_DataADC				: std_logic_vector(23 downto 0);
 
+signal s_AD_R_DataInDec				: std_logic_vector(23 downto 0);
+signal s_AD_L_DataInDec				: std_logic_vector(23 downto 0);
+
 signal s_AD_Status					: std_logic_vector(7 downto 0);
 signal s_AD_DataRdyADC				: std_logic := '0';
 signal s_AD_DataRdy              : std_logic := '0';
@@ -563,7 +566,7 @@ signal s_DA_REMPTY					: std_logic;
 signal s_DA_DATAL						: std_logic_vector(23 downto 0) := (others => '0');
 signal s_DA_DATAR						: std_logic_vector(23 downto 0) := (others => '0');
 
-signal s_DA_RATE						: std_logic := '0';							-- 0 is 78125 Hz
+signal s_DA_RATE						: std_logic := '0';							-- 0 is 62500Hz, 1 is 31250 DAC rate
 
 signal s_DA_DataMem					: std_logic_vector(23 downto 0) := (others => '0');
 signal s_DA_R_DataFreqDiv			: std_logic_vector(23 downto 0) := (others => '0');
@@ -575,7 +578,7 @@ signal s_DA_WCmd						: std_logic_vector(15 downto 0) := C_BIT16_ZERO;
 signal s_DA_WE							: std_logic := '0';
 signal s_DA_WRPending				: std_logic := '0';
 
-TYPE STATE_DACTYPE IS (DacState0, DacState1, DacState2, DacState3);
+TYPE STATE_DACTYPE IS (DacState0, DacState1, DacState2, DacState3, DacState4, DacState5, DacState6);
 signal s_DacState						: STATE_DACTYPE := DacState0;
 
 -----------------------
@@ -755,8 +758,8 @@ port map(
 		i_DC_DataAv => s_AD_DataRdyADC,
 		i_DC_DataAvOut => s_AD_DataRdy,
 
-		i_DC_R_DataIn => s_AD_R_DataADC,
-		i_DC_L_DataIn => s_AD_L_DataADC,
+		i_DC_R_DataIn => s_AD_R_DataInDec,
+		i_DC_L_DataIn => s_AD_L_DataInDec,
 		i_DC_R_DataOut => s_AD_R_Data,
 		i_DC_L_DataOut => s_AD_L_Data,
 		i_DC_Random => s_Random
@@ -1258,9 +1261,6 @@ begin
 			s_BufDacRLen <= (others => '0');
 			
 			s_DitherNd <= '0';
-			
-			-- s_AD_R_DataADCTest <= x"4C3B2A";
-
 		else
 		-- Clock
 	-----------------------------------------------------------
@@ -1273,8 +1273,7 @@ begin
 						s_REG_Status(7 downto 0) <= s_AD_Status;					-- update status information
 
 						if s_AD_Status(STAT_ADC_FLTSTL) = '1' and
-								((s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) = CTRL_MODE_REC) or
-								 (s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) = CTRL_MODE_RECH))  then		-- data valid, write data
+								(s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) = CTRL_MODE_REC) then		-- data valid, write data
 							s_DitherNd <= '1';											-- dither s_AD_R_Data (only right channel is saved to RAM)
 							s_AdcWState <= AdcStateW1;
 						else
@@ -1290,7 +1289,7 @@ begin
 					s_P1_CMD_INS <= "000";												-- this will be a write
 					-- do the write to memory here
 					s_P1_CMD_ADR(C_MEMADDR_SIZE downto 2) <= s_AdcWAddr(C_MEMADDR_SIZE downto 2);	-- set address
-					
+		
 					if s_REG_Ctrl(CTRL_24BIT_ON) = '0' then						-- 16 bit per sample
 						if s_AdcWAddr(1) = '1' then
 							s_P1_WR_DATA(31 downto 16) <= s_Data_Dith;			-- set data to dithered data
@@ -1416,14 +1415,25 @@ begin
 			end if;
 
 	-----------------------------------------------------------
-	-- DAC Play Handling (currently not used)
+	-- DAC Play Handling
 	-----------------------------------------------------------		
-			-- handle new Data requests from DAC
-			-- handle request only, if storage of ADC is disabled
+			-- play from ringbuffer memory
+			-- ringbuffer previously filled by STM32
+
 			case s_DacState is
 				when DacState0 =>
-					if s_DA_REMPTY = '1' and s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) = CTRL_MODE_PLAY and
-							s_BufDacRLen /= C_MEMADDR_ZERO then						-- wait for request for new data
+					if (s_AD_DataRdyADC = '1') and (s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) = CTRL_MODE_PLAY_MIX) and -- MIX used bitrate from ADC
+							(s_BufDacRLen /= C_MEMADDR_ZERO) then
+						s_P1_CMD_INS <= "001";											-- this will be a read
+						-- Address calculation
+						s_P1_CMD_ADR(C_MEMADDR_SIZE downto 2) <= s_BufDacRAddr(C_MEMADDR_SIZE downto 2);	-- lower 2 address byte = "00"
+						s_P1_CMD_ADR(29 downto 27) <= (others => '0');
+						s_P1_CMD_ADR(1 downto 0) <= (others => '0');
+						-- Address calculation finished
+						s_P1_CMD_EN <= '1';												-- clock command
+						s_DacState <= DacState1;										-- wait for next clock	
+					elsif (s_DA_REMPTY = '1') and (s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) = CTRL_MODE_PLAY_PITCH) and -- MIX used bitrate from DAC
+							(s_BufDacRLen /= C_MEMADDR_ZERO) then
 						s_P1_CMD_INS <= "001";											-- this will be a read
 						-- Address calculation
 						s_P1_CMD_ADR(C_MEMADDR_SIZE downto 2) <= s_BufDacRAddr(C_MEMADDR_SIZE downto 2);	-- lower 2 address byte = "00"
@@ -1433,9 +1443,10 @@ begin
 						s_P1_CMD_EN <= '1';												-- clock command
 						s_DacState <= DacState1;										-- wait for next clock	
 					else
-						if s_DA_REMPTY = '1' and s_BufDacRLen = C_MEMADDR_ZERO then
-							s_DA_DataMem <= (others => '0');
-						end if;
+						if (s_AD_DataRdyADC = '1') then
+							s_AD_R_DataInDec <= s_AD_R_DataADC;						-- no play back, use ADC data
+							s_AD_L_DataInDec <= s_AD_L_DataADC;						-- no play back, use ADC data
+						end if;	
 						s_DacState <= DacState0;										-- keep state
 					end if;
 				when DacState1 =>
@@ -1444,20 +1455,85 @@ begin
 				when DacState2 =>
 					if s_P1_RD_EMPTY = '0' then										-- after this, data physically read
 						s_P1_RD_EN <= '1';												-- start read cycle from read fifo
-						if s_BufDacRAddr(1) = '0' then								-- select correct WORD according to A0
-							s_DA_DataMem <= s_P1_RD_DATA(15 downto 0) & "00000000";	-- put it to ADC
+						if s_REG_Ctrl(CTRL_24BIT_ON) = '0' then					-- 16 bit per sample
+							if s_BufDacRAddr(1) = '0' then								-- select correct WORD according to A0
+								s_DA_DataMem <= s_P1_RD_DATA(15 downto 0) & "00000000";	-- put it to DAC
+								s_AD_R_DataInDec <= s_P1_RD_DATA(15 downto 0) & "00000000";	-- put it to decimator
+								s_AD_L_DataInDec <= s_P1_RD_DATA(15 downto 0) & "00000000";	-- put it to decimator
+							else
+								s_DA_DataMem <= s_P1_RD_DATA(31 downto 16)& "00000000";	-- put it to DAC
+								s_AD_R_DataInDec <= s_P1_RD_DATA(31 downto 16)& "00000000";	-- put it to decimator
+								s_AD_L_DataInDec <= s_P1_RD_DATA(31 downto 16)& "00000000";	-- put it to decimator
+							end if;
+							s_BufDacRAddr <= std_logic_vector(unsigned(s_BufDacRAddr) + 2); 	-- increment Read addr
+							s_BufDacRLen <= std_logic_vector(unsigned(s_BufDacRLen) - 2);		-- decrement length
+							s_DacState <= DacState6;									-- next state
 						else
-							s_DA_DataMem <= s_P1_RD_DATA(31 downto 16)& "00000000";	-- put it to ADC
+							case s_BufDacRAddr(1 downto 0) is
+								when "00" =>
+									s_DA_DataMem <= s_P1_RD_DATA(23 downto 0);		-- put it to DAC
+									s_AD_R_DataInDec <= s_P1_RD_DATA(23 downto 0);	-- put it to decimator
+									s_AD_L_DataInDec <= s_P1_RD_DATA(23 downto 0);	-- put it to decimator
+									s_DacState <= DacState6;									-- next state
+								when "01" =>
+									s_DA_DataMem <= s_P1_RD_DATA(31 downto 8);		-- put it to DAC
+									s_AD_R_DataInDec <= s_P1_RD_DATA(31 downto 8);	-- put it to decimator
+									s_AD_L_DataInDec <= s_P1_RD_DATA(31 downto 8);	-- put it to decimator
+									s_DacState <= DacState6;								-- next state
+								when "10" =>
+									s_DA_DataMem(15 downto 0) <= s_P1_RD_DATA(31 downto 16);			-- put it to DAC
+									s_AD_R_DataInDec(15 downto 0) <= s_P1_RD_DATA(31 downto 16);	-- put it to decimator
+									s_AD_L_DataInDec(15 downto 0) <= s_P1_RD_DATA(31 downto 16);	-- put it to decimator
+									s_DacState <= DacState3;								-- next state
+								when "11" =>
+									s_DA_DataMem(7 downto 0) <= s_P1_RD_DATA(31 downto 24);			-- put it to DAC
+									s_AD_R_DataInDec(7 downto 0) <= s_P1_RD_DATA(31 downto 24);	-- put it to decimator
+									s_AD_L_DataInDec(7 downto 0) <= s_P1_RD_DATA(31 downto 24);	-- put it to decimator
+									s_DacState <= DacState3;								-- next state
+								when others =>
+									s_DacState <= DacState0;								-- initial state
+							end case;
+							s_BufDacRAddr <= std_logic_vector(unsigned(s_BufDacRAddr) + 3); 	-- increment Read addr
+							s_BufDacRLen <= std_logic_vector(unsigned(s_BufDacRLen) - 3);	-- decrement length
 						end if;
-						s_DacState <= DacState3;										-- next state
 					else
-						s_DacState <= DacState2;										-- keep state
+						s_DacState <= DacState2;											-- keep state
 					end if;
-				when DacState3 =>
-					s_P1_RD_EN <= '0';													-- finalise read cycle
-					s_BufDacRAddr <= std_logic_vector(unsigned(s_BufDacRAddr) + 2); 	-- increment Read addr, wrap is realized via size of s_DacRAddr
-					s_BufDacRLen <= std_logic_vector(unsigned(s_BufDacRLen) - 2);		-- decrement length
-					s_DacState <= DacState0;											-- next state
+				when DacState3 =>	
+					s_P1_RD_EN <= '0';														-- finalise read cycle
+					s_P1_CMD_INS <= "001";													-- this will be a read
+					-- Address calculation
+					s_P1_CMD_ADR(C_MEMADDR_SIZE downto 2) <= s_BufDacRAddr(C_MEMADDR_SIZE downto 2);	-- lower 2 address byte = "00"
+					s_P1_CMD_ADR(29 downto 27) <= (others => '0');
+					s_P1_CMD_ADR(1 downto 0) <= (others => '0');
+					-- Address calculation finished
+					s_P1_CMD_EN <= '1';														-- clock command
+					s_DacState <= DacState4;												-- wait for next clock	
+				when DacState4 =>
+					s_P1_CMD_EN <= '0';														-- finalise command
+					s_DacState <= DacState5;												-- next state
+				when DacState5 =>
+					if s_P1_RD_EMPTY = '0' then											-- after this, data physically read
+						s_P1_RD_EN <= '1';													-- start read cycle from read fifo
+						case s_BufDacRAddr(1 downto 0) is
+							when "01" =>
+								s_DA_DataMem(23 downto 16) <= s_P1_RD_DATA(7 downto 0);		-- put it to DAC
+								s_AD_R_DataInDec(23 downto 16) <= s_P1_RD_DATA(7 downto 0);	-- put it to decimator
+								s_AD_L_DataInDec(23 downto 16) <= s_P1_RD_DATA(7 downto 0);	-- put it to decimator
+							when "10" =>
+								s_DA_DataMem(23 downto 8) <= s_P1_RD_DATA(15 downto 0);		-- put it to DAC
+								s_AD_R_DataInDec(23 downto 8) <= s_P1_RD_DATA(15 downto 0);	-- put it to decimator
+								s_AD_L_DataInDec(23 downto 8) <= s_P1_RD_DATA(15 downto 0);	-- put it to decimator
+							when others =>
+								s_DacState <= DacState0;									-- initial state
+						end case;
+						s_DacState <= DacState6;											-- next state
+					else
+						s_DacState <= DacState5;											-- wait
+					end if;
+				when DacState6 =>
+					s_P1_RD_EN <= '0';														-- finalise read cycle
+					s_DacState <= DacState0;												-- next state
 			end case;	
 		end if;
 	end if;	
@@ -1486,10 +1562,30 @@ begin
 			-- data output to DAC
 			if s_AD_DataRdy = '1' then													-- use the 312500 rate for this
 				case s_REG_Ctrl(CTRL_MODE_BH downto CTRL_MODE_BL) is
-					when CTRL_MODE_PLAY =>
+					when CTRL_MODE_PLAY_PITCH =>
 						s_DA_DATAL <= s_DA_DataMem;
 						s_DA_DATAR <= s_DA_DataMem;
-					when CTRL_MODE_RECH =>
+					when CTRL_MODE_PLAY_MIX =>
+						if (s_BufDacRLen /= C_MEMADDR_ZERO) then
+							case s_REG_Ctrl(CTRL_STEREO_BH downto CTRL_STEREO_BL) is
+								when CTRL_STEREO_OFF =>
+									s_DA_DATAR <= s_DA_R_DataFreqDiv;
+									s_DA_DATAL <= s_DA_R_DataHet;
+								when CTRL_STEREO_FD =>
+									s_DA_DATAR <= s_DA_L_DataFreqDiv;
+									s_DA_DATAL <= s_DA_R_DataFreqDiv;
+								when CTRL_STEREO_HD =>
+									s_DA_DATAR <= s_DA_L_DataHet;
+									s_DA_DATAL <= s_DA_R_DataHet;
+								when others =>
+									s_DA_DATAR <= s_DA_R_DataFreqDiv;
+									s_DA_DATAL <= s_DA_R_DataHet;
+							end case;
+						else
+							s_DA_DATAR <= (others => '0');
+							s_DA_DATAL <= (others => '0');
+						end if;
+					when CTRL_MODE_REC =>
 					   case s_REG_Ctrl(CTRL_STEREO_BH downto CTRL_STEREO_BL) is
 							when CTRL_STEREO_OFF =>
 								s_DA_DATAR <= s_DA_R_DataFreqDiv;
