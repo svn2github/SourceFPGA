@@ -1,0 +1,415 @@
+# Reading C:/Progs/modeltech_pe_edu_10.3/tcl/vsim/pref.tcl 
+# do {DCTestbench.fdo} 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 17:03:45 on Mar 01,2014
+# vcom -reportprogress 300 -explicit -93 ipcore_dir/Decimator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Decimator
+# -- Compiling architecture Decimator_a of Decimator
+# -- Loading package bip_utils_pkg_v2_0
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package fir_compiler_v5_0_sim_pkg
+# -- Loading package ul_utils
+# -- Loading package fir_compiler_v5_0_sim_comps
+# -- Loading entity fir_compiler_v5_0
+# End time: 17:03:46 on Mar 01,2014
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 17:03:46 on Mar 01,2014
+# vcom -reportprogress 300 -explicit -93 BatDither.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BatDither
+# -- Compiling architecture Behavioral of BatDither
+# End time: 17:03:46 on Mar 01,2014
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 17:03:46 on Mar 01,2014
+# vcom -reportprogress 300 -explicit -93 BatDecimator.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity BatDecimator
+# -- Compiling architecture Behavioral of BatDecimator
+# End time: 17:03:47 on Mar 01,2014
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim PE Student Edition vcom 10.3 Compiler 2014.01 Jan  6 2014
+# Start time: 17:03:47 on Mar 01,2014
+# vcom -reportprogress 300 -explicit -93 TestDC_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package MATH_REAL
+# -- Compiling entity DCTestbench
+# -- Compiling architecture behavior of DCTestbench
+# End time: 17:03:47 on Mar 01,2014
+# Errors: 0, Warnings: 0
+# //  ModelSim PE Student Edition 10.3 Jan  6 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# // NOT FOR CORPORATE OR PRODUCTION USE.
+# // THE ModelSim PE Student Edition IS NOT A SUPPORTED PRODUCT.
+# // FOR HIGHER EDUCATION PURPOSES ONLY
+# //
+# vsim -lib work -voptargs=""+acc"" -t 1ps work.DCTestbench 
+# Start time: 17:03:47 on Mar 01,2014
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.math_real(body)
+# Loading work.dctestbench(behavior)
+# Loading work.batdecimator(behavioral)
+# Loading xilinxcorelib.bip_utils_pkg_v2_0(body)
+# Loading ieee.std_logic_textio(body)
+# Loading xilinxcorelib.fir_compiler_v5_0_sim_pkg(body)
+# Loading xilinxcorelib.ul_utils(body)
+# Loading xilinxcorelib.fir_compiler_v5_0_sim_comps
+# Loading work.decimator(decimator_a)
+# Loading xilinxcorelib.fir_compiler_v5_0(behavioral)
+# Loading xilinxcorelib.fir_compiler_v5_0_mac_fir(behavioral)
+# Loading work.batdither(behavioral)
+# ** Warning: Design size of 31075 statements or 2 leaf instances exceeds ModelSim PE Student Edition recommended capacity.
+# Expect performance to be quite adversely affected.
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DATA_VALID, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DATA_VALID.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I(23 downto 0), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I(23 downto 0).
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q(49 downto 0), and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q(49 downto 0).
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_1, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_1.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_2, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_2.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_3, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_3.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_4, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_4.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_5, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_5.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_6, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_6.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_7, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_7.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_8, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_8.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_9, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_9.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_10, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_10.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_11, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_11.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_12, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_12.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_13, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_13.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_14, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_14.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_15, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_15.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_16.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_I_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_I_16.
+# 
+# ** Warning: (vsim-8684) No drivers exist on out port /dctestbench/uut/inst_Decimator/U0/g_mac/mac/DOUT_Q_16, and its initial value is not used.
+# 
+# Therefore, simulation behavior may occur that is not in compliance with
+# 
+# the VHDL standard as the initial values come from the base signal /dctestbench/uut/inst_Decimator/U0/DOUT_Q_16.
+# 
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Michael  Hostname: MICHI  ProcessID: 1804
+# 
+#           Attempting to use alternate WLF file "./wlfta02tns".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfta02tns
+# 
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Region: /dctestbench/uut/inst_Decimator/U0/g_mac/mac/g_dpaths_in(0)/g_dpages_1
+run -all
+# Break key hit 
+# Simulation stop requested.
+# End time: 17:06:09 on Mar 01,2014
+# Errors: 0, Warnings: 3

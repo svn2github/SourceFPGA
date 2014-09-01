@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestDC/DCTestbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="dctestbench" />
+            <top_module name="fir_compiler_v5_0_sim_comps" />
+            <top_module name="fir_compiler_v5_0_sim_pkg" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+            <top_module name="ul_utils" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/dctestbench/uut/i_dc_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_reset</obj_property>
+      <obj_property name="ObjectShortName">i_dc_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_usrclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_usrclk</obj_property>
+      <obj_property name="ObjectShortName">i_dc_usrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_625khz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_625khz</obj_property>
+      <obj_property name="ObjectShortName">i_dc_625khz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_dataav" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_dataav</obj_property>
+      <obj_property name="ObjectShortName">i_dc_dataav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_dataavout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_dataavout</obj_property>
+      <obj_property name="ObjectShortName">i_dc_dataavout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_r_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_r_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_r_datain[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_l_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_l_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_l_datain[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_r_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_r_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_r_dataout[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_l_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_l_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_l_dataout[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/dctestbench/uut/i_dc_random" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_random[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_random[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
