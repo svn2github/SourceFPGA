@@ -1,0 +1,4 @@
+vhdl work "lfsr_pkg.vhd"
+vhdl work "BatRandom.vhd"
+vhdl work "BatDither.vhd"
+vhdl work "TestDT_tb.vhd"

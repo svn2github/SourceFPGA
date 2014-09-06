@@ -183,6 +183,9 @@ constant	REG_FFT_RMSVALH			: std_logic_vector(4 downto 0):= "10011";		-- 38		R	R
 constant	REG_FFT_MAXAMPL			: std_logic_vector(4 downto 0):= "10100";		-- 40		R	MAX amplitude of block
 constant	REG_BEEP_TIME				: std_logic_vector(4 downto 0):= "10101";		-- 42		W	upper byte: beep time (ms/2)), lower byte: beep volume, writing start beep
 
+-- For BatRandom
+constant	c_RndSz						: integer := 32;								-- size of random values to be created
+
 --##################################################################################
 --#	Components
 --#
@@ -260,7 +263,8 @@ component BatDecimator
 		i_DC_L_DataIn					: in  std_logic_vector(23 downto 0);	-- new data from ADC
 		i_DC_R_DataOut					: out std_logic_vector(23 downto 0);	-- data for DAC
 		i_DC_L_DataOut					: out std_logic_vector(23 downto 0);	-- data for DAC
-		i_DC_Random                : in	std_logic_vector(31 downto 0)		-- Random data
+		i_DC_Random1               : in	std_logic_vector(c_RndSz - 1 downto 0);-- Random data
+		i_DC_Random2               : in	std_logic_vector(c_RndSz - 1 downto 0)	-- Random data
 	);
 end component;
 
@@ -275,7 +279,8 @@ component BatFreqDiv
 		i_FD_L_DataIn					: in  std_logic_vector(23 downto 0);	-- new data from ADC
 		i_FD_R_DataOut					: out std_logic_vector(23 downto 0);	-- data for DAC
 		i_FD_L_DataOut					: out std_logic_vector(23 downto 0);	-- data for DAC
-		i_FD_Random                : in	std_logic_vector(31 downto 0)		-- Random data
+		i_FD_Random1               : in	std_logic_vector(c_RndSz - 1 downto 0);-- Random data
+		i_FD_Random2               : in	std_logic_vector(c_RndSz - 1 downto 0)	-- Random data
 	);
 end component;
 
@@ -293,7 +298,8 @@ component BatHet
 		i_HD_L_DataIn					: in	std_logic_vector(23 downto 0);	-- new data from ADC
 		i_HD_R_DataOut					: out	std_logic_vector(23 downto 0);	-- data for DAC
 		i_HD_L_DataOut					: out	std_logic_vector(23 downto 0);	-- data for DAC
-		i_HD_Random                : in	std_logic_vector(31 downto 0)		-- Random data
+		i_HD_Random1               : in	std_logic_vector(c_RndSz - 1 downto 0);-- Random data
+		i_HD_Random2               : in	std_logic_vector(c_RndSz - 1 downto 0)	-- Random data
 	);
 end component;
 
@@ -313,35 +319,37 @@ component BatFFTMod
 		i_FFT_RMSValue					: out	STD_LOGIC_VECTOR(31 DOWNTO 0);	-- RMS value of that frame	
 		i_FFT_MaxAmpl					: out	STD_LOGIC_VECTOR(23 DOWNTO 0);	-- Max Amplitude value of that frame	
 		i_FFT_DataRdy					: out STD_LOGIC;								-- FFT has new data
-		i_FFT_Random               : in	std_logic_vector(31 downto 0)		-- Random data
+		i_FFT_Random1              : in	std_logic_vector(c_RndSz - 1 downto 0);-- Random data
+		i_FFT_Random2              : in	std_logic_vector(c_RndSz - 1 downto 0)	-- Random data
 	);
 end component;
 
 component BatRandom
 	generic (
-		width 							: integer
+		c_RD_Width						: integer
 	);
 	port (
 		i_RD_USRCLK						: in	std_logic;
-		i_Random							: out	std_logic_vector (width-1 downto 0)	--output vector
+		i_RD_Random1					: out	std_logic_vector (c_RD_Width - 1 downto 0);	--output vector
+		i_RD_Random2					: out	std_logic_vector (c_RD_Width - 1 downto 0)	--output vector
 	);
 end component;
 
-component BatDither
-	generic(
-		dBits								: integer;
-		qBits								: integer;
-		ditherBits						: integer										-- min ((dBits-qBits) + 1)
+component BatDither 
+	generic (
+		c_DT_DBits						: integer;										-- size of input data
+		c_DT_QBits						: integer										-- size of output data
 	);
+	port (
+		i_DT_USRCLK						: in std_logic;
+		i_DT_Nd							: in std_logic;
+		i_DT_Bypass						: in std_logic;
+		i_DT_Tpdf						: in std_logic;
 
-   port (
-		clk								: in std_logic;
-		nd									: in std_logic;
-		bypass							: in std_logic;
-
-		dither							: in signed(ditherBits-1 downto 0);
-		d									: in signed(dBits-1 downto 0);
-		q									: out std_logic_vector(qBits-1 downto 0)
+		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
 
@@ -611,7 +619,8 @@ signal s_FFTState						: STATE_FFTTYPE := FFTState0;
 -----------------------
 -- BatRandom --
 -----------------------
-signal s_Random						: std_logic_vector(31 downto 0);			-- Random bits
+signal s_Random1						: std_logic_vector(c_RndSz-1 downto 0);	-- Random bits
+signal s_Random2						: std_logic_vector(c_RndSz-1 downto 0);	-- Random bits
 
 -----------------------
 -- Dither --
@@ -657,31 +666,33 @@ inst_ClkInBuf : IBUFG
 -- Random generator
 -----------------------------------------------------------
 inst_BatRandom : BatRandom
-   generic map (
-		width  							=> 32
+	generic map (
+		c_RD_Width 						=> c_RndSz
 	)
 	port map (
 		i_RD_USRCLK						=> s_UserClk,
-		i_Random							=> s_Random
+		i_RD_Random1					=> s_Random1,
+		i_RD_Random2					=> s_Random2
 	);
 
 -----------------------------------------------------------
 -- Dithering
 -----------------------------------------------------------
-inst_Dither: BatDither
+inst_Dither : BatDither 
 	generic map(
-		dBits								=> 24,
-		qBits								=> 16,
-		ditherBits						=> 9										-- min ((dBits-qBits) + 1)
+		c_DT_DBits						=> s_AD_R_DataADC'length,
+		c_DT_QBits						=> s_Data_Dith'length
 	)
- 	port map (
-		clk								=> s_UserClk,
-		nd									=> s_DitherNd,
-		bypass							=> '0',
+	port map (
+		i_DT_USRCLK						=> s_UserClk,
+		i_DT_Nd							=> s_DitherNd,
+		i_DT_Bypass						=> '0',
+		i_DT_Tpdf						=> '1',
 
-		dither							=> signed(s_Random(8 downto 0)),
-		d									=> signed(s_AD_R_DataADC),
-		q									=> s_Data_Dith
+		i_DT_Rand1						=> signed(s_Random1(s_AD_R_DataADC'length - s_Data_Dith'length downto 0)),
+		i_DT_Rand2						=> signed(s_Random2(s_AD_R_DataADC'length - s_Data_Dith'length downto 0)),
+		i_DT_D							=> signed(s_AD_R_DataADC),
+		i_DT_Q							=>	s_Data_Dith
 	);
 
 -----------------------------------------------------------
@@ -689,31 +700,31 @@ inst_Dither: BatDither
 -----------------------------------------------------------
 inst_BatADC: BatADC
 	port map(
-		i_AD_RESET => s_ResetUserClk,													-- synced system reset
-		i_AD_PHYS_RES => s_sys_reset,													-- use async system reset to enable SCO clock immediately
-		i_AD_USRCLK => s_UserClk,														-- 100 MHz sync clock
+		i_AD_RESET						=> s_ResetUserClk,							-- synced system reset
+		i_AD_PHYS_RES					=> s_sys_reset,								-- use async system reset to enable SCO clock immediately
+		i_AD_USRCLK						=> s_UserClk,									-- 100 MHz sync clock
 		
-		i_AD_R_Data => s_AD_R_DataADC,
-		i_AD_L_Data => s_AD_L_DataADC,
-		i_AD_Status => s_AD_Status,
-		i_AD_DataRdy => s_AD_DataRdyADC,
+		i_AD_R_Data						=> s_AD_R_DataADC,
+		i_AD_L_Data						=> s_AD_L_DataADC,
+		i_AD_Status						=> s_AD_Status,
+		i_AD_DataRdy					=> s_AD_DataRdyADC,
 		
-		i_AD_WCmd => s_AD_WCmd,
-		i_AD_WE => s_AD_WE,
-		i_AD_WRPending	=> s_AD_WRPending,
+		i_AD_WCmd						=> s_AD_WCmd,
+		i_AD_WE							=> s_AD_WE,
+		i_AD_WRPending					=> s_AD_WRPending,
 				
-		AD_R_SDO => p_AD_R_SDO,
-		AD_R_SDI => p_AD_R_SDI,
-		AD_R_FSI => p_AD_R_FSI,
+		AD_R_SDO							=> p_AD_R_SDO,
+		AD_R_SDI							=> p_AD_R_SDI,
+		AD_R_FSI							=> p_AD_R_FSI,
 
-		AD_L_SDO => p_AD_L_SDO,
-		AD_L_SDI => p_AD_L_SDI,
-		AD_L_FSI => p_AD_L_FSI,
+		AD_L_SDO							=> p_AD_L_SDO,
+		AD_L_SDI							=> p_AD_L_SDI,
+		AD_L_FSI							=> p_AD_L_FSI,
 
-		AD_SCO => s_SCO_buf,																
-		AD_DRDY => p_AD_DRDY,
-		AD_RES => p_AD_RES,
-		AD_SYNC => p_AD_SYNC
+		AD_SCO							=> s_SCO_buf,																
+		AD_DRDY							=> p_AD_DRDY,
+		AD_RES							=> p_AD_RES,
+		AD_SYNC							=> p_AD_SYNC
 	);
 
 -----------------------------------------------------------
@@ -721,48 +732,49 @@ inst_BatADC: BatADC
 -----------------------------------------------------------
 inst_BatDAC: BatDAC
 	port map(
-		i_DA_RESET => s_ResetUserClk,
-		i_DA_USRCLK	=> s_UserClk,
+		i_DA_RESET						=> s_ResetUserClk,
+		i_DA_USRCLK						=> s_UserClk,
 		
-		i_DA_STMRES => p_DA_STMRES,
+		i_DA_STMRES						=> p_DA_STMRES,
 		
-		i_DA_REMPTY => s_DA_REMPTY,
-		i_DA_DATAL => s_DA_DATAL,
-		i_DA_DATAR => s_DA_DATAR,
+		i_DA_REMPTY						=> s_DA_REMPTY,
+		i_DA_DATAL						=> s_DA_DATAL,
+		i_DA_DATAR						=> s_DA_DATAR,
 		
-		i_DA_RATE => s_DA_RATE,
+		i_DA_RATE						=> s_DA_RATE,
 
-		i_DA_WCmd => s_DA_WCmd,
-		i_DA_WE => s_DA_WE,
-		i_DA_WRPending	=> s_DA_WRPending,	
+		i_DA_WCmd						=> s_DA_WCmd,
+		i_DA_WE							=> s_DA_WE,
+		i_DA_WRPending					=> s_DA_WRPending,	
 		
-		DA_CS => p_DA_CS,
-		DA_CDIN => p_DA_CDIN,
-		DA_CCLK => p_DA_CCLK,
-		DA_LRCK => p_DA_LRCK,
-		DA_SCLK => p_DA_SCLK,
-		DA_SDIN => p_DA_SDIN,
-		DA_RST => p_DA_RST
+		DA_CS								=> p_DA_CS,
+		DA_CDIN							=> p_DA_CDIN,
+		DA_CCLK							=> p_DA_CCLK,
+		DA_LRCK							=> p_DA_LRCK,
+		DA_SCLK							=> p_DA_SCLK,
+		DA_SDIN							=> p_DA_SDIN,
+		DA_RST							=> p_DA_RST
 	);
 	
 -----------------------------------------------------------
 -- Decimator Instantiation
 -----------------------------------------------------------
 inst_BatDecimator: BatDecimator
-port map(
-		i_DC_RESET => s_ResetUserClk,
-		i_DC_USRCLK => s_UserClk,
+	port map(
+		i_DC_RESET						=> s_ResetUserClk,
+		i_DC_USRCLK						=> s_UserClk,
 
-		i_DC_625KHZ => s_REG_Ctrl(CTRL_625KHZ_ON),
+		i_DC_625KHZ						=> s_REG_Ctrl(CTRL_625KHZ_ON),
 
-		i_DC_DataAv => s_AD_DataRdyADC,
-		i_DC_DataAvOut => s_AD_DataRdy,
+		i_DC_DataAv						=> s_AD_DataRdyADC,
+		i_DC_DataAvOut					=> s_AD_DataRdy,
 
-		i_DC_R_DataIn => s_AD_R_DataInDec,
-		i_DC_L_DataIn => s_AD_L_DataInDec,
-		i_DC_R_DataOut => s_AD_R_Data,
-		i_DC_L_DataOut => s_AD_L_Data,
-		i_DC_Random => s_Random
+		i_DC_R_DataIn					=> s_AD_R_DataInDec,
+		i_DC_L_DataIn					=> s_AD_L_DataInDec,
+		i_DC_R_DataOut					=> s_AD_R_Data,
+		i_DC_L_DataOut					=> s_AD_L_Data,
+		i_DC_Random1					=> s_Random1,
+		i_DC_Random2					=> s_Random2
 	);
 	
 -----------------------------------------------------------
@@ -770,17 +782,18 @@ port map(
 -----------------------------------------------------------
 inst_BatFreqDiv: BatFreqDiv
 port map(
-		i_FD_RESET => s_ResetUserClk,
-		i_FD_USRCLK => s_UserClk,
+		i_FD_RESET						=> s_ResetUserClk,
+		i_FD_USRCLK						=> s_UserClk,
 		
-		i_FD_Thresh => s_FD_Thresh,			
-		i_FD_DataAv => s_AD_DataRdy,
+		i_FD_Thresh						=> s_FD_Thresh,			
+		i_FD_DataAv						=> s_AD_DataRdy,
 
-		i_FD_R_DataIn => s_AD_R_Data,
-		i_FD_L_DataIn => s_AD_L_Data,
-		i_FD_R_DataOut => s_DA_R_DataFreqDiv,
-		i_FD_L_DataOut => s_DA_L_DataFreqDiv,
-		i_FD_Random  => s_Random
+		i_FD_R_DataIn					=> s_AD_R_Data,
+		i_FD_L_DataIn					=> s_AD_L_Data,
+		i_FD_R_DataOut					=> s_DA_R_DataFreqDiv,
+		i_FD_L_DataOut					=> s_DA_L_DataFreqDiv,
+		i_FD_Random1					=> s_Random1,
+		i_FD_Random2					=> s_Random2
 	);
 
 -----------------------------------------------------------
@@ -788,19 +801,20 @@ port map(
 -----------------------------------------------------------
 inst_BatHet: BatHet
 port map(
-		i_HD_RESET => s_ResetUserClk,
-		i_HD_USRCLK => s_UserClk,
+		i_HD_RESET						=> s_ResetUserClk,
+		i_HD_USRCLK						=> s_UserClk,
 		
-		i_HD_Freq => s_HD_Freq,
-		i_HD_WE => s_HD_WE,
-		i_HD_WRPending => s_HD_WRPending,
+		i_HD_Freq						=> s_HD_Freq,
+		i_HD_WE							=> s_HD_WE,
+		i_HD_WRPending					=> s_HD_WRPending,
 		
-		i_HD_DataAv => s_AD_DataRdy,
-		i_HD_R_DataIn => s_AD_R_Data,
-		i_HD_L_DataIn => s_AD_L_Data,
-		i_HD_R_DataOut => s_DA_R_DataHet,
-		i_HD_L_DataOut => s_DA_L_DataHet,
-		i_HD_Random => s_Random
+		i_HD_DataAv						=> s_AD_DataRdy,
+		i_HD_R_DataIn					=> s_AD_R_Data,
+		i_HD_L_DataIn					=> s_AD_L_Data,
+		i_HD_R_DataOut					=> s_DA_R_DataHet,
+		i_HD_L_DataOut					=> s_DA_L_DataHet,
+		i_HD_Random1					=> s_Random1,
+		i_HD_Random2					=> s_Random2
 	);
   
 -----------------------------------------------------------
@@ -808,21 +822,22 @@ port map(
 -----------------------------------------------------------
 inst_BatFFTMod: BatFFTMod
 port map(
-		i_FFT_RESET => s_ResetUserClk,
-		i_FFT_USRCLK => s_UserClk,
+		i_FFT_RESET						=> s_ResetUserClk,
+		i_FFT_USRCLK					=> s_UserClk,
 		
-		i_FFT_DataAv => s_AD_DataRdy,
-		i_FFT_DataIn => s_AD_R_Data,
+		i_FFT_DataAv					=> s_AD_DataRdy,
+		i_FFT_DataIn					=> s_AD_R_Data,
 		
-		i_FFT_RADDR => s_FFT_RAddr,
-		i_FFT_RDATA	=> s_FFT_RData,
-		i_FFT_BLOCKEXP => s_FFT_BlockExp,
-		i_FFT_MaxValue => s_FFT_MaxValue,
-		i_FFT_MaxValInd => s_FFT_MaxValInd,
-		i_FFT_RMSValue => s_FFT_RMSValue,
-		i_FFT_MaxAmpl => s_FFT_MaxAmpl, 
-		i_FFT_DataRdy => s_Interrupt,
-		i_FFT_Random => s_Random
+		i_FFT_RADDR						=> s_FFT_RAddr,
+		i_FFT_RDATA						=> s_FFT_RData,
+		i_FFT_BLOCKEXP					=> s_FFT_BlockExp,
+		i_FFT_MaxValue					=> s_FFT_MaxValue,
+		i_FFT_MaxValInd				=> s_FFT_MaxValInd,
+		i_FFT_RMSValue					=> s_FFT_RMSValue,
+		i_FFT_MaxAmpl					=> s_FFT_MaxAmpl, 
+		i_FFT_DataRdy					=> s_Interrupt,
+		i_FFT_Random1					=> s_Random1,
+		i_FFT_Random2					=> s_Random2
 	);
 
 -----------------------------------------------------------

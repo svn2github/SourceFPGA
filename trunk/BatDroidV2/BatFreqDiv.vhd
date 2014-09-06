@@ -48,7 +48,8 @@ entity BatFreqDiv is
 		i_FD_L_DataIn					: in  std_logic_vector(23 downto 0);	-- new data from ADC
 		i_FD_R_DataOut					: out std_logic_vector(23 downto 0);	-- data for DAC
 		i_FD_L_DataOut					: out std_logic_vector(23 downto 0);	-- data for DAC
-		i_FD_Random                : in	std_logic_vector(31 downto 0)		-- Random data	
+		i_FD_Random1               : in	std_logic_vector(31 downto 0);	-- Random data
+		i_FD_Random2               : in	std_logic_vector(31 downto 0)		-- Random data	
 	);
 end BatFreqDiv;
 
@@ -84,21 +85,21 @@ component FDFilter
 		dout								: out std_logic_vector(50 downto 0));
 end component;
 
-component BatDither
-	generic(
-		dBits								: integer;
-		qBits								: integer;
-		ditherBits						: integer										-- min ((dBits-qBits) + 1)
+component BatDither 
+	generic (
+		c_DT_DBits						: integer;										-- size of input data
+		c_DT_QBits						: integer										-- size of output data
 	);
+	port (
+		i_DT_USRCLK						: in std_logic;
+		i_DT_Nd							: in std_logic;
+		i_DT_Bypass						: in std_logic;
+		i_DT_Tpdf						: in std_logic;
 
-   port (
-		clk								: in std_logic;
-		nd									: in std_logic;
-		bypass							: in std_logic;
-
-		dither							: in signed(ditherBits-1 downto 0);
-		d									: in signed(dBits-1 downto 0);
-		q									: out std_logic_vector(qBits-1 downto 0)
+		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
 
@@ -164,21 +165,23 @@ inst_FDFilter: FDFilter
 		din 								=> std_logic_vector(s_FilterIn),
 		dout 								=> s_FD_Out
 	);
-	
-inst_FDDither: BatDither
-	generic map(
-		dBits								=> 48,
-		qBits								=> 24,
-		ditherBits						=> 28										-- min ((dBits-qBits) + 1)
-	)
- 	port map (
-		clk								=> i_FD_USRCLK,
-		nd									=> s_DithNd,
-		bypass							=> '0',
 
-		dither							=> signed(i_FD_Random(27 downto 0)),
-		d									=> s_DithIn,
-		q									=> s_FD_OutDith
+
+inst_FDDither : BatDither 
+	generic map(
+		c_DT_DBits						=> s_DithIn'length,
+		c_DT_QBits						=> s_FD_OutDith'length
+	)
+	port map (
+		i_DT_USRCLK						=> i_FD_USRCLK,
+		i_DT_Nd							=> s_DithNd,
+		i_DT_Bypass						=> '0',
+		i_DT_Tpdf						=> '1',
+
+		i_DT_Rand1						=> signed(i_FD_Random1(s_DithIn'length - s_FD_OutDith'length downto 0)),
+		i_DT_Rand2						=> signed(i_FD_Random2(s_DithIn'length - s_FD_OutDith'length downto 0)),
+		i_DT_D							=> s_DithIn,
+		i_DT_Q							=>	s_FD_OutDith
 	);
 
 s_DithIn <= signed(s_FD_Out(50) & s_FD_Out(47 downto 1));

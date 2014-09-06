@@ -74,7 +74,8 @@ entity BatFFTMod is
 		i_FFT_RMSValue					: out	STD_LOGIC_VECTOR(31 DOWNTO 0);	-- RMS value of that frame
 		i_FFT_MaxAmpl					: out	STD_LOGIC_VECTOR(23 DOWNTO 0);	-- Max Amplitude value of that frame	
 		i_FFT_DataRdy					: out STD_LOGIC;								-- FFT has new data
-		i_FFT_Random               : in	std_logic_vector(31 downto 0)		-- Random data
+		i_FFT_Random1              : in	std_logic_vector(31 downto 0);	-- Random data
+		i_FFT_Random2              : in	std_logic_vector(31 downto 0)		-- Random data
 	);
 end BatFFTMod;
 
@@ -194,21 +195,21 @@ component FftMult
 	);
 end component;
 
-component BatDither
-	generic(
-		dBits								: integer;
-		qBits								: integer;
-		ditherBits						: integer										-- min ((dBits-qBits) + 1)
+component BatDither 
+	generic (
+		c_DT_DBits						: integer;										-- size of input data
+		c_DT_QBits						: integer										-- size of output data
 	);
+	port (
+		i_DT_USRCLK						: in std_logic;
+		i_DT_Nd							: in std_logic;
+		i_DT_Bypass						: in std_logic;
+		i_DT_Tpdf						: in std_logic;
 
-   port (
-		clk								: in std_logic;
-		nd									: in std_logic;
-		bypass							: in std_logic;
-
-		dither							: in signed(ditherBits-1 downto 0);
-		d									: in signed(dBits-1 downto 0);
-		q									: out std_logic_vector(qBits-1 downto 0)
+		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
 
@@ -414,20 +415,21 @@ inst_MultTmp_i: FftMult
 		p => s_tmp_ii
 	);
 
-inst_FFTDither: BatDither
+inst_FFTDither : BatDither 
 	generic map(
-		dBits								=> 24,
-		qBits								=> 16,
-		ditherBits						=> 9										-- min ((dBits-qBits) + 1)
+		c_DT_DBits						=> s_pMultLutD'length,
+		c_DT_QBits						=> s_WinVal'length
 	)
- 	port map (
-		clk								=> i_FFT_USRCLK,
-		nd									=> s_DithNd,
-		bypass							=> '0',
+	port map (
+		i_DT_USRCLK						=> i_FFT_USRCLK,
+		i_DT_Nd							=> s_DithNd,
+		i_DT_Bypass						=> '0',
+		i_DT_Tpdf						=> '1',
 
-		dither							=> signed(i_FFT_Random(8 downto 0)),
-		d									=> signed(s_pMultLutD),
-		q									=> s_WinVal
+		i_DT_Rand1						=> signed(i_FFT_Random1(s_pMultLutD'length - s_WinVal'length downto 0)),
+		i_DT_Rand2						=> signed(i_FFT_Random2(s_pMultLutD'length - s_WinVal'length downto 0)),
+		i_DT_D							=> signed(s_pMultLutD),
+		i_DT_Q							=>	s_WinVal
 	);
 	
 -----------------------------------------------------------
