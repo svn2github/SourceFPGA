@@ -4,10 +4,10 @@ How to use this testbench
 	- Set project rate to 625KHz
 	- Go to: Generate->Tone
 	- Use wave form 'Sine', frequency 45000, number of samples 50000
-	- Export as 24 bit PCM: File->Export->Other uncompressed files, Options->Wav, signed 24 bit PCM: save as Data45KHz.way
-	- Now we have a 625KHz/24bit 45KHz Sine wav file. This simulates the Input from the ADC of BatDroid
+	- Export as 24 bit PCM: File->Export->Other uncompressed files, Options->Wav, signed 24 bit PCM: save as Data45KHz.wav
+	- Now we have a 625KHz/24bit 45KHz Sine wav file. This simulates the input from the ADC of BatDroid
 	- You can also use recordings from BatDroid, but be sure to shorten the wav file to about 50000 samples. 
-		Otherwise, the Dither simulation will take a long time
+		Otherwise, the dither simulation will take a long time
 - Run the Octave Script "Wav2Txt"
 	- This will read the wav file and create a txt file with the corresponding sample values out of it.
 	- The txt file will then be read by the ISIM simulation script.
