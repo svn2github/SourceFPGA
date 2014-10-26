@@ -1,0 +1,14 @@
+E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.ngc 1414302031
+ipcore_dir/Decimator.ngc 1413566400
+ipcore_dir/BatOutpBR.ngc 1404063049
+ipcore_dir/BatFFT.ngc 1404062945
+ipcore_dir/Sqrt.ngc 1404063184
+ipcore_dir/BatFFTLut.ngc 1404062425
+ipcore_dir/BatInpBR.ngc 1404062529
+ipcore_dir/BatInpBR1.ngc 1404062655
+ipcore_dir/FftMult.ngc 1404063402
+ipcore_dir/FDFilter.ngc 1414299083
+ipcore_dir/HetDDS.ngc 1413623578
+ipcore_dir/HDFilter.ngc 1413715453
+ipcore_dir/HetMult.ngc 1413623789
+OK

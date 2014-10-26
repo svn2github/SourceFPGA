@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqDDDS/TestFreqDDDS_bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_dsp48_multadd_pkg_v2_0" />
+            <top_module name="bip_usecase_utils_pkg_v2_0" />
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="dds_compiler_v4_0_sim_comps" />
+            <top_module name="fir_compiler_v5_0_sim_comps" />
+            <top_module name="fir_compiler_v5_0_sim_pkg" />
+            <top_module name="lfsr_pkg" />
+            <top_module name="math_real" />
+            <top_module name="mult_gen_pkg_v11_2" />
+            <top_module name="mult_gen_v11_0_xst_comp" />
+            <top_module name="numeric_std" />
+            <top_module name="pkg_dds_compiler_v4_0" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testfreqddds_bench" />
+            <top_module name="textio" />
+            <top_module name="ul_utils" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+            <top_module name="xbip_dsp48_multadd_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_xst_comp" />
+            <top_module name="xcc_utils_v2_0" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_reset</obj_property>
+      <obj_property name="ObjectShortName">i_fd_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_usrclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_usrclk</obj_property>
+      <obj_property name="ObjectShortName">i_fd_usrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_dataav" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_dataav</obj_property>
+      <obj_property name="ObjectShortName">i_fd_dataav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_r_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_r_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_r_datain[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_l_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_l_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_l_datain[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_r_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_r_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_r_dataout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/i_fd_l_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_l_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_l_dataout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/s_ddsclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_ddsclk</obj_property>
+      <obj_property name="ObjectShortName">s_ddsclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/s_ddsrdy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_ddsrdy</obj_property>
+      <obj_property name="ObjectShortName">s_ddsrdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/s_drstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">s_drstate</obj_property>
+      <obj_property name="ObjectShortName">s_drstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/s_amplitude" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_amplitude[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_amplitude[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqddds_bench/uut/s_samplecnt_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_samplecnt_r[17:0]</obj_property>
+      <obj_property name="ObjectShortName">s_samplecnt_r[17:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

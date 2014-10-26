@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFIR/TestFIR_bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="fir_compiler_v5_0_sim_comps" />
+            <top_module name="fir_compiler_v5_0_sim_pkg" />
+            <top_module name="lfsr_pkg" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testfir_bench" />
+            <top_module name="textio" />
+            <top_module name="ul_utils" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/testfir_bench/uut/i_dc_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_reset</obj_property>
+      <obj_property name="ObjectShortName">i_dc_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_r_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_r_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_r_datain[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_l_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_l_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_l_datain[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_r_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_r_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_r_dataout[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_l_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_l_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_l_dataout[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_random1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_random1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_random1[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_random2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_random2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dc_random2[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_filterin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_filterin[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_filterin[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_dc_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_dc_out[49:0]</obj_property>
+      <obj_property name="ObjectShortName">s_dc_out[49:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_dc_outdith" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_dc_outdith[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_dc_outdith[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_dc_outreg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_dc_outreg[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_dc_outreg[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_en</obj_property>
+      <obj_property name="ObjectShortName">s_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_usrclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_usrclk</obj_property>
+      <obj_property name="ObjectShortName">i_dc_usrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_dataav" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_dataav</obj_property>
+      <obj_property name="ObjectShortName">i_dc_dataav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_rdyfordata" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_rdyfordata</obj_property>
+      <obj_property name="ObjectShortName">s_rdyfordata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_chanin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_chanin[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_chanin[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_nd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_nd</obj_property>
+      <obj_property name="ObjectShortName">s_nd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_filterrdy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_filterrdy</obj_property>
+      <obj_property name="ObjectShortName">s_filterrdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_chanout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_chanout[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_chanout[0:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/i_dc_dataavout" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dc_dataavout</obj_property>
+      <obj_property name="ObjectShortName">i_dc_dataavout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_dithnd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_dithnd</obj_property>
+      <obj_property name="ObjectShortName">s_dithnd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_dithin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_dithin[47:0]</obj_property>
+      <obj_property name="ObjectShortName">s_dithin[47:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_rstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">s_rstate</obj_property>
+      <obj_property name="ObjectShortName">s_rstate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfir_bench/uut/s_fstate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">s_fstate</obj_property>
+      <obj_property name="ObjectShortName">s_fstate</obj_property>
+   </wvobject>
+</wave_config>
