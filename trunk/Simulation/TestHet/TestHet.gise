@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TestHet.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestHet_bench_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestHet_bench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestHet_bench_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/HDFilter_readme.txt"/>
+    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/HetDDS_readme.txt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1413629815" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1413629815">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414009259" xil_pn:in_ck="1488095163586281776" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414009259">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="BatDither.vhd"/>
+      <outfile xil_pn:name="BatHet.vhd"/>
+      <outfile xil_pn:name="BatRandom.vhd"/>
+      <outfile xil_pn:name="TestHet.vhd"/>
+      <outfile xil_pn:name="lfsr_pkg.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1413612935" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5755273197450370506" xil_pn:start_ts="1413612935">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1413612935" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5610592274722054836" xil_pn:start_ts="1413612935">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1413718490" xil_pn:in_ck="-4996281453603797242" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7577062037314049988" xil_pn:start_ts="1413718489">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/HDFilter.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/HDFilter.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/HetDDS.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/HetDDS.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/HetMult.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/HetMult.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1414009259" xil_pn:in_ck="1488095163586281776" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414009259">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="BatDither.vhd"/>
+      <outfile xil_pn:name="BatHet.vhd"/>
+      <outfile xil_pn:name="BatRandom.vhd"/>
+      <outfile xil_pn:name="TestHet.vhd"/>
+      <outfile xil_pn:name="lfsr_pkg.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1414009270" xil_pn:in_ck="2226465057246046846" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1809497755199973708" xil_pn:start_ts="1414009259">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TestHet_bench_beh.prj"/>
+      <outfile xil_pn:name="TestHet_bench_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1414009271" xil_pn:in_ck="417398183490558415" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3377800092360169" xil_pn:start_ts="1414009270">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TestHet_bench_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>
