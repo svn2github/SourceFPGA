@@ -33,11 +33,13 @@ library work;
 use work.lfsr_pkg.ALL;
 
 entity BatRandom is
-	generic ( width : integer :=  32 );
+	generic (
+		c_RD_Width : integer 	:=  32
+	);
 	Port (
 		i_RD_USRCLK					: in	std_logic;
-		i_RD_Random1				: out	std_logic_vector (width-1 downto 0);-- generated random value 1
-		i_RD_Random2				: out	std_logic_vector (width-1 downto 0)	--	generated random value 2
+		i_RD_Random1				: out	std_logic_vector (c_RD_Width-1 downto 0) := (others=>'0');	-- generated random value 1
+		i_RD_Random2				: out	std_logic_vector (c_RD_Width-1 downto 0) := (others=>'0')	--	generated random value 2
     );
 end BatRandom;
 
@@ -60,7 +62,7 @@ constant	c_RandomGenBits		: integer := 64;									-- Number of bits used in lsf
 --#
 --#
 --##################################################################################
-signal s_RandomBuf				: std_logic_vector(width-1 downto 0);		-- Random bits
+signal s_RandomBuf				: std_logic_vector(c_RD_Width-1 downto 0) := (others=>'0'); -- Random bits
 
 --##################################################################################
 --#	BatRandom
@@ -76,8 +78,8 @@ begin
 		temp := xor_gates(rand_temp);
 		rand_temp(c_RandomGenBits-1 downto 1) := rand_temp(c_RandomGenBits-2 downto 0);
 		rand_temp(0) := temp;
-		i_RD_Random1 <= rand_temp(width-1 downto 0);
-		s_RandomBuf <= rand_temp(c_RandomGenBits-1 downto c_RandomGenBits-width);
+		i_RD_Random1 <= rand_temp(c_RD_Width-1 downto 0);
+		s_RandomBuf <= rand_temp(c_RandomGenBits-1 downto c_RandomGenBits-c_RD_Width);
 		i_RD_Random2 <= s_RandomBuf;
 	end if;
 end process RandomProc;
