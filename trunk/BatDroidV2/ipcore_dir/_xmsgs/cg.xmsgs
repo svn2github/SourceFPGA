@@ -5,22 +5,24 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="sim" num="991" delta="old" >The project IP instance &apos;<arg fmt="%s" index="1">BigMem</arg>&apos; for IP &apos;<arg fmt="%s" index="2">MIG Virtex-6 and Spartan-6 v3.92</arg>&apos; was generated with a different version of the IP than is currently in the IP Catalog. It was originally generated using IP with the packaged timestamp &apos;<arg fmt="%s" index="3">2013-03-27+03:45</arg>&apos;; the IP in the current catalog has a different packaged timestamp &apos;<arg fmt="%s" index="4">2013-10-13+18:46</arg>&apos;. This mismatch is due to changes made to the IP in the user repositories. It may affect some functionality of the IP, if there are differences between these two versions of the IP.
-</msg>
-
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="info" file="sim" num="993" delta="new" >The selected IP does not support an ASY schematic symbol.
+<msg type="warning" file="coreutil" num="0" delta="new" >WARNING:sim:192 - Xco Parameter changed from
+   (Coefficient_File,./BatFD227_120_W.coe) to
+   (Coefficient_File,.\BatFD227_120_W.coe) during Recustomization.
 </msg>
 
-<msg type="info" file="sim" num="949" delta="new" >Finished generation of ASY schematic symbol.
+<msg type="warning" file="sim" num="89" delta="new" >A core named &lt;<arg fmt="%s" index="1">FDFilter</arg>&gt; already exists in the output directory. Output products for this core may be overwritten.
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">The chosen IP does not support an SYM schematic symbol.</arg>
+<msg type="warning" file="sim" num="192" delta="new" >Xco Parameter changed from (<arg fmt="%s" index="1">Coefficient_File</arg>,<arg fmt="%s" index="2">./BatFD227_120_W.coe</arg>) to (<arg fmt="%s" index="3">Coefficient_File</arg>,<arg fmt="%s" index="4">.\BatFD227_120_W.coe</arg>) during Recustomization.
 </msg>
 
-<msg type="info" file="sim" num="948" delta="new" >Finished FLIST file generation.
+<msg type="info" file="sim" num="949" delta="old" >Finished generation of ASY schematic symbol.
+</msg>
+
+<msg type="info" file="sim" num="948" delta="old" >Finished FLIST file generation.
 </msg>
 
 </messages>

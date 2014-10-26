@@ -268,7 +268,15 @@ component BatDecimator
 	);
 end component;
 
+----------------------------------------------------------------------------------------------
+-- There are two versions for the frequency divider:
+-- BatFreqDiv is a very simple one, generating a filtered rectangle output. This should be used for regular usage.
+-- BatFreqDivDDS is a more complex one, re-building the input signal with a DDS. This one is experimental. It requires a lot of resources.
+-- Uncomment / comment here and at the corresponding instantiation to select the frequency divider.
+----------------------------------------------------------------------------------------------
+
 component BatFreqDiv
+-- component BatFreqDivDDS
 	Port (
 		i_FD_RESET						: in  STD_LOGIC;
 		i_FD_USRCLK						: in  STD_LOGIC;								-- User clock 100 MHz
@@ -779,8 +787,11 @@ inst_BatDecimator: BatDecimator
 	
 -----------------------------------------------------------
 -- Frequency Divider Instantiation
+-- There are two versions available.
+-- See component description above.
 -----------------------------------------------------------
-inst_BatFreqDiv: BatFreqDiv
+inst_BatFreqDiv: BatFreqDiv	
+-- inst_BatFreqDiv: BatFreqDivDDS
 port map(
 		i_FD_RESET						=> s_ResetUserClk,
 		i_FD_USRCLK						=> s_UserClk,

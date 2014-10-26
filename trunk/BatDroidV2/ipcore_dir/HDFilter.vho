@@ -62,7 +62,7 @@ component HDFilter
 	chan_in: out std_logic_vector(0 downto 0);
 	chan_out: out std_logic_vector(0 downto 0);
 	din: in std_logic_vector(23 downto 0);
-	dout: out std_logic_vector(51 downto 0));
+	dout: out std_logic_vector(48 downto 0));
 end component;
 
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------

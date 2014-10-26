@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Decimator">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-6-29T17:44:49</timestamp>
+    <timestamp>2014-10-17T18:20:6</timestamp>
     <pin polarity="Input" x="0" y="80" name="din[23:0]" />
     <pin polarity="Input" x="0" y="144" name="nd" />
     <pin polarity="Input" x="0" y="1008" name="clk" />

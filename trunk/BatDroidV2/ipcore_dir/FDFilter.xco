@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sun Jun 29 18:02:43 2014
+# Date: Sun Oct 26 04:50:42 2014
 #
 ##############################################################
 #
@@ -40,12 +40,12 @@ SELECT FIR_Compiler family Xilinx,_Inc. 5.0
 # END Select
 # BEGIN Parameters
 CSET allow_rounding_approximation=false
-CSET bestprecision=true
+CSET bestprecision=false
 CSET chan_in_adv=0
-CSET clock_frequency=100.0
+CSET clock_frequency=100
 CSET coefficient_buffer_type=Automatic
-CSET coefficient_file=./COE_FDFull.coe
-CSET coefficient_fractional_bits=26
+CSET coefficient_file=./BatFD227_120_W.coe
+CSET coefficient_fractional_bits=24
 CSET coefficient_reload=false
 CSET coefficient_sets=1
 CSET coefficient_sign=Signed
@@ -59,7 +59,7 @@ CSET data_buffer_type=Automatic
 CSET data_fractional_bits=0
 CSET data_sign=Signed
 CSET data_width=24
-CSET decimation_rate=4
+CSET decimation_rate=5
 CSET displayreloadorder=false
 CSET filter_architecture=Systolic_Multiply_Accumulate
 CSET filter_selection=1
@@ -79,7 +79,7 @@ CSET number_paths=1
 CSET optimization_goal=Area
 CSET output_buffer_type=Automatic
 CSET output_rounding_mode=Full_Precision
-CSET output_width=51
+CSET output_width=49
 CSET passband_max=0.5
 CSET passband_min=0.0
 CSET preference_for_other_storage=Automatic
@@ -99,4 +99,4 @@ CSET zero_pack_factor=1
 MISC pkg_timestamp=2013-10-13T18:46:09Z
 # END Extra information
 GENERATE
-# CRC: 516dd678
+# CRC: 6052e6f2

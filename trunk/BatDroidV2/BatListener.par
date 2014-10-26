@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-MICHI::  Sat Sep 06 15:50:30 2014
+MICHAEL-PC::  Sun Oct 26 06:44:03 2014
 
 par -w -intstyle ise -ol high -mt off BatListener_map.ncd BatListener.ncd
 BatListener.pcf 
@@ -22,39 +22,39 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 6,649 out of  54,576   12%
-    Number used as Flip Flops:               6,603
+  Number of Slice Registers:                 6,784 out of  54,576   12%
+    Number used as Flip Flops:               6,738
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               46
-  Number of Slice LUTs:                      6,771 out of  27,288   24%
-    Number used as logic:                    5,579 out of  27,288   20%
-      Number using O6 output only:           3,832
-      Number using O5 output only:             131
-      Number using O5 and O6:                1,616
+  Number of Slice LUTs:                      6,841 out of  27,288   25%
+    Number used as logic:                    5,636 out of  27,288   20%
+      Number using O6 output only:           3,782
+      Number using O5 output only:             133
+      Number using O5 and O6:                1,721
       Number used as ROM:                        0
-    Number used as Memory:                     853 out of   6,408   13%
+    Number used as Memory:                     832 out of   6,408   12%
       Number used as Dual Port RAM:            156
-        Number using O6 output only:            24
-        Number using O5 output only:             0
-        Number using O5 and O6:                132
+        Number using O6 output only:            12
+        Number using O5 output only:             4
+        Number using O5 and O6:                140
       Number used as Single Port RAM:            0
-      Number used as Shift Register:           697
-        Number using O6 output only:           170
+      Number used as Shift Register:           676
+        Number using O6 output only:           158
         Number using O5 output only:             0
-        Number using O5 and O6:                527
-    Number used exclusively as route-thrus:    339
-      Number with same-slice register load:    180
-      Number with same-slice carry load:       159
+        Number using O5 and O6:                518
+    Number used exclusively as route-thrus:    373
+      Number with same-slice register load:    208
+      Number with same-slice carry load:       165
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,351 out of   6,822   34%
-  Number of MUXCYs used:                     2,972 out of  13,644   21%
-  Number of LUT Flip Flop pairs used:        7,745
-    Number with an unused Flip Flop:         2,309 out of   7,745   29%
-    Number with an unused LUT:                 974 out of   7,745   12%
-    Number of fully used LUT-FF pairs:       4,462 out of   7,745   57%
+  Number of occupied Slices:                 2,328 out of   6,822   34%
+  Number of MUXCYs used:                     2,940 out of  13,644   21%
+  Number of LUT Flip Flop pairs used:        7,725
+    Number with an unused Flip Flop:         2,283 out of   7,725   29%
+    Number with an unused LUT:                 884 out of   7,725   11%
+    Number of fully used LUT-FF pairs:       4,558 out of   7,725   59%
     Number of slice register sites lost
       to control set restrictions:               0 out of  54,576    0%
 
@@ -69,7 +69,7 @@ IO Utilization:
     Number of LOCed IOBs:                      117 out of     117  100%
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                         9 out of     116    7%
+  Number of RAMB16BWERs:                         7 out of     116    6%
   Number of RAMB8BWERs:                         13 out of     232    5%
   Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
     Number used as BUFIO2s:                      1
@@ -91,7 +91,7 @@ Specific Feature Utilization:
   Number of BUFHs:                               0 out of     256    0%
   Number of BUFPLLs:                             0 out of       8    0%
   Number of BUFPLL_MCBs:                         1 out of       4   25%
-  Number of DSP48A1s:                           41 out of      58   70%
+  Number of DSP48A1s:                           33 out of      58   56%
   Number of ICAPs:                               0 out of       1    0%
   Number of MCBs:                                1 out of       2   50%
   Number of PCILOGICSEs:                         0 out of       2    0%
@@ -104,35 +104,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 26 secs 
-Finished initial Timing Analysis.  REAL time: 27 secs 
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 8 secs 
 
 Starting Router
 
 
-Phase  1  : 44948 unrouted;      REAL time: 29 secs 
+Phase  1  : 44063 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 34466 unrouted;      REAL time: 35 secs 
+Phase  2  : 34322 unrouted;      REAL time: 11 secs 
 
-Phase  3  : 12498 unrouted;      REAL time: 1 mins 28 secs 
+Phase  3  : 12781 unrouted;      REAL time: 30 secs 
 
-Phase  4  : 12498 unrouted; (Setup:233, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 38 secs 
+Phase  4  : 12785 unrouted; (Setup:1479, Hold:0, Component Switching Limit:0)     REAL time: 34 secs 
 
 Updating file: BatListener.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:240, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 31 secs 
+Phase  5  : 0 unrouted; (Setup:1493, Hold:0, Component Switching Limit:0)     REAL time: 57 secs 
 
-Phase  6  : 0 unrouted; (Setup:240, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 34 secs 
+Phase  6  : 0 unrouted; (Setup:1493, Hold:0, Component Switching Limit:0)     REAL time: 57 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 5 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 11 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 5 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 11 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 5 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 11 secs 
 
-Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 10 secs 
-Total REAL time to Router completion: 3 mins 10 secs 
-Total CPU time to Router completion: 3 mins 18 secs 
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 13 secs 
+Total REAL time to Router completion: 1 mins 13 secs 
+Total CPU time to Router completion: 1 mins 16 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -150,15 +150,15 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
+|           s_UserClk | BUFGMUX_X3Y13| No   | 1683 |  0.065     |  1.774      |
++---------------------+--------------+------+------+------------+-------------+
 |inst_BigMem/c3_mcb_d |              |      |      |            |             |
-|              rp_clk |  BUFGMUX_X2Y3| No   |  142 |  0.092     |  1.805      |
-+---------------------+--------------+------+------+------------+-------------+
-|           s_UserClk | BUFGMUX_X3Y13| No   | 1698 |  0.070     |  1.778      |
-+---------------------+--------------+------+------+------------+-------------+
-|      s_SCO_buf_BUFG |  BUFGMUX_X3Y6| No   |   27 |  0.055     |  1.770      |
+|              rp_clk |  BUFGMUX_X2Y3| No   |  142 |  0.073     |  1.805      |
 +---------------------+--------------+------+------+------------+-------------+
 |inst_BatHet/s_DDS_CL |              |      |      |            |             |
-|              K_BUFG |  BUFGMUX_X2Y2| No   |   46 |  0.038     |  1.746      |
+|              K_BUFG |  BUFGMUX_X2Y2| No   |   52 |  0.017     |  1.725      |
++---------------------+--------------+------+------+------------+-------------+
+|      s_SCO_buf_BUFG |  BUFGMUX_X3Y6| No   |   27 |  0.059     |  1.768      |
 +---------------------+--------------+------+------+------------+-------------+
 |inst_BigMem/c3_syscl |              |      |      |            |             |
 |                k_2x |         Local|      |   35 |  0.704     |  1.551      |
@@ -211,8 +211,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_p_AD_SCO = PERIOD TIMEGRP "p_AD_SCO" 5 | SETUP       |     0.132ns|    48.680ns|       0|           0
-  0 ns HIGH 50% INPUT_JITTER 0.001 ns       | HOLD        |     0.394ns|            |       0|           0
+  TS_p_AD_SCO = PERIOD TIMEGRP "p_AD_SCO" 5 | SETUP       |     0.047ns|    49.530ns|       0|           0
+  0 ns HIGH 50% INPUT_JITTER 0.001 ns       | HOLD        |     0.412ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_inst_BigMem_memc3_infrastructure_inst_ | MINPERIOD   |     0.167ns|     1.499ns|       0|           0
   clk_2x_180 = PERIOD TIMEGRP         "inst |             |            |            |        |            
@@ -226,29 +226,29 @@ Asterisk (*) preceding a constraint indicates it was not met.
    TS_p_AD_SCO / 30 HIGH         50% INPUT_ |             |            |            |        |            
   JITTER 0.001 ns                           |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_inst_BigMem_memc3_infrastructure_inst_ | SETUP       |     0.385ns|     9.615ns|       0|           0
-  clk0_bufg_in = PERIOD TIMEGRP         "in | HOLD        |     0.176ns|            |       0|           0
+  COMP "p_AD_L_SDI" OFFSET = OUT 13 ns VALI | MAXDELAY    |     0.305ns|    12.695ns|       0|           0
+  D 22 ns AFTER COMP "p_AD_SCO" HIGH        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_inst_BigMem_memc3_infrastructure_inst_ | SETUP       |     0.453ns|     9.547ns|       0|           0
+  clk0_bufg_in = PERIOD TIMEGRP         "in | HOLD        |     0.134ns|            |       0|           0
   st_BigMem_memc3_infrastructure_inst_clk0_ |             |            |            |        |            
   bufg_in" TS_p_AD_SCO / 5         HIGH 50% |             |            |            |        |            
    INPUT_JITTER 0.001 ns                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  COMP "p_AD_L_SDI" OFFSET = OUT 13 ns VALI | MAXDELAY    |     0.631ns|    12.369ns|       0|           0
+  COMP "p_AD_R_SDI" OFFSET = OUT 13 ns VALI | MAXDELAY    |     1.898ns|    11.102ns|       0|           0
   D 22 ns AFTER COMP "p_AD_SCO" HIGH        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  COMP "p_AD_R_SDI" OFFSET = OUT 13 ns VALI | MAXDELAY    |     1.693ns|    11.307ns|       0|           0
-  D 22 ns AFTER COMP "p_AD_SCO" HIGH        |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_inst_BigMem_memc3_infrastructure_inst_ | SETUP       |     3.518ns|     9.815ns|       0|           0
-  mcb_drp_clk_bufg_in = PERIOD TIMEGRP      | HOLD        |     0.405ns|            |       0|           0
+  TS_inst_BigMem_memc3_infrastructure_inst_ | SETUP       |     3.741ns|     9.592ns|       0|           0
+  mcb_drp_clk_bufg_in = PERIOD TIMEGRP      | HOLD        |     0.382ns|            |       0|           0
       "inst_BigMem_memc3_infrastructure_ins |             |            |            |        |            
   t_mcb_drp_clk_bufg_in"         TS_p_AD_SC |             |            |            |        |            
   O / 3.75 HIGH 50% INPUT_JITTER 0.001 ns   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  COMP "p_AD_R_SDO" OFFSET = IN 20 ns VALID | SETUP       |    13.300ns|     6.700ns|       0|           0
-   45 ns BEFORE COMP "p_AD_SCO" LOW         | HOLD        |    28.359ns|            |       0|           0
+  COMP "p_AD_L_SDO" OFFSET = IN 20 ns VALID | SETUP       |    15.050ns|     4.950ns|       0|           0
+   45 ns BEFORE COMP "p_AD_SCO" LOW         | HOLD        |    27.662ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  COMP "p_AD_L_SDO" OFFSET = IN 20 ns VALID | SETUP       |    14.170ns|     5.830ns|       0|           0
-   45 ns BEFORE COMP "p_AD_SCO" LOW         | HOLD        |    28.131ns|            |       0|           0
+  COMP "p_AD_R_SDO" OFFSET = IN 20 ns VALID | SETUP       |    15.353ns|     4.647ns|       0|           0
+   45 ns BEFORE COMP "p_AD_SCO" LOW         | HOLD        |    27.358ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -262,14 +262,14 @@ Derived Constraints for TS_p_AD_SCO
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_p_AD_SCO                    |     50.000ns|     48.680ns|     48.075ns|            0|            0|         1596|      1497182|
-| TS_inst_BigMem_memc3_infrastru|     13.333ns|      9.815ns|          N/A|            0|            0|        20458|            0|
+|TS_p_AD_SCO                    |     50.000ns|     49.530ns|     47.735ns|            0|            0|         1596|      1478733|
+| TS_inst_BigMem_memc3_infrastru|     13.333ns|      9.592ns|          N/A|            0|            0|        20458|            0|
 | cture_inst_mcb_drp_clk_bufg_in|             |             |             |             |             |             |             |
 | TS_inst_BigMem_memc3_infrastru|      1.667ns|      1.499ns|          N/A|            0|            0|            0|            0|
 | cture_inst_clk_2x_180         |             |             |             |             |             |             |             |
 | TS_inst_BigMem_memc3_infrastru|      1.667ns|      1.499ns|          N/A|            0|            0|            0|            0|
 | cture_inst_clk_2x_0           |             |             |             |             |             |             |             |
-| TS_inst_BigMem_memc3_infrastru|     10.000ns|      9.615ns|          N/A|            0|            0|      1476724|            0|
+| TS_inst_BigMem_memc3_infrastru|     10.000ns|      9.547ns|          N/A|            0|            0|      1458275|            0|
 | cture_inst_clk0_bufg_in       |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -280,10 +280,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 3 mins 14 secs 
-Total CPU time to PAR completion: 3 mins 23 secs 
+Total REAL time to PAR completion: 1 mins 14 secs 
+Total CPU time to PAR completion: 1 mins 18 secs 
 
-Peak Memory Usage:  639 MB
+Peak Memory Usage:  650 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

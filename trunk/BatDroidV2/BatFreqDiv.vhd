@@ -82,7 +82,7 @@ component FDFilter
 		chan_in							: out std_logic_vector(0 downto 0);
 		chan_out							: out std_logic_vector(0 downto 0);
 		din								: in std_logic_vector(23 downto 0);
-		dout								: out std_logic_vector(50 downto 0));
+		dout								: out std_logic_vector(48 downto 0));
 end component;
 
 component BatDither 
@@ -112,11 +112,12 @@ end component;
 -- Frequency divider --
 -----------------------
 signal	s_Threshold						: signed(23 downto 0);					-- signal filter threshold
-signal	s_ActValFilt_R					: signed(23 downto 0);					-- the value output
-signal	s_ActValFilt_L					: signed(23 downto 0);					-- the value output
-signal	s_FilterIn						: signed(23 downto 0);					-- the filter input
+signal	s_ActValFilt_R					: signed(23 downto 0) := (others => '0');	-- the value output
+signal	s_ActValFilt_L					: signed(23 downto 0) := (others => '0');	-- the value output
+signal	s_FilterIn						: signed(23 downto 0) := (others => '0');	-- the filter input
+signal	s_FilterInL						: signed(23 downto 0) := (others => '0');	-- the filter input
 
-signal	s_FD_Out							: std_logic_vector(50 downto 0) := (others => '0');	-- of filtering
+signal	s_FD_Out							: std_logic_vector(48 downto 0) := (others => '0');	-- of filtering
 signal	s_FD_OutDith					: std_logic_vector(23 downto 0) := (others => '0');	-- dithered version of filtering
 signal	s_FD_OutReg						: std_logic_vector(23 downto 0) := (others => '0');	-- save result of first channel until second channel is ready
 
@@ -137,13 +138,13 @@ signal	s_NullCnt_L						: integer range 0 to 15 := 0;			-- number of zero crossi
 signal	s_Toggle_R						: std_logic := '0';						-- negative or positive maxvalue
 signal	s_Toggle_L						: std_logic := '0';						-- negative or positive maxvalue
 
-signal	s_DithIn							: signed(47 downto 0);					-- the dither input
+signal	s_DithIn							: signed(47 downto 0)  := (others => '0');	-- the dither input
 
 -- FD Read Statemachine states
 TYPE 		RSTATE_TYPE IS (St_R0, St_R1, St_R2, St_R3, St_R4, St_R5);
 signal 	s_RState							: RSTATE_TYPE := St_R0;
 -- FD Feed Statemachine states
-TYPE 		FSTATE_TYPE IS (St_F0, St_F1, St_F2, St_F3);
+TYPE 		FSTATE_TYPE IS (St_F0, St_F1, St_F2);
 signal 	s_FState							: FSTATE_TYPE := St_F0;
 
 --##################################################################################
@@ -183,8 +184,6 @@ inst_FDDither : BatDither
 		i_DT_D							=> s_DithIn,
 		i_DT_Q							=>	s_FD_OutDith
 	);
-
-s_DithIn <= signed(s_FD_Out(50) & s_FD_Out(47 downto 1));
 
 -----------------------------------------------------------
 -- Keep Threshold value up-to-date
@@ -299,34 +298,33 @@ begin
 			s_EN <= '0';
 			s_ND <= '0';
 			s_FilterIn <= (others => '0');
+			s_FilterInL <= (others => '0');
 		else
 		-- Clock
 			s_EN <= '1';
 			s_ND <= '0';																	-- reset ND signal
 			case s_FState is
 				when St_F0 =>
-					if i_FD_DataAv = '1' and s_ChanIn = "0" then					-- new data available, sync on channel 0
+					if i_FD_DataAv = '1' and s_ChanIn = "0" and s_RdyForData = '1' then		-- new data available, sync on channel 0
 						s_FState <= St_F1;                                 	-- next state
 					else
+						if i_FD_DataAv = '1' and s_ChanIn = "1" and s_RdyForData = '1' then		-- new data available, sync on channel 0
+							s_ND <= '1';													-- just feed the filter once to synchronise on channel 0
+						end if;	
 						s_FState <= St_F0;                                 	-- keep state
 					end if;
 				when St_F1 =>
-				   if s_RdyForData = '1' then											-- Filter ready to accept data?
-				   	s_FilterIn <= s_ActValFilt_R;									-- feed with right channel
-					   s_ND <= '1';														-- take over data to filter
-				      s_FState <= St_F2;                                 	-- next state
-				   else
-				   	s_FState <= St_F1;                                 	-- keep state
-				   end if;
+					s_FilterIn <= s_ActValFilt_R;										-- feed with right channel
+					s_FilterInL <= s_ActValFilt_L;									-- save left channel for now channel
+					s_ND <= '1';															-- take over data to filter
+			   	s_FState <= St_F2; 		                                	-- next state
 				when St_F2 =>
-				   	s_FState <= St_F3;                                 	-- next state
-				when St_F3 =>
 				   if s_RdyForData = '1' and s_ChanIn = "1" then				-- Filter ready to accept data?
-						s_FilterIn <= s_ActValFilt_L;									-- feed with left channel
+						s_FilterIn <= s_FilterInL;										-- feed with left channel
 				      s_ND <= '1';														-- take over data to filter
 				      s_FState <= St_F0;                                 	-- default state
 				   else
-				   	s_FState <= St_F3;                                 	-- keep state
+				   	s_FState <= St_F2;                                 	-- keep state
 				   end if;
 			end case;
 		end if;
@@ -352,6 +350,20 @@ begin
 			case s_RState is
 				when St_R0 =>
 			   	if s_FilterRdy = '1' and s_ChanOut = "0" then				-- now we have the filtered value in s_FilterOut, sync on channel 0
+						-- handle overrun
+						if s_FD_Out(s_FD_Out'high) = '0' then						-- result is positive
+							if s_FD_Out(s_FD_Out'high-1) = '1' then				-- overrun occured
+								s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
+							else																-- no overrun
+								s_DithIn <= signed(s_FD_Out(s_FD_Out'high) & s_FD_Out((s_FD_Out'high-2) downto 0));	-- use original value
+							end if;
+						else																	-- negative result
+							if s_FD_Out(s_FD_Out'high-1) = '0' then				-- overrun occured
+								s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');	-- set to min value
+							else
+								s_DithIn <= signed(s_FD_Out(s_FD_Out'high) & s_FD_Out((s_FD_Out'high-2) downto 0));	-- use original value
+							end if;
+						end if;		
         				s_DithNd <= '1';
 						s_RState <= St_R1;												-- next state
 			   	else
@@ -360,10 +372,23 @@ begin
 				when St_R1 =>																-- wait one cycle to be sure to have dithered data
 		   		s_RState <= St_R2;													-- next state
 				when St_R2 =>																-- here we should have dithered data available
-					s_FD_OutReg <= s_FD_OutDith;									-- right channel ready
+					s_FD_OutReg <= s_FD_OutDith;										-- right channel ready
 		   		s_RState <= St_R3;													-- next state
 				when St_R3 =>																-- wait for Filter ready to disappear
 			   	if s_FilterRdy = '1' then											-- this can only be channel 1
+						if s_FD_Out(s_FD_Out'high) = '0' then						-- result is positive
+							if s_FD_Out(s_FD_Out'high-1) = '1' then				-- overrun occured
+								s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
+							else																-- no overrun
+								s_DithIn <= signed(s_FD_Out(s_FD_Out'high) & s_FD_Out((s_FD_Out'high-2) downto 0));	-- use original value
+							end if;
+						else																	-- negative result
+							if s_FD_Out(s_FD_Out'high-1) = '0' then				-- overrun occured
+								s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');	-- set to min value
+							else
+								s_DithIn <= signed(s_FD_Out(s_FD_Out'high) & s_FD_Out((s_FD_Out'high-2) downto 0));	-- use original value
+							end if;
+						end if;		
        				s_DithNd <= '1';
 						s_RState <= St_R4;												-- next state
 			   	else

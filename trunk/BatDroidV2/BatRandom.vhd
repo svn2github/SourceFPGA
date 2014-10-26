@@ -38,8 +38,8 @@ entity BatRandom is
 	);
 	Port (
 		i_RD_USRCLK					: in	std_logic;
-		i_RD_Random1				: out	std_logic_vector (c_RD_Width-1 downto 0);	-- generated random value 1
-		i_RD_Random2				: out	std_logic_vector (c_RD_Width-1 downto 0)	--	generated random value 2
+		i_RD_Random1				: out	std_logic_vector (c_RD_Width-1 downto 0) := (others=>'0');	-- generated random value 1
+		i_RD_Random2				: out	std_logic_vector (c_RD_Width-1 downto 0) := (others=>'0')	--	generated random value 2
     );
 end BatRandom;
 
@@ -62,7 +62,7 @@ constant	c_RandomGenBits		: integer := 64;									-- Number of bits used in lsf
 --#
 --#
 --##################################################################################
-signal s_RandomBuf				: std_logic_vector(c_RD_Width-1 downto 0);-- Random bits
+signal s_RandomBuf				: std_logic_vector(c_RD_Width-1 downto 0) := (others=>'0'); -- Random bits
 
 --##################################################################################
 --#	BatRandom

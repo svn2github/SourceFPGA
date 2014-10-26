@@ -73,7 +73,7 @@ ENTITY FDFilter IS
 	chan_in: out std_logic_vector(0 downto 0);
 	chan_out: out std_logic_vector(0 downto 0);
 	din: in std_logic_vector(23 downto 0);
-	dout: out std_logic_vector(50 downto 0));
+	dout: out std_logic_vector(48 downto 0));
 END FDFilter;
 
 ARCHITECTURE FDFilter_a OF FDFilter IS
@@ -88,7 +88,7 @@ component wrapped_FDFilter
 	chan_in: out std_logic_vector(0 downto 0);
 	chan_out: out std_logic_vector(0 downto 0);
 	din: in std_logic_vector(23 downto 0);
-	dout: out std_logic_vector(50 downto 0));
+	dout: out std_logic_vector(48 downto 0));
 end component;
 
 -- Configuration specification 
@@ -100,14 +100,14 @@ end component;
 			c_component_name => "FDFilter",
 			c_family => "spartan6",
 			round_mode => 0,
-			output_width => 51,
+			output_width => 49,
 			sclr_deterministic => 0,
 			col_config => "1",
 			coef_memtype => 0,
 			clock_freq => 100000000,
 			symmetry => 1,
 			col_pipe_len => 4,
-			c_latency => 371,
+			c_latency => 440,
 			chan_sel_width => 1,
 			c_xdevicefamily => "spartan6",
 			c_has_nd => 1,
@@ -120,18 +120,18 @@ end component;
 			neg_symmetry => 0,
 			filter_type => 1,
 			data_type => 0,
-			accum_width => 51,
+			accum_width => 49,
 			rate_change_type => 0,
 			ipbuff_memtype => 0,
 			c_optimization => 1,
 			output_reg => 1,
 			data_memtype => 0,
 			c_has_data_valid => 0,
-			decim_rate => 4,
+			decim_rate => 5,
 			coef_type => 0,
 			filter_arch => 1,
 			interp_rate => 1,
-			num_taps => 265,
+			num_taps => 227,
 			c_mem_init_file => "FDFilter.mif",
 			zero_packing_factor => 1,
 			num_paths => 1,

@@ -85,7 +85,7 @@ component Decimator
 		chan_in							: out std_logic_vector(0 downto 0);
 		chan_out							: out std_logic_vector(0 downto 0);
 		din								: in std_logic_vector(23 downto 0);
-		dout								: out std_logic_vector(49 downto 0));
+		dout								: out std_logic_vector(49 downto 0));-- out std_logic_vector(49 downto 0));
 end component;
 
 component BatDither 
@@ -134,7 +134,7 @@ signal	s_DithIn							: signed(47 downto 0);					-- the dither input
 TYPE 		RSTATE_TYPE IS (St_R0, St_R1, St_R2, St_R3, St_R4, St_R5);
 signal 	s_RState							: RSTATE_TYPE := St_R0;
 -- DC Feed Statemachine states
-TYPE 		FSTATE_TYPE IS (St_F0, St_F1, St_F2, St_F3);
+TYPE 		FSTATE_TYPE IS (St_F0, St_F1, St_F2);
 signal 	s_FState							: FSTATE_TYPE := St_F0;
 
 --##################################################################################
@@ -174,8 +174,6 @@ inst_DecDither : BatDither
 		i_DT_Q							=>	s_DC_OutDith
 	);
 
-s_DithIn <= signed(s_DC_Out(49) & s_DC_Out(46 downto 0));
-
 -----------------------------------------------------------
 -- Feed Decimator Filter
 -----------------------------------------------------------
@@ -193,28 +191,25 @@ begin
 			s_EN <= '1';
 			case s_FState is
 				when St_F0 =>
-					if i_DC_DataAv = '1' and s_ChanIn = "0" then					-- new data available, sync on channel 0
+					if i_DC_DataAv = '1' and s_ChanIn = "0" and s_RdyForData = '1' then		-- new data available, sync on channel 0
 						s_FState <= St_F1;                                 	-- next state
 					else
+						if i_DC_DataAv = '1' and s_ChanIn = "1" and s_RdyForData = '1' then
+							s_ND <= '1';													-- just feed the filter once to synchronise on channel 0
+						end if;	
 						s_FState <= St_F0;                                 	-- keep state
 					end if;
 				when St_F1 =>
-					if s_RdyForData = '1' then											-- Filter ready to accept data?
-						s_FilterIn <= signed(i_DC_R_DataIn);						-- feed with right channel
-						s_ND <= '1';														-- take over data to filter
-						s_FState <= St_F2;                                 	-- next state
-					else
-						s_FState <= St_F1;                                 	-- keep state
-					end if;
+					s_FilterIn <= signed(i_DC_R_DataIn);							-- feed with right channel
+					s_ND <= '1';															-- take over data to filter
+					s_FState <= St_F2;  		                               	-- keep state
 				when St_F2 =>
-						s_FState <= St_F3;                                 	-- next state
-				when St_F3 =>
 					if s_RdyForData = '1' and s_ChanIn = "1" then				-- Filter ready to accept data?
 						s_FilterIn <= signed(i_DC_L_DataIn);						-- feed with left channel
 						s_ND <= '1';														-- take over data to filter
 						s_FState <= St_F0;                                 	-- default state
 					else
-						s_FState <= St_F3;                                 	-- keep state
+						s_FState <= St_F2;                                 	-- keep state
 					end if;
 			end case;
 		end if;
@@ -231,6 +226,7 @@ begin
 		if i_DC_RESET = '1' then
 			i_DC_R_DataOut <= (others => '0');										-- reset value for output signal
 			i_DC_L_DataOut <= (others => '0');										-- reset value for output signal
+			s_DithIn <= (others => '0');												-- reset value for dither signal
 			s_RState <= St_R0;
 			s_DithNd <= '0';
 			i_DC_DataAvOut <= '0';
@@ -239,9 +235,23 @@ begin
 		   if i_DC_625KHZ = '1' then
 				s_DithNd <= '0';															-- reset DithND every clock			
 				i_DC_DataAvOut <= '0';
-				case s_RState is
+				case s_RState is															-- reset DataAvOut every clock
 					when St_R0 =>
 						if s_FilterRdy = '1' and s_ChanOut = "0" then			-- now we have the filtered value in s_FilterOut, sync on channel 0
+							-- handle overrun
+							if s_DC_Out(s_DC_Out'high) = '0' then					-- result is positive
+								if s_DC_Out(s_DC_Out'high-1) = '1' or s_DC_Out(s_DC_Out'high-2) = '1' then	-- overrun occured
+									s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
+								else															-- no overrun
+									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
+								end if;
+							else																-- negative result
+								if s_DC_Out(s_DC_Out'high-1) = '0' or s_DC_Out(s_DC_Out'high-2) = '0' then	-- overrun occured
+									s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');		-- set to min value
+								else
+									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
+								end if;
+							end if;
 							s_DithNd <= '1';
 							s_RState <= St_R1;											-- next state
 						else
@@ -254,6 +264,20 @@ begin
 						s_RState <= St_R3;												-- next state
 					when St_R3 =>															-- wait for Filter ready to disappear
 						if s_FilterRdy = '1' then										-- this can only be channel 1
+							-- handle overrun
+							if s_DC_Out(s_DC_Out'high) = '0' then					-- result is positive
+								if s_DC_Out(s_DC_Out'high-1) = '1' or s_DC_Out(s_DC_Out'high-2) = '1' then	-- overrun occured
+									s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
+								else															-- no overrun
+									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
+								end if;
+							else																-- negative result
+								if s_DC_Out(s_DC_Out'high-1) = '0' or s_DC_Out(s_DC_Out'high-2) = '0' then	-- overrun occured
+									s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');		-- set to min value
+								else
+									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
+								end if;
+							end if;
 							s_DithNd <= '1';
 							s_RState <= St_R4;											-- next state
 						else

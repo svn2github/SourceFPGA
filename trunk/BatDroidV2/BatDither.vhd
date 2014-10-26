@@ -52,7 +52,7 @@ entity BatDither is
 		i_DT_Rand1					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
 		i_DT_Rand2					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
 		i_DT_D						: in signed(c_DT_DBits - 1 downto 0);
-		i_DT_Q						: out std_logic_vector(c_DT_QBits - 1 downto 0)
+		i_DT_Q						: out std_logic_vector(c_DT_QBits - 1 downto 0) := (others=>'0')
 	);
 end entity;
 

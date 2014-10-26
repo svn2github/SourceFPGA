@@ -30,7 +30,7 @@
 <msg type="warning" file="NgdBuild" num="1211" delta="new" >User specified non-default attribute value (<arg fmt="%g" index="1">0.005</arg>) was detected for the <arg fmt="%s" index="2">REF_JITTER</arg> attribute on <arg fmt="%s" index="3">PLL</arg> &quot;<arg fmt="%s" index="4">inst_BigMem/memc3_infrastructure_inst/u_pll_adv</arg>&quot;.  This is not consistent with the computed value (<arg fmt="%g" index="5">2e-005</arg>) from the PERIOD constraint (<arg fmt="%s" index="6">&lt;TIMESPEC TS_p_AD_SCO = PERIOD &quot;p_AD_SCO&quot; 50ns HIGH 50% INPUT_JITTER 1ps;&gt; [BatListener.ucf(307)]</arg>).  The uncertainty calculation will use the non-default attribute value.  This could result in incorrect uncertainty calculated for <arg fmt="%s" index="7">PLL</arg> output clocks.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatDecimator/inst_Decimator/blk00000003/blk0000004a</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatDecimator/inst_Decimator/blk00000003/blk00000047</arg>&apos; has unconnected output pin
 </msg>
 
 <msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatFFTMod/inst_BatFFT/blk000001a3</arg>&apos; has unconnected output pin
@@ -72,16 +72,16 @@
 <msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatFFTMod/inst_BatFFT/blk000006da</arg>&apos; has unconnected output pin
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatFreqDiv/inst_FDFilter/blk00000003/blk00000046</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatFreqDiv/inst_FDFilter/blk00000003/blk00000045</arg>&apos; has unconnected output pin
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatHet/inst_HDFilter/blk00000003/blk00000046</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">inst_BatHet/inst_HDFilter/blk00000003/blk00000045</arg>&apos; has unconnected output pin
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N601</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N599</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N605</arg>&apos; has no driver
+<msg type="warning" file="NgdBuild" num="452" delta="new" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N603</arg>&apos; has no driver
 </msg>
 
 </messages>

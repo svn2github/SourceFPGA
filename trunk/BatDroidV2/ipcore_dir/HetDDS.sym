@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="HetDDS">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-6-29T18:6:4</timestamp>
+    <timestamp>2014-10-18T10:13:0</timestamp>
     <pin polarity="Input" x="0" y="80" name="clk" />
     <pin polarity="Input" x="0" y="176" name="we" />
     <pin polarity="Input" x="0" y="272" name="data[15:0]" />

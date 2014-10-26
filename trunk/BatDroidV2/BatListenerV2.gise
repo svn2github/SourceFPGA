@@ -52,6 +52,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="BatListener_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="BatListener_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="BatListener_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="BatListener_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="BatListener_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="BatListener_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="BatListener_xst.xrpt"/>
@@ -65,6 +66,21 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="batlistener.bgn" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="batlistener.bit" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="batlistener.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/FDDiv.asy" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ipcore_dir/FDDiv.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/FDDiv.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="ipcore_dir/FDDiv.vhd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/FDDiv.vho" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/FDMult.asy" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ipcore_dir/FDMult.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/FDMult.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="ipcore_dir/FDMult.vhd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/FDMult.vho" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/FdDds.asy" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ipcore_dir/FdDds.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/FdDds.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="ipcore_dir/FdDds.vhd" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/FdDds.vho" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -73,14 +89,13 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1410010692" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8884136027844786750" xil_pn:start_ts="1410010692">
+    <transform xil_pn:end_ts="1414301987" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="8884136027844786750" xil_pn:start_ts="1414301987">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1410010693" xil_pn:in_ck="-4545771501792041764" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5993946327449136078" xil_pn:start_ts="1410010692">
+    <transform xil_pn:end_ts="1414301988" xil_pn:in_ck="-3335562191432324017" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="5993946327449136078" xil_pn:start_ts="1414301987">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
       <outfile xil_pn:name="ipcore_dir/BatFFT.ngc"/>
       <outfile xil_pn:name="ipcore_dir/BatFFT.vhd"/>
       <outfile xil_pn:name="ipcore_dir/BatFFTLut.ngc"/>
@@ -101,8 +116,14 @@
       <outfile xil_pn:name="ipcore_dir/BigMem/user_design/rtl/memc3_wrapper.vhd"/>
       <outfile xil_pn:name="ipcore_dir/Decimator.ngc"/>
       <outfile xil_pn:name="ipcore_dir/Decimator.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/FDDiv.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/FDDiv.vhd"/>
       <outfile xil_pn:name="ipcore_dir/FDFilter.ngc"/>
       <outfile xil_pn:name="ipcore_dir/FDFilter.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/FDMult.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/FDMult.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/FdDds.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/FdDds.vhd"/>
       <outfile xil_pn:name="ipcore_dir/FftMult.ngc"/>
       <outfile xil_pn:name="ipcore_dir/FftMult.vhd"/>
       <outfile xil_pn:name="ipcore_dir/HDFilter.ngc"/>
@@ -114,29 +135,26 @@
       <outfile xil_pn:name="ipcore_dir/Sqrt.ngc"/>
       <outfile xil_pn:name="ipcore_dir/Sqrt.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1410010693" xil_pn:in_ck="8310101746163214463" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1410010693">
+    <transform xil_pn:end_ts="1414247197" xil_pn:in_ck="8310101746163214463" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1414247197">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1410010693" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8102850179970523008" xil_pn:start_ts="1410010693">
+    <transform xil_pn:end_ts="1414301988" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-8102850179970523008" xil_pn:start_ts="1414301988">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1410010693" xil_pn:in_ck="8310101746163214463" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015756273942" xil_pn:start_ts="1410010693">
+    <transform xil_pn:end_ts="1414301988" xil_pn:in_ck="8310101746163214463" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="8977612015756273942" xil_pn:start_ts="1414301988">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1410010693" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="549675825685462552" xil_pn:start_ts="1410010693">
+    <transform xil_pn:end_ts="1414301988" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="549675825685462552" xil_pn:start_ts="1414301988">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1410010824" xil_pn:in_ck="880210639639252018" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-213397812460536089" xil_pn:start_ts="1410010693">
+    <transform xil_pn:end_ts="1414302033" xil_pn:in_ck="3473894642715687264" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-213397812460536089" xil_pn:start_ts="1414301988">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BatListener.lso"/>
@@ -151,26 +169,23 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1410010824" xil_pn:in_ck="2586106459355140718" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8397222150120882357" xil_pn:start_ts="1410010824">
+    <transform xil_pn:end_ts="1414302033" xil_pn:in_ck="2586106459355140718" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8397222150120882357" xil_pn:start_ts="1414302033">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1410010852" xil_pn:in_ck="-9194153633233274664" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4644897524694884793" xil_pn:start_ts="1410010824">
+    <transform xil_pn:end_ts="1414302043" xil_pn:in_ck="7128393925002874773" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4644897524694884793" xil_pn:start_ts="1414302033">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BatListener.bld"/>
       <outfile xil_pn:name="BatListener.ngd"/>
       <outfile xil_pn:name="BatListener_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1410011428" xil_pn:in_ck="7832489912562431501" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-398923363910175968" xil_pn:start_ts="1410010852">
+    <transform xil_pn:end_ts="1414302243" xil_pn:in_ck="7832489912562431501" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="-398923363910175968" xil_pn:start_ts="1414302043">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BatListener.pcf"/>
@@ -183,10 +198,9 @@
       <outfile xil_pn:name="BatListener_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1410011665" xil_pn:in_ck="-2668216503359141626" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1410011428">
+    <transform xil_pn:end_ts="1414302334" xil_pn:in_ck="-2668216503359141626" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-3829590541433901613" xil_pn:start_ts="1414302243">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BatListener.ncd"/>
       <outfile xil_pn:name="BatListener.pad"/>
       <outfile xil_pn:name="BatListener.par"/>
@@ -198,11 +212,10 @@
       <outfile xil_pn:name="BatListener_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1410011734" xil_pn:in_ck="-5124917518133425632" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-8529566902918683922" xil_pn:start_ts="1410011665">
+    <transform xil_pn:end_ts="1414302365" xil_pn:in_ck="-5124917518133425632" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="-8529566902918683922" xil_pn:start_ts="1414302334">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BatListener.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="batlistener.bgn"/>
@@ -212,10 +225,9 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1410011665" xil_pn:in_ck="4687062219705658889" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1410011631">
+    <transform xil_pn:end_ts="1414302334" xil_pn:in_ck="4687062219705658889" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1414302321">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BatListener.twr"/>
       <outfile xil_pn:name="BatListener.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

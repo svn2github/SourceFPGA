@@ -62,64 +62,64 @@
 <msg type="warning" file="HDLCompiler" num="321" delta="new" >"E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7091: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">846</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;8:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -140,10 +140,13 @@
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FD_Random2&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random1&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random1&lt;31:24&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random2&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random2&lt;31:24&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;23:23&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FFT_Random1&lt;31:9&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -620,12 +623,6 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_aMultLut_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatFFTMod</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_aMultLut_17&gt; &lt;s_aMultLut_18&gt; &lt;s_aMultLut_19&gt; &lt;s_aMultLut_20&gt; &lt;s_aMultLut_21&gt; &lt;s_aMultLut_22&gt; &lt;s_aMultLut_23&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_27&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_32</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_0&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_28&gt; </arg>
 </msg>
 
@@ -638,46 +635,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_34</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_30&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_35</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_3&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_36</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_9&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_37</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_42</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_10&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_38</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_43</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_11&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_39</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_44</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_12&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_40</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_8&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_45</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_13&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_46</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_14&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_51</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_19&gt; </arg>
@@ -686,25 +650,16 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_47</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_52</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_20&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_48</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_16&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_53</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_49</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_17&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_54</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_22&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_50</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_18&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_55</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_23&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_56</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_24&gt; </arg>
@@ -719,25 +674,10 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_62</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_58</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_26&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_63</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_31&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_59</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_27&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_60</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_28&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_1&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_2&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_3&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_4&gt; </arg>
@@ -752,34 +692,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_13&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_7&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_8&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_15&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_9&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_21&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_16&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_10&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_22&gt; </arg>
@@ -788,28 +707,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_18&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_23&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_19&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_24&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_20&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_25&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_26&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_31&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_DDS_WE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatHet</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_HD_WRPending&gt; </arg>
@@ -818,52 +722,52 @@
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_P0_CMD_INS_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1042_o_s_UserClk_DFF_544</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1043_o_s_UserClk_DFF_591</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1038_o_s_UserClk_DFF_542</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1039_o_s_UserClk_DFF_589</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1040_o_s_UserClk_DFF_543</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1041_o_s_UserClk_DFF_590</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1048_o_s_UserClk_DFF_547</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1049_o_s_UserClk_DFF_594</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1044_o_s_UserClk_DFF_545</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1045_o_s_UserClk_DFF_592</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1046_o_s_UserClk_DFF_546</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1047_o_s_UserClk_DFF_593</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1050_o_s_UserClk_DFF_548</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1051_o_s_UserClk_DFF_595</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1052_o_s_UserClk_DFF_549</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1053_o_s_UserClk_DFF_596</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1058_o_s_UserClk_DFF_552</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1059_o_s_UserClk_DFF_599</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1054_o_s_UserClk_DFF_550</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1055_o_s_UserClk_DFF_597</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1056_o_s_UserClk_DFF_551</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1057_o_s_UserClk_DFF_598</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1060_o_s_UserClk_DFF_553</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1061_o_s_UserClk_DFF_600</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1062_o_s_UserClk_DFF_554</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1063_o_s_UserClk_DFF_601</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1068_o_s_UserClk_DFF_557</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1069_o_s_UserClk_DFF_604</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1064_o_s_UserClk_DFF_555</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1065_o_s_UserClk_DFF_602</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1066_o_s_UserClk_DFF_556</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1067_o_s_UserClk_DFF_603</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_REG_Status_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -1017,6 +921,27 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_FFT_MaxAmpl_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatFFTMod</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">s_RandomBuf_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">s_RandomBuf_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">s_RandomBuf_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random2_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
@@ -1187,52 +1112,52 @@
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_REG_Status_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1068_o_s_UserClk_DFF_557</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1069_o_s_UserClk_DFF_604</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1066_o_s_UserClk_DFF_556</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1067_o_s_UserClk_DFF_603</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1064_o_s_UserClk_DFF_555</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1065_o_s_UserClk_DFF_602</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1060_o_s_UserClk_DFF_553</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1061_o_s_UserClk_DFF_600</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1058_o_s_UserClk_DFF_552</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1059_o_s_UserClk_DFF_599</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1062_o_s_UserClk_DFF_554</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1063_o_s_UserClk_DFF_601</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1054_o_s_UserClk_DFF_550</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1055_o_s_UserClk_DFF_597</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1052_o_s_UserClk_DFF_549</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1053_o_s_UserClk_DFF_596</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1056_o_s_UserClk_DFF_551</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1057_o_s_UserClk_DFF_598</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1048_o_s_UserClk_DFF_547</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1049_o_s_UserClk_DFF_594</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1046_o_s_UserClk_DFF_546</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1047_o_s_UserClk_DFF_593</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1050_o_s_UserClk_DFF_548</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1051_o_s_UserClk_DFF_595</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1044_o_s_UserClk_DFF_545</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1045_o_s_UserClk_DFF_592</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1042_o_s_UserClk_DFF_544</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1043_o_s_UserClk_DFF_591</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1038_o_s_UserClk_DFF_542</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1039_o_s_UserClk_DFF_589</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1040_o_s_UserClk_DFF_543</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1041_o_s_UserClk_DFF_590</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_P0_CMD_INS_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -1307,12 +1232,6 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_LRCK</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatDAC</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;DA_LRCK&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_27&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_32</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_0&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_28&gt; </arg>
 </msg>
 
@@ -1325,46 +1244,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_34</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_30&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_35</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_3&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_36</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_9&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_37</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_42</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_10&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_38</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_43</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_11&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_39</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_44</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_12&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_40</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_8&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_45</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_13&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_46</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_14&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_51</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_19&gt; </arg>
@@ -1373,25 +1259,16 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_47</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_52</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_20&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_48</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_16&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_53</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_49</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_17&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_54</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_22&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_50</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_18&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_55</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_23&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_56</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_24&gt; </arg>
@@ -1406,25 +1283,10 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_62</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_58</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_26&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_63</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_31&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_59</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_27&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_60</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;s_RandomBuf_28&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_1&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_2&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_3&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_4&gt; </arg>
@@ -1439,34 +1301,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_12&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_13&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_7&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_14&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_8&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_15&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_9&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_21&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_16&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_10&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_22&gt; </arg>
@@ -1475,31 +1316,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_17&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_18&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_23&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_19&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_24&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_20&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_25&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_26&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random1_31&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_33</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_0&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_34</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_1&gt; </arg>
@@ -1508,70 +1331,31 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_35</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_2&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_36</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_3&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_37</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_42</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_9&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_38</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_5&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_43</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_10&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_39</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_44</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_11&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_40</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_7&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_45</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_12&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_46</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_13&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_5&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_51</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_18&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_47</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_14&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_52</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_19&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_19&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_48</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_15&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_53</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_20&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_49</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_16&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_16&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_54</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_21&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_50</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_17&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_55</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_22&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_56</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_23&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_61</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_28&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_22&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_57</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_24&gt; </arg>
@@ -1580,16 +1364,13 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_62</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_29&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_58</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_25&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_25&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_63</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_30&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_59</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_26&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">RandomProc.rand_temp_60</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_27&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_RandomBuf_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatRandom</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_RD_Random2_27&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">s_DDS_WE</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatHet</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_HD_WRPending&gt; </arg>
@@ -1778,6 +1559,33 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random2_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random2_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random2_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random1_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random1_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random1_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random1_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/s_RandomBuf_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/s_RandomBuf_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/s_RandomBuf_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">inst_BatDAC/s_Dcnt_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -1838,9 +1646,6 @@
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_BatFFTMod/s_InAddr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatListener</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_BatFFTMod/s_InAddr1_8&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000010d</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk0000010b</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk0000010e&gt; &lt;blk0000010f&gt; &lt;blk00000110&gt; &lt;blk00000111&gt; &lt;blk00000112&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000000b</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatFFTMod/inst_BatFFT</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000008b6&gt; &lt;blk000008b7&gt; </arg>
 </msg>
 
@@ -1854,15 +1659,6 @@
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk00000871</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatFFTMod/inst_BatFFT</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;blk000008b4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000010d</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk0000010b</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk0000010e&gt; &lt;blk0000010f&gt; &lt;blk00000110&gt; &lt;blk00000111&gt; &lt;blk00000112&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000010d</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk0000010b</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk0000010e&gt; &lt;blk0000010f&gt; &lt;blk00000110&gt; &lt;blk00000111&gt; &lt;blk00000112&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000010d</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">blk0000010b</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk0000010e&gt; &lt;blk0000010f&gt; &lt;blk00000110&gt; &lt;blk00000111&gt; &lt;blk00000112&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000000a</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatFFTMod/inst_BatFFT</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">3 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000008b8&gt; &lt;blk000008b9&gt; &lt;blk000008ba&gt; </arg>

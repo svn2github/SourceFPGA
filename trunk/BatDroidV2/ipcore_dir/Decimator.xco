@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sun Jun 29 17:43:01 2014
+# Date: Fri Oct 17 18:19:18 2014
 #
 ##############################################################
 #
@@ -44,7 +44,7 @@ CSET bestprecision=true
 CSET chan_in_adv=0
 CSET clock_frequency=100.0
 CSET coefficient_buffer_type=Automatic
-CSET coefficient_file=./COE_Decimator.coe
+CSET coefficient_file=./BatDecimator127ParksLPF.coe
 CSET coefficient_fractional_bits=24
 CSET coefficient_reload=false
 CSET coefficient_sets=1
@@ -53,7 +53,7 @@ CSET coefficient_structure=Inferred
 CSET coefficient_width=24
 CSET coefficientsource=COE_File
 CSET coefficientvector=6,0,-4,-3,5,6,-6,-13,7,44,64,44,7,-13,-6,6,5,-3,-4,0,6
-CSET columnconfig=3
+CSET columnconfig=1
 CSET component_name=Decimator
 CSET data_buffer_type=Automatic
 CSET data_fractional_bits=0
@@ -99,4 +99,4 @@ CSET zero_pack_factor=1
 MISC pkg_timestamp=2013-10-13T18:46:09Z
 # END Extra information
 GENERATE
-# CRC: bccb6031
+# CRC: 15bc36a5

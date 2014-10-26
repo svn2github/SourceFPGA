@@ -75,15 +75,7 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DecimatorCOE
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
 incr fcount
 
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DecimatorCOEFF_auto0_1.mif
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
-incr fcount
-
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DecimatorCOEFF_auto1_0.mif
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
-incr fcount
-
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DecimatorCOEFF_auto1_1.mif
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
 incr fcount
 

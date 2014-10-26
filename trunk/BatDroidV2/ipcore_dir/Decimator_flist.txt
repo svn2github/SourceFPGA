@@ -11,9 +11,7 @@ Decimator.vho
 Decimator.xco
 Decimator.xise
 DecimatorCOEFF_auto0_0.mif
-DecimatorCOEFF_auto0_1.mif
 DecimatorCOEFF_auto1_0.mif
-DecimatorCOEFF_auto1_1.mif
 Decimator_flist.txt
 Decimator_readme.txt
 Decimator_xmdf.tcl
