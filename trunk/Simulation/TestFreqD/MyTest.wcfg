@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqD/TestFreqD_bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="fir_compiler_v5_0_sim_comps" />
+            <top_module name="fir_compiler_v5_0_sim_pkg" />
+            <top_module name="lfsr_pkg" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testfreqd_bench" />
+            <top_module name="textio" />
+            <top_module name="ul_utils" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/testfreqd_bench/s_tb_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_reset</obj_property>
+      <obj_property name="ObjectShortName">s_tb_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/s_tb_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_clk</obj_property>
+      <obj_property name="ObjectShortName">s_tb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_dataav" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_dataav</obj_property>
+      <obj_property name="ObjectShortName">i_fd_dataav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_r_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_r_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_r_datain[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_l_datain" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_l_datain[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_l_datain[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_r_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_r_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_r_dataout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_l_dataout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_l_dataout[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_l_dataout[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_random1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_random1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_random1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/i_fd_random2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_fd_random2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_fd_random2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/s_actvalfilt_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_actvalfilt_r[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_actvalfilt_r[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfreqd_bench/uut/s_actvalfilt_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_actvalfilt_l[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_actvalfilt_l[23:0]</obj_property>
+   </wvobject>
+</wave_config>
