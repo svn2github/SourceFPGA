@@ -1,6 +1,0 @@
-vhdl work "ipcore_dir/HetMult.vhd"
-vhdl work "ipcore_dir/HDFilter.vhd"
-vhdl work "ipcore_dir/HetDDS.vhd"
-vhdl work "lfsr_pkg.vhd"
-vhdl work "lfsr.vhd"
-vhdl work "BatHet.vhd"
