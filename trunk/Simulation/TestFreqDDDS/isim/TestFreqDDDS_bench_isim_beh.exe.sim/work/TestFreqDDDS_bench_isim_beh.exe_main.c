@@ -103,8 +103,8 @@ int main(int argc, char **argv)
     xilinxcorelib_p_1705937335_init();
     xilinxcorelib_a_1393401644_3212880686_init();
     work_a_3706124908_0442380582_init();
-    work_a_0638805043_3212880686_init();
-    work_a_0018626043_3212880686_init();
+    work_a_0262888882_3212880686_init();
+    work_a_1083401823_3212880686_init();
     ieee_p_3564397177_init();
     xilinxcorelib_p_0292540400_init();
     xilinxcorelib_p_0347517956_init();

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Oct 26 06:43:59 2014
+// Written by: Map P.20131013 on Sun Nov 02 19:55:31 2014
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -724,9 +724,9 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_Dither/i_DT_Q_1" BEL "inst_Dither/i_DT_Q_0" BEL
         "inst_BatDecimator/s_RState_FSM_FFd1" BEL
         "inst_BatDecimator/s_RState_FSM_FFd2" BEL
+        "inst_BatDecimator/s_RState_FSM_FFd3" BEL
         "inst_BatDecimator/s_FState_FSM_FFd1" BEL
         "inst_BatDecimator/s_FState_FSM_FFd2" BEL
-        "inst_BatDecimator/s_RState_FSM_FFd3" BEL
         "inst_BatDecimator/i_DC_R_DataOut_23" BEL
         "inst_BatDecimator/i_DC_R_DataOut_22" BEL
         "inst_BatDecimator/i_DC_R_DataOut_21" BEL
@@ -798,37 +798,7 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatDecimator/s_DC_OutReg_3" BEL
         "inst_BatDecimator/s_DC_OutReg_2" BEL
         "inst_BatDecimator/s_DC_OutReg_1" BEL
-        "inst_BatDecimator/s_DC_OutReg_0" BEL "inst_BatDecimator/s_DithIn_47"
-        BEL "inst_BatDecimator/s_DithIn_46" BEL
-        "inst_BatDecimator/s_DithIn_45" BEL "inst_BatDecimator/s_DithIn_44"
-        BEL "inst_BatDecimator/s_DithIn_43" BEL
-        "inst_BatDecimator/s_DithIn_42" BEL "inst_BatDecimator/s_DithIn_41"
-        BEL "inst_BatDecimator/s_DithIn_40" BEL
-        "inst_BatDecimator/s_DithIn_39" BEL "inst_BatDecimator/s_DithIn_38"
-        BEL "inst_BatDecimator/s_DithIn_37" BEL
-        "inst_BatDecimator/s_DithIn_36" BEL "inst_BatDecimator/s_DithIn_35"
-        BEL "inst_BatDecimator/s_DithIn_34" BEL
-        "inst_BatDecimator/s_DithIn_33" BEL "inst_BatDecimator/s_DithIn_32"
-        BEL "inst_BatDecimator/s_DithIn_31" BEL
-        "inst_BatDecimator/s_DithIn_30" BEL "inst_BatDecimator/s_DithIn_29"
-        BEL "inst_BatDecimator/s_DithIn_28" BEL
-        "inst_BatDecimator/s_DithIn_27" BEL "inst_BatDecimator/s_DithIn_26"
-        BEL "inst_BatDecimator/s_DithIn_25" BEL
-        "inst_BatDecimator/s_DithIn_24" BEL "inst_BatDecimator/s_DithIn_23"
-        BEL "inst_BatDecimator/s_DithIn_22" BEL
-        "inst_BatDecimator/s_DithIn_21" BEL "inst_BatDecimator/s_DithIn_20"
-        BEL "inst_BatDecimator/s_DithIn_19" BEL
-        "inst_BatDecimator/s_DithIn_18" BEL "inst_BatDecimator/s_DithIn_17"
-        BEL "inst_BatDecimator/s_DithIn_16" BEL
-        "inst_BatDecimator/s_DithIn_15" BEL "inst_BatDecimator/s_DithIn_14"
-        BEL "inst_BatDecimator/s_DithIn_13" BEL
-        "inst_BatDecimator/s_DithIn_12" BEL "inst_BatDecimator/s_DithIn_11"
-        BEL "inst_BatDecimator/s_DithIn_10" BEL "inst_BatDecimator/s_DithIn_9"
-        BEL "inst_BatDecimator/s_DithIn_8" BEL "inst_BatDecimator/s_DithIn_7"
-        BEL "inst_BatDecimator/s_DithIn_6" BEL "inst_BatDecimator/s_DithIn_5"
-        BEL "inst_BatDecimator/s_DithIn_4" BEL "inst_BatDecimator/s_DithIn_3"
-        BEL "inst_BatDecimator/s_DithIn_2" BEL "inst_BatDecimator/s_DithIn_1"
-        BEL "inst_BatDecimator/s_DithIn_0" BEL
+        "inst_BatDecimator/s_DC_OutReg_0" BEL
         "inst_BatDecimator/i_DC_DataAvOut" BEL
         "inst_BatDecimator/s_FilterIn_23" BEL
         "inst_BatDecimator/s_FilterIn_22" BEL
@@ -1298,16 +1268,15 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         BEL "inst_BatFFTMod/s_pMultLutD_6" BEL "inst_BatFFTMod/s_pMultLutD_5"
         BEL "inst_BatFFTMod/s_pMultLutD_4" BEL "inst_BatFFTMod/s_pMultLutD_3"
         BEL "inst_BatFFTMod/s_pMultLutD_2" BEL "inst_BatFFTMod/s_pMultLutD_1"
-        BEL "inst_BatFFTMod/s_pMultLutD_0" BEL "inst_BatFFTMod/s_aMultLut_15"
-        BEL "inst_BatFFTMod/s_aMultLut_14" BEL "inst_BatFFTMod/s_aMultLut_13"
-        BEL "inst_BatFFTMod/s_aMultLut_12" BEL "inst_BatFFTMod/s_aMultLut_11"
-        BEL "inst_BatFFTMod/s_aMultLut_10" BEL "inst_BatFFTMod/s_aMultLut_9"
-        BEL "inst_BatFFTMod/s_aMultLut_8" BEL "inst_BatFFTMod/s_aMultLut_7"
-        BEL "inst_BatFFTMod/s_aMultLut_6" BEL "inst_BatFFTMod/s_aMultLut_5"
-        BEL "inst_BatFFTMod/s_aMultLut_4" BEL "inst_BatFFTMod/s_aMultLut_3"
-        BEL "inst_BatFFTMod/s_aMultLut_2" BEL "inst_BatFFTMod/s_aMultLut_1"
-        BEL "inst_BatFFTMod/s_aMultLut_0" BEL
-        "inst_BatFFTMod/i_FFT_MaxAmpl_22" BEL
+        BEL "inst_BatFFTMod/s_aMultLut_15" BEL "inst_BatFFTMod/s_aMultLut_14"
+        BEL "inst_BatFFTMod/s_aMultLut_13" BEL "inst_BatFFTMod/s_aMultLut_12"
+        BEL "inst_BatFFTMod/s_aMultLut_11" BEL "inst_BatFFTMod/s_aMultLut_10"
+        BEL "inst_BatFFTMod/s_aMultLut_9" BEL "inst_BatFFTMod/s_aMultLut_8"
+        BEL "inst_BatFFTMod/s_aMultLut_7" BEL "inst_BatFFTMod/s_aMultLut_6"
+        BEL "inst_BatFFTMod/s_aMultLut_5" BEL "inst_BatFFTMod/s_aMultLut_4"
+        BEL "inst_BatFFTMod/s_aMultLut_3" BEL "inst_BatFFTMod/s_aMultLut_2"
+        BEL "inst_BatFFTMod/s_aMultLut_1" BEL "inst_BatFFTMod/s_aMultLut_0"
+        BEL "inst_BatFFTMod/i_FFT_MaxAmpl_22" BEL
         "inst_BatFFTMod/i_FFT_MaxAmpl_21" BEL
         "inst_BatFFTMod/i_FFT_MaxAmpl_20" BEL
         "inst_BatFFTMod/i_FFT_MaxAmpl_19" BEL
@@ -1387,19 +1356,20 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         BEL "inst_BatRandom/i_RD_Random2_17" BEL
         "inst_BatRandom/i_RD_Random2_9" BEL "inst_BatRandom/i_RD_Random2_6"
         BEL "inst_BatRandom/i_RD_Random2_4" BEL
-        "inst_BatRandom/i_RD_Random1_21" BEL "inst_BatRandom/i_RD_Random1_20"
-        BEL "inst_BatRandom/i_RD_Random1_19" BEL
-        "inst_BatRandom/i_RD_Random1_18" BEL "inst_BatRandom/i_RD_Random1_15"
-        BEL "inst_BatRandom/i_RD_Random1_13" BEL
-        "inst_BatRandom/i_RD_Random1_10" BEL "inst_BatRandom/i_RD_Random1_9"
-        BEL "inst_BatRandom/i_RD_Random1_8" BEL
-        "inst_BatRandom/i_RD_Random1_6" BEL "inst_BatRandom/i_RD_Random1_3"
-        BEL "inst_BatRandom/i_RD_Random1_1" BEL
-        "inst_BatRandom/i_RD_Random1_0" BEL "inst_BatRandom/s_RandomBuf_23"
-        BEL "inst_BatRandom/s_RandomBuf_20" BEL
-        "inst_BatRandom/s_RandomBuf_17" BEL "inst_BatRandom/s_RandomBuf_9" BEL
-        "inst_BatRandom/s_RandomBuf_6" BEL "inst_BatRandom/s_RandomBuf_4" BEL
-        "inst_BatRandom/RandomProc.rand_temp_63" BEL
+        "inst_BatRandom/i_RD_Random1_25" BEL "inst_BatRandom/i_RD_Random1_21"
+        BEL "inst_BatRandom/i_RD_Random1_20" BEL
+        "inst_BatRandom/i_RD_Random1_19" BEL "inst_BatRandom/i_RD_Random1_18"
+        BEL "inst_BatRandom/i_RD_Random1_15" BEL
+        "inst_BatRandom/i_RD_Random1_13" BEL "inst_BatRandom/i_RD_Random1_10"
+        BEL "inst_BatRandom/i_RD_Random1_9" BEL
+        "inst_BatRandom/i_RD_Random1_8" BEL "inst_BatRandom/i_RD_Random1_6"
+        BEL "inst_BatRandom/i_RD_Random1_3" BEL
+        "inst_BatRandom/i_RD_Random1_1" BEL "inst_BatRandom/i_RD_Random1_0"
+        BEL "inst_BatRandom/s_RandomBuf_26" BEL
+        "inst_BatRandom/s_RandomBuf_23" BEL "inst_BatRandom/s_RandomBuf_20"
+        BEL "inst_BatRandom/s_RandomBuf_17" BEL "inst_BatRandom/s_RandomBuf_9"
+        BEL "inst_BatRandom/s_RandomBuf_6" BEL "inst_BatRandom/s_RandomBuf_4"
+        BEL "inst_BatRandom/RandomProc.rand_temp_63" BEL
         "inst_BatRandom/RandomProc.rand_temp_60" BEL
         "inst_BatRandom/RandomProc.rand_temp_45" BEL
         "inst_BatRandom/RandomProc.rand_temp_44" BEL
@@ -1408,6 +1378,7 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatRandom/RandomProc.rand_temp_41" BEL
         "inst_BatRandom/RandomProc.rand_temp_38" BEL
         "inst_BatRandom/RandomProc.rand_temp_35" BEL
+        "inst_BatRandom/RandomProc.rand_temp_24" BEL
         "inst_BatRandom/RandomProc.rand_temp_23" BEL
         "inst_BatRandom/RandomProc.rand_temp_20" BEL
         "inst_BatRandom/RandomProc.rand_temp_19" BEL
@@ -1418,30 +1389,6 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatRandom/RandomProc.rand_temp_8" BEL
         "inst_BatRandom/RandomProc.rand_temp_5" BEL
         "inst_BatRandom/RandomProc.rand_temp_0" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_0" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_1" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_2" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_3" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_4" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_5" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_6" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_7" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_8" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_9" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_10" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_11" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_12" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_13" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_14" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_15" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_16" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_17" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_18" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_19" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_20" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_21" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_22" BEL
-        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_23" BEL
         "inst_BatFreqDiv/s_RState_FSM_FFd1" BEL
         "inst_BatFreqDiv/s_RState_FSM_FFd2" BEL
         "inst_BatFreqDiv/s_RState_FSM_FFd3" BEL
@@ -1511,30 +1458,6 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatFreqDiv/i_FD_L_DataOut_2" BEL
         "inst_BatFreqDiv/i_FD_L_DataOut_1" BEL
         "inst_BatFreqDiv/i_FD_L_DataOut_0" BEL "inst_BatFreqDiv/s_DithNd" BEL
-        "inst_BatFreqDiv/s_DithIn_47" BEL "inst_BatFreqDiv/s_DithIn_46" BEL
-        "inst_BatFreqDiv/s_DithIn_45" BEL "inst_BatFreqDiv/s_DithIn_44" BEL
-        "inst_BatFreqDiv/s_DithIn_43" BEL "inst_BatFreqDiv/s_DithIn_42" BEL
-        "inst_BatFreqDiv/s_DithIn_41" BEL "inst_BatFreqDiv/s_DithIn_40" BEL
-        "inst_BatFreqDiv/s_DithIn_39" BEL "inst_BatFreqDiv/s_DithIn_38" BEL
-        "inst_BatFreqDiv/s_DithIn_37" BEL "inst_BatFreqDiv/s_DithIn_36" BEL
-        "inst_BatFreqDiv/s_DithIn_35" BEL "inst_BatFreqDiv/s_DithIn_34" BEL
-        "inst_BatFreqDiv/s_DithIn_33" BEL "inst_BatFreqDiv/s_DithIn_32" BEL
-        "inst_BatFreqDiv/s_DithIn_31" BEL "inst_BatFreqDiv/s_DithIn_30" BEL
-        "inst_BatFreqDiv/s_DithIn_29" BEL "inst_BatFreqDiv/s_DithIn_28" BEL
-        "inst_BatFreqDiv/s_DithIn_27" BEL "inst_BatFreqDiv/s_DithIn_26" BEL
-        "inst_BatFreqDiv/s_DithIn_25" BEL "inst_BatFreqDiv/s_DithIn_24" BEL
-        "inst_BatFreqDiv/s_DithIn_23" BEL "inst_BatFreqDiv/s_DithIn_22" BEL
-        "inst_BatFreqDiv/s_DithIn_21" BEL "inst_BatFreqDiv/s_DithIn_20" BEL
-        "inst_BatFreqDiv/s_DithIn_19" BEL "inst_BatFreqDiv/s_DithIn_18" BEL
-        "inst_BatFreqDiv/s_DithIn_17" BEL "inst_BatFreqDiv/s_DithIn_16" BEL
-        "inst_BatFreqDiv/s_DithIn_15" BEL "inst_BatFreqDiv/s_DithIn_14" BEL
-        "inst_BatFreqDiv/s_DithIn_13" BEL "inst_BatFreqDiv/s_DithIn_12" BEL
-        "inst_BatFreqDiv/s_DithIn_11" BEL "inst_BatFreqDiv/s_DithIn_10" BEL
-        "inst_BatFreqDiv/s_DithIn_9" BEL "inst_BatFreqDiv/s_DithIn_8" BEL
-        "inst_BatFreqDiv/s_DithIn_7" BEL "inst_BatFreqDiv/s_DithIn_6" BEL
-        "inst_BatFreqDiv/s_DithIn_5" BEL "inst_BatFreqDiv/s_DithIn_4" BEL
-        "inst_BatFreqDiv/s_DithIn_3" BEL "inst_BatFreqDiv/s_DithIn_2" BEL
-        "inst_BatFreqDiv/s_DithIn_1" BEL "inst_BatFreqDiv/s_DithIn_0" BEL
         "inst_BatFreqDiv/s_ND" BEL "inst_BatFreqDiv/s_FilterIn_23" BEL
         "inst_BatFreqDiv/s_FilterIn_22" BEL "inst_BatFreqDiv/s_FilterIn_21"
         BEL "inst_BatFreqDiv/s_FilterIn_20" BEL
@@ -1646,6 +1569,30 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         BEL "inst_BatFreqDiv/s_MaxPos_R_2" BEL "inst_BatFreqDiv/s_MaxPos_R_1"
         BEL "inst_BatFreqDiv/s_MaxPos_R_0" BEL "inst_BatFreqDiv/s_Toggle_R"
         BEL "inst_BatFreqDiv/s_Toggle_L" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_23" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_22" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_21" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_20" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_19" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_18" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_17" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_16" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_15" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_14" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_13" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_12" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_11" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_10" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_9" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_8" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_7" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_6" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_5" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_4" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_3" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_2" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_1" BEL
+        "inst_BatFreqDiv/inst_FDDither/i_DT_Q_0" BEL
         "inst_BatHet/s_HetRState_FSM_FFd2" BEL
         "inst_BatHet/s_HetRState_FSM_FFd3" BEL
         "inst_BatHet/s_HetRState_FSM_FFd1" BEL
@@ -1696,93 +1643,46 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatHet/i_HD_L_DataOut_4" BEL "inst_BatHet/i_HD_L_DataOut_3" BEL
         "inst_BatHet/i_HD_L_DataOut_2" BEL "inst_BatHet/i_HD_L_DataOut_1" BEL
         "inst_BatHet/i_HD_L_DataOut_0" BEL "inst_BatHet/s_Dith2Nd" BEL
-        "inst_BatHet/s_DithIn_46" BEL "inst_BatHet/s_DithIn_45" BEL
-        "inst_BatHet/s_DithIn_44" BEL "inst_BatHet/s_DithIn_43" BEL
-        "inst_BatHet/s_DithIn_42" BEL "inst_BatHet/s_DithIn_41" BEL
-        "inst_BatHet/s_DithIn_40" BEL "inst_BatHet/s_DithIn_39" BEL
-        "inst_BatHet/s_DithIn_38" BEL "inst_BatHet/s_DithIn_37" BEL
-        "inst_BatHet/s_DithIn_36" BEL "inst_BatHet/s_DithIn_35" BEL
-        "inst_BatHet/s_DithIn_34" BEL "inst_BatHet/s_DithIn_33" BEL
-        "inst_BatHet/s_DithIn_32" BEL "inst_BatHet/s_DithIn_31" BEL
-        "inst_BatHet/s_DithIn_30" BEL "inst_BatHet/s_DithIn_29" BEL
-        "inst_BatHet/s_DithIn_28" BEL "inst_BatHet/s_DithIn_27" BEL
-        "inst_BatHet/s_DithIn_26" BEL "inst_BatHet/s_DithIn_25" BEL
-        "inst_BatHet/s_DithIn_24" BEL "inst_BatHet/s_DithIn_23" BEL
-        "inst_BatHet/s_DithIn_22" BEL "inst_BatHet/s_DithIn_21" BEL
-        "inst_BatHet/s_DithIn_20" BEL "inst_BatHet/s_DithIn_19" BEL
-        "inst_BatHet/s_DithIn_18" BEL "inst_BatHet/s_DithIn_17" BEL
-        "inst_BatHet/s_DithIn_16" BEL "inst_BatHet/s_DithIn_15" BEL
-        "inst_BatHet/s_DithIn_14" BEL "inst_BatHet/s_DithIn_13" BEL
-        "inst_BatHet/s_DithIn_12" BEL "inst_BatHet/s_DithIn_11" BEL
-        "inst_BatHet/s_DithIn_10" BEL "inst_BatHet/s_DithIn_9" BEL
-        "inst_BatHet/s_DithIn_8" BEL "inst_BatHet/s_DithIn_7" BEL
-        "inst_BatHet/s_DithIn_6" BEL "inst_BatHet/s_DithIn_5" BEL
-        "inst_BatHet/s_DithIn_4" BEL "inst_BatHet/s_DithIn_3" BEL
-        "inst_BatHet/s_DithIn_2" BEL "inst_BatHet/s_DithIn_1" BEL
-        "inst_BatHet/s_DithIn_0" BEL "inst_BatHet/s_FilterNd" BEL
-        "inst_BatHet/s_FilterIn_23" BEL "inst_BatHet/s_FilterIn_22" BEL
-        "inst_BatHet/s_FilterIn_21" BEL "inst_BatHet/s_FilterIn_20" BEL
-        "inst_BatHet/s_FilterIn_19" BEL "inst_BatHet/s_FilterIn_18" BEL
-        "inst_BatHet/s_FilterIn_17" BEL "inst_BatHet/s_FilterIn_16" BEL
-        "inst_BatHet/s_FilterIn_15" BEL "inst_BatHet/s_FilterIn_14" BEL
-        "inst_BatHet/s_FilterIn_13" BEL "inst_BatHet/s_FilterIn_12" BEL
-        "inst_BatHet/s_FilterIn_11" BEL "inst_BatHet/s_FilterIn_10" BEL
-        "inst_BatHet/s_FilterIn_9" BEL "inst_BatHet/s_FilterIn_8" BEL
-        "inst_BatHet/s_FilterIn_7" BEL "inst_BatHet/s_FilterIn_6" BEL
-        "inst_BatHet/s_FilterIn_5" BEL "inst_BatHet/s_FilterIn_4" BEL
-        "inst_BatHet/s_FilterIn_3" BEL "inst_BatHet/s_FilterIn_2" BEL
-        "inst_BatHet/s_FilterIn_1" BEL "inst_BatHet/s_FilterIn_0" BEL
-        "inst_BatHet/s_FilterInL_23" BEL "inst_BatHet/s_FilterInL_22" BEL
-        "inst_BatHet/s_FilterInL_21" BEL "inst_BatHet/s_FilterInL_20" BEL
-        "inst_BatHet/s_FilterInL_19" BEL "inst_BatHet/s_FilterInL_18" BEL
-        "inst_BatHet/s_FilterInL_17" BEL "inst_BatHet/s_FilterInL_16" BEL
-        "inst_BatHet/s_FilterInL_15" BEL "inst_BatHet/s_FilterInL_14" BEL
-        "inst_BatHet/s_FilterInL_13" BEL "inst_BatHet/s_FilterInL_12" BEL
-        "inst_BatHet/s_FilterInL_11" BEL "inst_BatHet/s_FilterInL_10" BEL
-        "inst_BatHet/s_FilterInL_9" BEL "inst_BatHet/s_FilterInL_8" BEL
-        "inst_BatHet/s_FilterInL_7" BEL "inst_BatHet/s_FilterInL_6" BEL
-        "inst_BatHet/s_FilterInL_5" BEL "inst_BatHet/s_FilterInL_4" BEL
-        "inst_BatHet/s_FilterInL_3" BEL "inst_BatHet/s_FilterInL_2" BEL
-        "inst_BatHet/s_FilterInL_1" BEL "inst_BatHet/s_FilterInL_0" BEL
-        "inst_BatHet/s_MultDithRight_23" BEL "inst_BatHet/s_MultDithRight_22"
-        BEL "inst_BatHet/s_MultDithRight_21" BEL
-        "inst_BatHet/s_MultDithRight_20" BEL "inst_BatHet/s_MultDithRight_19"
-        BEL "inst_BatHet/s_MultDithRight_18" BEL
-        "inst_BatHet/s_MultDithRight_17" BEL "inst_BatHet/s_MultDithRight_16"
-        BEL "inst_BatHet/s_MultDithRight_15" BEL
-        "inst_BatHet/s_MultDithRight_14" BEL "inst_BatHet/s_MultDithRight_13"
-        BEL "inst_BatHet/s_MultDithRight_12" BEL
-        "inst_BatHet/s_MultDithRight_11" BEL "inst_BatHet/s_MultDithRight_10"
-        BEL "inst_BatHet/s_MultDithRight_9" BEL
-        "inst_BatHet/s_MultDithRight_8" BEL "inst_BatHet/s_MultDithRight_7"
-        BEL "inst_BatHet/s_MultDithRight_6" BEL
-        "inst_BatHet/s_MultDithRight_5" BEL "inst_BatHet/s_MultDithRight_4"
-        BEL "inst_BatHet/s_MultDithRight_3" BEL
-        "inst_BatHet/s_MultDithRight_2" BEL "inst_BatHet/s_MultDithRight_1"
-        BEL "inst_BatHet/s_MultDithRight_0" BEL "inst_BatHet/s_Mult_scaled_46"
-        BEL "inst_BatHet/s_Mult_scaled_45" BEL "inst_BatHet/s_Mult_scaled_44"
-        BEL "inst_BatHet/s_Mult_scaled_43" BEL "inst_BatHet/s_Mult_scaled_42"
-        BEL "inst_BatHet/s_Mult_scaled_41" BEL "inst_BatHet/s_Mult_scaled_40"
-        BEL "inst_BatHet/s_Mult_scaled_39" BEL "inst_BatHet/s_Mult_scaled_38"
-        BEL "inst_BatHet/s_Mult_scaled_37" BEL "inst_BatHet/s_Mult_scaled_36"
-        BEL "inst_BatHet/s_Mult_scaled_35" BEL "inst_BatHet/s_Mult_scaled_34"
-        BEL "inst_BatHet/s_Mult_scaled_33" BEL "inst_BatHet/s_Mult_scaled_32"
-        BEL "inst_BatHet/s_Mult_scaled_31" BEL "inst_BatHet/s_Mult_scaled_30"
-        BEL "inst_BatHet/s_Mult_scaled_29" BEL "inst_BatHet/s_Mult_scaled_28"
-        BEL "inst_BatHet/s_Mult_scaled_27" BEL "inst_BatHet/s_Mult_scaled_26"
-        BEL "inst_BatHet/s_Mult_scaled_25" BEL "inst_BatHet/s_Mult_scaled_24"
-        BEL "inst_BatHet/s_Mult_scaled_23" BEL "inst_BatHet/s_Mult_scaled_22"
-        BEL "inst_BatHet/s_Mult_scaled_21" BEL "inst_BatHet/s_Mult_scaled_20"
-        BEL "inst_BatHet/s_Mult_scaled_19" BEL "inst_BatHet/s_Mult_scaled_18"
-        BEL "inst_BatHet/s_Mult_scaled_17" BEL "inst_BatHet/s_Mult_scaled_16"
-        BEL "inst_BatHet/s_Mult_scaled_15" BEL "inst_BatHet/s_Mult_scaled_14"
-        BEL "inst_BatHet/s_Mult_scaled_13" BEL "inst_BatHet/s_Mult_scaled_12"
-        BEL "inst_BatHet/s_Mult_scaled_11" BEL "inst_BatHet/s_Mult_scaled_10"
-        BEL "inst_BatHet/s_Mult_scaled_9" BEL "inst_BatHet/s_Mult_scaled_8"
-        BEL "inst_BatHet/s_Mult_scaled_7" BEL "inst_BatHet/s_Mult_scaled_6"
-        BEL "inst_BatHet/s_Mult_scaled_5" BEL "inst_BatHet/s_Mult_scaled_4"
-        BEL "inst_BatHet/s_Mult_scaled_3" BEL "inst_BatHet/s_Mult_scaled_2"
-        BEL "inst_BatHet/s_Mult_scaled_1" BEL "inst_BatHet/s_Mult_scaled_0"
+        "inst_BatHet/s_FilterNd" BEL "inst_BatHet/s_FilterIn_23" BEL
+        "inst_BatHet/s_FilterIn_22" BEL "inst_BatHet/s_FilterIn_21" BEL
+        "inst_BatHet/s_FilterIn_20" BEL "inst_BatHet/s_FilterIn_19" BEL
+        "inst_BatHet/s_FilterIn_18" BEL "inst_BatHet/s_FilterIn_17" BEL
+        "inst_BatHet/s_FilterIn_16" BEL "inst_BatHet/s_FilterIn_15" BEL
+        "inst_BatHet/s_FilterIn_14" BEL "inst_BatHet/s_FilterIn_13" BEL
+        "inst_BatHet/s_FilterIn_12" BEL "inst_BatHet/s_FilterIn_11" BEL
+        "inst_BatHet/s_FilterIn_10" BEL "inst_BatHet/s_FilterIn_9" BEL
+        "inst_BatHet/s_FilterIn_8" BEL "inst_BatHet/s_FilterIn_7" BEL
+        "inst_BatHet/s_FilterIn_6" BEL "inst_BatHet/s_FilterIn_5" BEL
+        "inst_BatHet/s_FilterIn_4" BEL "inst_BatHet/s_FilterIn_3" BEL
+        "inst_BatHet/s_FilterIn_2" BEL "inst_BatHet/s_FilterIn_1" BEL
+        "inst_BatHet/s_FilterIn_0" BEL "inst_BatHet/s_FilterInL_23" BEL
+        "inst_BatHet/s_FilterInL_22" BEL "inst_BatHet/s_FilterInL_21" BEL
+        "inst_BatHet/s_FilterInL_20" BEL "inst_BatHet/s_FilterInL_19" BEL
+        "inst_BatHet/s_FilterInL_18" BEL "inst_BatHet/s_FilterInL_17" BEL
+        "inst_BatHet/s_FilterInL_16" BEL "inst_BatHet/s_FilterInL_15" BEL
+        "inst_BatHet/s_FilterInL_14" BEL "inst_BatHet/s_FilterInL_13" BEL
+        "inst_BatHet/s_FilterInL_12" BEL "inst_BatHet/s_FilterInL_11" BEL
+        "inst_BatHet/s_FilterInL_10" BEL "inst_BatHet/s_FilterInL_9" BEL
+        "inst_BatHet/s_FilterInL_8" BEL "inst_BatHet/s_FilterInL_7" BEL
+        "inst_BatHet/s_FilterInL_6" BEL "inst_BatHet/s_FilterInL_5" BEL
+        "inst_BatHet/s_FilterInL_4" BEL "inst_BatHet/s_FilterInL_3" BEL
+        "inst_BatHet/s_FilterInL_2" BEL "inst_BatHet/s_FilterInL_1" BEL
+        "inst_BatHet/s_FilterInL_0" BEL "inst_BatHet/s_MultDithRight_23" BEL
+        "inst_BatHet/s_MultDithRight_22" BEL "inst_BatHet/s_MultDithRight_21"
+        BEL "inst_BatHet/s_MultDithRight_20" BEL
+        "inst_BatHet/s_MultDithRight_19" BEL "inst_BatHet/s_MultDithRight_18"
+        BEL "inst_BatHet/s_MultDithRight_17" BEL
+        "inst_BatHet/s_MultDithRight_16" BEL "inst_BatHet/s_MultDithRight_15"
+        BEL "inst_BatHet/s_MultDithRight_14" BEL
+        "inst_BatHet/s_MultDithRight_13" BEL "inst_BatHet/s_MultDithRight_12"
+        BEL "inst_BatHet/s_MultDithRight_11" BEL
+        "inst_BatHet/s_MultDithRight_10" BEL "inst_BatHet/s_MultDithRight_9"
+        BEL "inst_BatHet/s_MultDithRight_8" BEL
+        "inst_BatHet/s_MultDithRight_7" BEL "inst_BatHet/s_MultDithRight_6"
+        BEL "inst_BatHet/s_MultDithRight_5" BEL
+        "inst_BatHet/s_MultDithRight_4" BEL "inst_BatHet/s_MultDithRight_3"
+        BEL "inst_BatHet/s_MultDithRight_2" BEL
+        "inst_BatHet/s_MultDithRight_1" BEL "inst_BatHet/s_MultDithRight_0"
         BEL "inst_BatHet/s_CycleCnt_3" BEL "inst_BatHet/s_CycleCnt_2" BEL
         "inst_BatHet/s_CycleCnt_1" BEL "inst_BatHet/s_CycleCnt_0" BEL
         "inst_BatHet/s_InVal_23" BEL "inst_BatHet/s_InVal_22" BEL
@@ -1797,7 +1697,31 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatHet/s_InVal_5" BEL "inst_BatHet/s_InVal_4" BEL
         "inst_BatHet/s_InVal_3" BEL "inst_BatHet/s_InVal_2" BEL
         "inst_BatHet/s_InVal_1" BEL "inst_BatHet/s_InVal_0" BEL
-        "inst_BatHet/s_DDS_WE" BEL "inst_BatHet/s_DDS_CLK" BEL
+        "inst_BatHet/s_DDS_WE" BEL "inst_BatHet/s_Dith1Nd" BEL
+        "inst_BatHet/s_DDS_CLK" BEL "inst_BatHet/inst_HetDither1/i_DT_Q_23"
+        BEL "inst_BatHet/inst_HetDither1/i_DT_Q_22" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_21" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_20" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_19" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_18" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_17" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_16" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_15" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_14" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_13" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_12" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_11" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_10" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_9" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_8" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_7" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_6" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_5" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_4" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_3" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_2" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_1" BEL
+        "inst_BatHet/inst_HetDither1/i_DT_Q_0" BEL
         "inst_BatHet/inst_HetDither2/i_DT_Q_23" BEL
         "inst_BatHet/inst_HetDither2/i_DT_Q_22" BEL
         "inst_BatHet/inst_HetDither2/i_DT_Q_21" BEL
@@ -1821,31 +1745,7 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatHet/inst_HetDither2/i_DT_Q_3" BEL
         "inst_BatHet/inst_HetDither2/i_DT_Q_2" BEL
         "inst_BatHet/inst_HetDither2/i_DT_Q_1" BEL
-        "inst_BatHet/inst_HetDither2/i_DT_Q_0" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_23" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_22" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_21" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_20" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_19" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_18" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_17" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_16" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_15" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_14" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_13" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_12" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_11" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_10" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_9" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_8" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_7" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_6" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_5" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_4" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_3" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_2" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_1" BEL
-        "inst_BatHet/inst_HetDither1/i_DT_Q_0" BEL "s_HD_WE" BEL "s_Beep_Pos"
+        "inst_BatHet/inst_HetDither2/i_DT_Q_0" BEL "s_HD_WE" BEL "s_Beep_Pos"
         BEL "s_DA_WE" BEL "s_AD_WE" BEL "inst_BatDAC/s_LRCK" BEL
         "inst_BatFFTMod/i_FFT_DataRdy" BEL "inst_BatFFTMod/s_FFTStart" BEL
         "inst_BatFFTMod/s_FFTWhich" BEL "inst_BatFreqDiv/s_Dir_L" BEL
@@ -1856,9 +1756,9 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatFFTMod/s_BREnb" BEL "inst_BatFFTMod/s_DithNd" BEL
         "inst_BatFFTMod/s_BREna" BEL "inst_BatFFTMod/s_LUTEna" BEL
         "inst_BatFFTMod/s_InpWE1_0" BEL "inst_BatFFTMod/s_InpWE_0" BEL
-        "inst_BatHet/s_Dith1Nd" BEL "inst_BatHet/s_MultEN" BEL "s_DA_RATE" BEL
-        "s_FFTState_FSM_FFd2" BEL "s_WState_FSM_FFd3" BEL "s_RState_FSM_FFd2"
-        BEL "inst_BatFFTMod/s_FftState_FSM_FFd1" BEL
+        "inst_BatHet/s_MultEN" BEL "s_DA_RATE" BEL "s_FFTState_FSM_FFd2" BEL
+        "s_WState_FSM_FFd3" BEL "s_RState_FSM_FFd2" BEL
+        "inst_BatFFTMod/s_FftState_FSM_FFd1" BEL
         "inst_BatFFTMod/s_GetState_FSM_FFd2" BEL "inst_BatFFTMod/s_InAddr1_9"
         BEL "s_P0_CMD_INS_0" BEL "inst_BatDAC/i_DA_REMPTY" BEL
         "Mshreg_s_ResetUserClk" BEL "s_ResetUserClk" BEL
@@ -1876,10 +1776,10 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatRandom/i_RD_Random2_11" BEL
         "inst_BatRandom/Mshreg_i_RD_Random2_10" BEL
         "inst_BatRandom/i_RD_Random2_10" BEL
-        "inst_BatRandom/Mshreg_RandomProc.rand_temp_62" BEL
-        "inst_BatRandom/RandomProc.rand_temp_62" BEL
         "inst_BatRandom/Mshreg_i_RD_Random2_7" BEL
         "inst_BatRandom/i_RD_Random2_7" BEL
+        "inst_BatRandom/Mshreg_RandomProc.rand_temp_62" BEL
+        "inst_BatRandom/RandomProc.rand_temp_62" BEL
         "inst_BatRandom/Mshreg_RandomProc.rand_temp_48" BEL
         "inst_BatRandom/RandomProc.rand_temp_48" BEL
         "inst_BatRandom/Mshreg_RandomProc.rand_temp_40" BEL
@@ -1910,6 +1810,8 @@ TIMEGRP inst_BigMem_memc3_infrastructure_inst_clk0_bufg_in = BEL
         "inst_BatRandom/RandomProc.rand_temp_4" BEL
         "inst_BatRandom/Mshreg_RandomProc.rand_temp_54" BEL
         "inst_BatRandom/RandomProc.rand_temp_54" BEL
+        "inst_BatRandom/Mshreg_RandomProc.rand_temp_57" BEL
+        "inst_BatRandom/RandomProc.rand_temp_57" BEL
         "inst_BatRandom/Mshreg_RandomProc.rand_temp_59" BEL
         "inst_BatRandom/RandomProc.rand_temp_59" PIN
         "inst_BatDecimator/inst_Decimator/blk00000003/blk00000006_pins<92>"

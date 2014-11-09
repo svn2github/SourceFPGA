@@ -2,7 +2,7 @@
 % and evaluate randomness and frequency
 % ----------------------------------------
 % filename to look for
-FileName = "Data45KHz";
+FileName = "TestSound";
 WavName = [FileName ".wav"];
 TxtName = [FileName ".txt"];
 % -------------- Code ------------

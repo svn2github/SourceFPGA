@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-10-26T05:34:59</DateModified>
+  <DateModified>2014-11-02T19:22:09</DateModified>
   <ModuleName>BatFreqDivDDS</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqDDDS/iseconfig/BatFreqDivDDS.xreport</SavedFilePath>

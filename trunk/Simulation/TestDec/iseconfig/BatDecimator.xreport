@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-10-18T07:57:36</DateModified>
+  <DateModified>2014-11-02T17:26:44</DateModified>
   <ModuleName>BatDecimator</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFIR/iseconfig/BatDecimator.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFIR\</ImplementationReportsDirectory>
+  <SavedFilePath>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestDec/iseconfig/BatDecimator.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestDec\</ImplementationReportsDirectory>
   <DateInitialized>2014-10-12T14:27:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

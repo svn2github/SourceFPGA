@@ -11,49 +11,49 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sun Oct 26 06:40:44 2014
+Mapped Date    : Sun Nov 02 19:52:17 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Slice Logic Utilization:
-  Number of Slice Registers:                 6,784 out of  54,576   12%
-    Number used as Flip Flops:               6,738
+  Number of Slice Registers:                 6,597 out of  54,576   12%
+    Number used as Flip Flops:               6,551
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               46
-  Number of Slice LUTs:                      6,841 out of  27,288   25%
-    Number used as logic:                    5,636 out of  27,288   20%
-      Number using O6 output only:           3,782
-      Number using O5 output only:             133
-      Number using O5 and O6:                1,721
+  Number of Slice LUTs:                      6,775 out of  27,288   24%
+    Number used as logic:                    5,546 out of  27,288   20%
+      Number using O6 output only:           3,789
+      Number using O5 output only:             129
+      Number using O5 and O6:                1,628
       Number used as ROM:                        0
-    Number used as Memory:                     832 out of   6,408   12%
+    Number used as Memory:                     833 out of   6,408   12%
       Number used as Dual Port RAM:            156
         Number using O6 output only:            12
         Number using O5 output only:             4
         Number using O5 and O6:                140
       Number used as Single Port RAM:            0
-      Number used as Shift Register:           676
-        Number using O6 output only:           158
+      Number used as Shift Register:           677
+        Number using O6 output only:           159
         Number using O5 output only:             0
         Number using O5 and O6:                518
-    Number used exclusively as route-thrus:    373
-      Number with same-slice register load:    208
-      Number with same-slice carry load:       165
+    Number used exclusively as route-thrus:    396
+      Number with same-slice register load:    229
+      Number with same-slice carry load:       167
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 2,328 out of   6,822   34%
-  Number of MUXCYs used:                     2,940 out of  13,644   21%
-  Number of LUT Flip Flop pairs used:        7,725
-    Number with an unused Flip Flop:         2,283 out of   7,725   29%
-    Number with an unused LUT:                 884 out of   7,725   11%
-    Number of fully used LUT-FF pairs:       4,558 out of   7,725   59%
-    Number of unique control sets:             161
+  Number of occupied Slices:                 2,334 out of   6,822   34%
+  Number of MUXCYs used:                     2,952 out of  13,644   21%
+  Number of LUT Flip Flop pairs used:        7,669
+    Number with an unused Flip Flop:         2,340 out of   7,669   30%
+    Number with an unused LUT:                 894 out of   7,669   11%
+    Number of fully used LUT-FF pairs:       4,435 out of   7,669   57%
+    Number of unique control sets:             157
     Number of slice register sites lost
-      to control set restrictions:             492 out of  54,576    1%
+      to control set restrictions:             486 out of  54,576    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -97,11 +97,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.24
+Average Fanout of Non-Clock Nets:                3.27
 
-Peak Memory Usage:  657 MB
-Total REAL time to MAP completion:  3 mins 17 secs 
-Total CPU time to MAP completion:   3 mins 17 secs 
+Peak Memory Usage:  656 MB
+Total REAL time to MAP completion:  3 mins 16 secs 
+Total CPU time to MAP completion:   3 mins 16 secs 
 
 Table of Contents
 -----------------
@@ -131,10 +131,10 @@ WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network N599 has no load.
-INFO:LIT:395 - The above info message is repeated 449 more times for the
+INFO:LIT:243 - Logical network N597 has no load.
+INFO:LIT:395 - The above info message is repeated 450 more times for the
    following (max. 5 shown):
-   N603,
+   N601,
    inst_BatDecimator/inst_Decimator/blk00000003/blk0000000a/LO,
    inst_BatDecimator/inst_Decimator/blk00000003/blk0000000c/LO,
    inst_BatDecimator/inst_Decimator/blk00000003/blk0000000f/LO,
@@ -156,7 +156,7 @@ Section 4 - Removed Logic Summary
 ---------------------------------
  543 block(s) removed
  241 block(s) optimized away
- 609 signal(s) removed
+ 610 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -1211,6 +1211,8 @@ removed.
 The signal "inst_BatFFTMod/inst_FftMultLUT/p<40>" is sourceless and has been
 removed.
 The signal "inst_BatFFTMod/inst_FftMultLUT/p<39>" is sourceless and has been
+removed.
+The signal "inst_BatFFTMod/inst_FftMultLUT/p<16>" is sourceless and has been
 removed.
 The signal "inst_BatFFTMod/inst_FftMultLUT/p<15>" is sourceless and has been
 removed.

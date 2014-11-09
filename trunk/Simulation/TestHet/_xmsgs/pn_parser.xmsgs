@@ -8,13 +8,13 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestHet/BatDither.vhd&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestHet/BatHet.vhd&quot; into library work</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestHet/BatRandom.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestHet/BatScaleDither.vhd&quot; into library work</arg>
 </msg>
 
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestHet/TestHet.vhd&quot; into library work</arg>

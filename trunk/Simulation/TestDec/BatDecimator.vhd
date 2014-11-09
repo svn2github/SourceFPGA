@@ -88,21 +88,24 @@ component Decimator
 		dout								: out std_logic_vector(49 downto 0));-- out std_logic_vector(49 downto 0));
 end component;
 
-component BatDither 
+
+component BatScaleDither 
 	generic (
-		c_DT_DBits						: integer;										-- size of input data
-		c_DT_QBits						: integer										-- size of output data
+		c_DT_DBits					: integer;											-- size of input data
+		c_DT_QBits					: integer;											-- size of output data
+		c_DT_ScaleBits				: integer;											-- number of bits to scale
+		c_DT_Truncate				: integer;											-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf					: integer;											-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB				: integer											-- 1: LSB dither, 0: 0.5 LSB dither
 	);
 	port (
-		i_DT_USRCLK						: in std_logic;
-		i_DT_Nd							: in std_logic;
-		i_DT_Bypass						: in std_logic;
-		i_DT_Tpdf						: in std_logic;
+		i_DT_USRCLK					: in std_logic;
+		i_DT_Nd						: in std_logic;
 
-		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
-		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
+		i_DT_Rand1					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D						: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q						: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
 
@@ -126,9 +129,6 @@ signal	s_ChanIn							: std_logic_vector(0 downto 0) := "0";		-- Input channel s
 signal	s_ChanOut						: std_logic_vector(0 downto 0) := "0";		-- Output channel selector
 signal	s_ND								: std_logic := '0';						-- New Data signal
 signal	s_DithNd							: std_logic := '0';						-- new dither data
-
-signal	s_DithIn							: signed(47 downto 0);					-- the dither input
-
 
 -- DC Read Statemachine states
 TYPE 		RSTATE_TYPE IS (St_R0, St_R1, St_R2, St_R3, St_R4, St_R5);
@@ -156,24 +156,26 @@ inst_Decimator: Decimator
 		din 								=> std_logic_vector(s_FilterIn),
 		dout 								=> s_DC_Out
 	);
-
-inst_DecDither : BatDither 
+	
+inst_DecDither : BatScaleDither 
 	generic map(
-		c_DT_DBits						=> s_DithIn'length,
-		c_DT_QBits						=> s_DC_OutDith'length
+		c_DT_DBits						=> s_DC_Out'length,
+		c_DT_QBits						=> s_DC_OutDith'length,
+		c_DT_ScaleBits					=> 2,												-- number of bits to scale result
+		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf						=> 0,												-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB					=> 0												-- 1: LSB dither, 0: 0.5 LSB dither
 	)
 	port map (
 		i_DT_USRCLK						=> i_DC_USRCLK,
 		i_DT_Nd							=> s_DithNd,
-		i_DT_Bypass						=> '0',
-		i_DT_Tpdf						=> '1',
 
-		i_DT_Rand1						=> signed(i_DC_Random1(s_DithIn'length - s_DC_OutDith'length downto 0)),
-		i_DT_Rand2						=> signed(i_DC_Random2(s_DithIn'length - s_DC_OutDith'length downto 0)),
-		i_DT_D							=> s_DithIn,
-		i_DT_Q							=>	s_DC_OutDith
+		i_DT_Rand1						=> signed(i_DC_Random1(s_DC_Out'length - s_DC_OutDith'length downto 0)),
+		i_DT_Rand2						=> signed(i_DC_Random2(s_DC_Out'length - s_DC_OutDith'length downto 0)),
+		i_DT_D							=> signed(s_DC_Out),
+		i_DT_Q							=> s_DC_OutDith
 	);
-
+	
 -----------------------------------------------------------
 -- Feed Decimator Filter
 -----------------------------------------------------------
@@ -226,7 +228,6 @@ begin
 		if i_DC_RESET = '1' then
 			i_DC_R_DataOut <= (others => '0');										-- reset value for output signal
 			i_DC_L_DataOut <= (others => '0');										-- reset value for output signal
-			s_DithIn <= (others => '0');												-- reset value for dither signal
 			s_RState <= St_R0;
 			s_DithNd <= '0';
 			i_DC_DataAvOut <= '0';
@@ -238,21 +239,7 @@ begin
 				case s_RState is															-- reset DataAvOut every clock
 					when St_R0 =>
 						if s_FilterRdy = '1' and s_ChanOut = "0" then			-- now we have the filtered value in s_FilterOut, sync on channel 0
-							-- handle overrun
-							if s_DC_Out(s_DC_Out'high) = '0' then					-- result is positive
-								if s_DC_Out(s_DC_Out'high-1) = '1' or s_DC_Out(s_DC_Out'high-2) = '1' then	-- overrun occured
-									s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
-								else															-- no overrun
-									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
-								end if;
-							else																-- negative result
-								if s_DC_Out(s_DC_Out'high-1) = '0' or s_DC_Out(s_DC_Out'high-2) = '0' then	-- overrun occured
-									s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');		-- set to min value
-								else
-									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
-								end if;
-							end if;
-							s_DithNd <= '1';
+							s_DithNd <= '1';												-- do dithering and scaling for right channel
 							s_RState <= St_R1;											-- next state
 						else
 							s_RState <= St_R0;                                	-- keep state
@@ -264,21 +251,7 @@ begin
 						s_RState <= St_R3;												-- next state
 					when St_R3 =>															-- wait for Filter ready to disappear
 						if s_FilterRdy = '1' then										-- this can only be channel 1
-							-- handle overrun
-							if s_DC_Out(s_DC_Out'high) = '0' then					-- result is positive
-								if s_DC_Out(s_DC_Out'high-1) = '1' or s_DC_Out(s_DC_Out'high-2) = '1' then	-- overrun occured
-									s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
-								else															-- no overrun
-									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
-								end if;
-							else																-- negative result
-								if s_DC_Out(s_DC_Out'high-1) = '0' or s_DC_Out(s_DC_Out'high-2) = '0' then	-- overrun occured
-									s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');		-- set to min value
-								else
-									s_DithIn <= signed(s_DC_Out(s_DC_Out'high) & s_DC_Out((s_DC_Out'high-3) downto 0));	-- use original value
-								end if;
-							end if;
-							s_DithNd <= '1';
+							s_DithNd <= '1';												-- do dithering and scaling for left channel
 							s_RState <= St_R4;											-- next state
 						else
 							s_RState <= St_R3;                                	-- keep state

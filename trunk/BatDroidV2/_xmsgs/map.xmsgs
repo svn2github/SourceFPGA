@@ -5,11 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N599</arg> has no load.
+<msg type="info" file="LIT" num="243" delta="new" >Logical network <arg fmt="%s" index="1">N597</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">449</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">N603,
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">450</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">N601,
 inst_BatDecimator/inst_Decimator/blk00000003/blk0000000a/LO,
 inst_BatDecimator/inst_Decimator/blk00000003/blk0000000c/LO,
 inst_BatDecimator/inst_Decimator/blk00000003/blk0000000f/LO,

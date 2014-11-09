@@ -5,6 +5,12 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatScaleDither.vhd" Line 75: Using initial value <arg fmt="%s" index="1">&quot;000000000000000000000000000000000000000000000000000&quot;</arg> for <arg fmt="%s" index="2">zeros</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="871" delta="new" >"E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatScaleDither.vhd" Line 76: Using initial value <arg fmt="%s" index="1">&quot;111111111111111111111111111111111111111111111111111&quot;</arg> for <arg fmt="%s" index="2">ones</arg> since it is never assigned
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="89" delta="new" >"E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatFFTMod.vhd" Line 142: &lt;<arg fmt="%s" index="1">batfft</arg>&gt; remains a black-box since it has no binding entity.
 </msg>
 
@@ -62,103 +68,124 @@
 <msg type="warning" file="HDLCompiler" num="321" delta="new" >"E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7091: Comparison between arrays of unequal length always returns <arg fmt="%s" index="1">FALSE</arg>.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_count</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p0_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_cmd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_underrun</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_wr_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">857</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd</arg>&quot; line <arg fmt="%s" index="2">861</arg>: Output port &lt;<arg fmt="%s" index="3">c3_p1_rd_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BigMem</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand1&lt;8:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;8:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DC_Random1&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DC_Random1&lt;31:27&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DC_Random2&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DC_Random2&lt;31:27&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand1&lt;26:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;26:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FD_Random1&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FD_Random2&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand1&lt;25:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;25:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random1&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random2&lt;31:26&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand1&lt;24:24&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;24:24&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FD_Random1&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand1&lt;25:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FD_Random2&lt;31:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random1&lt;31:24&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_HD_Random2&lt;31:24&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;23:23&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_DT_Rand2&lt;25:25&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FFT_Random1&lt;31:9&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FFT_Random2&lt;31:9&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">i_FFT_Random2</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatFFTMod.vhd</arg>&quot; line <arg fmt="%s" index="2">348</arg>: Output port &lt;<arg fmt="%s" index="3">edone</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BatFFT</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatFFTMod.vhd</arg>&quot; line <arg fmt="%s" index="2">351</arg>: Output port &lt;<arg fmt="%s" index="3">edone</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BatFFT</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatFFTMod.vhd</arg>&quot; line <arg fmt="%s" index="2">348</arg>: Output port &lt;<arg fmt="%s" index="3">done</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BatFFT</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatFFTMod.vhd</arg>&quot; line <arg fmt="%s" index="2">351</arg>: Output port &lt;<arg fmt="%s" index="3">done</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_BatFFT</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\BigMem.vhd</arg>&quot; line <arg fmt="%s" index="2">513</arg>: Output port &lt;<arg fmt="%s" index="3">selfrefresh_mode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">memc3_wrapper_inst</arg>&gt; is unconnected or connected to loadless signal.
@@ -722,52 +749,52 @@
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_P0_CMD_INS_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1043_o_s_UserClk_DFF_591</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1039_o_s_UserClk_DFF_544</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1039_o_s_UserClk_DFF_589</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1035_o_s_UserClk_DFF_542</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1041_o_s_UserClk_DFF_590</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1037_o_s_UserClk_DFF_543</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1049_o_s_UserClk_DFF_594</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1045_o_s_UserClk_DFF_547</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1045_o_s_UserClk_DFF_592</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1041_o_s_UserClk_DFF_545</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1047_o_s_UserClk_DFF_593</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1043_o_s_UserClk_DFF_546</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1051_o_s_UserClk_DFF_595</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1047_o_s_UserClk_DFF_548</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1053_o_s_UserClk_DFF_596</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1049_o_s_UserClk_DFF_549</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1059_o_s_UserClk_DFF_599</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1055_o_s_UserClk_DFF_552</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1055_o_s_UserClk_DFF_597</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1051_o_s_UserClk_DFF_550</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1057_o_s_UserClk_DFF_598</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1053_o_s_UserClk_DFF_551</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1061_o_s_UserClk_DFF_600</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1057_o_s_UserClk_DFF_553</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1063_o_s_UserClk_DFF_601</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1059_o_s_UserClk_DFF_554</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1069_o_s_UserClk_DFF_604</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1065_o_s_UserClk_DFF_557</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1065_o_s_UserClk_DFF_602</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1061_o_s_UserClk_DFF_555</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1067_o_s_UserClk_DFF_603</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1063_o_s_UserClk_DFF_556</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_REG_Status_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -932,9 +959,6 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">s_RandomBuf_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
 </msg>
 
@@ -942,12 +966,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random1_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random2_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random2_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">i_RD_Random2_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">inst_BatRandom</arg>&gt;.
@@ -1112,52 +1130,52 @@
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_REG_Status_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1069_o_s_UserClk_DFF_604</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1065_o_s_UserClk_DFF_557</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1067_o_s_UserClk_DFF_603</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1063_o_s_UserClk_DFF_556</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1065_o_s_UserClk_DFF_602</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1061_o_s_UserClk_DFF_555</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1061_o_s_UserClk_DFF_600</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1057_o_s_UserClk_DFF_553</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1059_o_s_UserClk_DFF_599</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1055_o_s_UserClk_DFF_552</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1063_o_s_UserClk_DFF_601</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1059_o_s_UserClk_DFF_554</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1055_o_s_UserClk_DFF_597</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1051_o_s_UserClk_DFF_550</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1053_o_s_UserClk_DFF_596</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1049_o_s_UserClk_DFF_549</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1057_o_s_UserClk_DFF_598</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1053_o_s_UserClk_DFF_551</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1049_o_s_UserClk_DFF_594</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1045_o_s_UserClk_DFF_547</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1047_o_s_UserClk_DFF_593</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1043_o_s_UserClk_DFF_546</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1051_o_s_UserClk_DFF_595</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1047_o_s_UserClk_DFF_548</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1045_o_s_UserClk_DFF_592</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1041_o_s_UserClk_DFF_545</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1043_o_s_UserClk_DFF_591</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1039_o_s_UserClk_DFF_544</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1039_o_s_UserClk_DFF_589</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1035_o_s_UserClk_DFF_542</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1041_o_s_UserClk_DFF_590</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">GND_1037_o_s_UserClk_DFF_543</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">s_P0_CMD_INS_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -1574,16 +1592,10 @@
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random1_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/i_RD_Random1_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/s_RandomBuf_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/s_RandomBuf_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_BatRandom/s_RandomBuf_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">inst_BatDAC/s_Dcnt_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">BatListener</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -1644,6 +1656,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">inst_BatFFTMod/s_InAddr_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">BatListener</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_BatFFTMod/s_InAddr1_8&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1898" delta="new" >Due to constant pushing, FF/Latch &lt;<arg fmt="%s" index="1">inst_BatFFTMod/s_pMultLutD_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">BatListener</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk0000000b</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">inst_BatFFTMod/inst_BatFFT</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000008b6&gt; &lt;blk000008b7&gt; </arg>

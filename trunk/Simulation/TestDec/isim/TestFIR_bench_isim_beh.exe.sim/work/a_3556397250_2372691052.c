@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFIR/TestFIR.vhd";
+static const char *ng0 = "E:/Source/BatDroidV2/SourceFPGA/Simulation/TestDec/TestFIR.vhd";
 extern char *STD_TEXTIO;
 extern char *IEEE_P_1242562249;
 extern char *STD_STANDARD;

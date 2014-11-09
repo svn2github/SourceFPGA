@@ -343,21 +343,23 @@ component BatRandom
 	);
 end component;
 
-component BatDither 
+component BatScaleDither 
 	generic (
-		c_DT_DBits						: integer;										-- size of input data
-		c_DT_QBits						: integer										-- size of output data
+		c_DT_DBits					: integer;											-- size of input data
+		c_DT_QBits					: integer;											-- size of output data
+		c_DT_ScaleBits				: integer;											-- number of bits to scale
+		c_DT_Truncate				: integer;											-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf					: integer;											-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB				: integer											-- 1: LSB dither, 0: 0.5 LSB dither
 	);
 	port (
-		i_DT_USRCLK						: in std_logic;
-		i_DT_Nd							: in std_logic;
-		i_DT_Bypass						: in std_logic;
-		i_DT_Tpdf						: in std_logic;
+		i_DT_USRCLK					: in std_logic;
+		i_DT_Nd						: in std_logic;
 
-		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
-		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
+		i_DT_Rand1					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D						: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q						: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
 
@@ -686,23 +688,25 @@ inst_BatRandom : BatRandom
 -----------------------------------------------------------
 -- Dithering
 -----------------------------------------------------------
-inst_Dither : BatDither 
+inst_Dither : BatScaleDither 
 	generic map(
 		c_DT_DBits						=> s_AD_R_DataADC'length,
-		c_DT_QBits						=> s_Data_Dith'length
+		c_DT_QBits						=> s_Data_Dith'length,
+		c_DT_ScaleBits					=> 0,												-- number of bits to scale result
+		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf						=> 1,												-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB					=> 1												-- 1: LSB dither, 0: 0.5 LSB dither
 	)
 	port map (
 		i_DT_USRCLK						=> s_UserClk,
 		i_DT_Nd							=> s_DitherNd,
-		i_DT_Bypass						=> '0',
-		i_DT_Tpdf						=> '1',
 
 		i_DT_Rand1						=> signed(s_Random1(s_AD_R_DataADC'length - s_Data_Dith'length downto 0)),
 		i_DT_Rand2						=> signed(s_Random2(s_AD_R_DataADC'length - s_Data_Dith'length downto 0)),
 		i_DT_D							=> signed(s_AD_R_DataADC),
-		i_DT_Q							=>	s_Data_Dith
+		i_DT_Q							=> s_Data_Dith
 	);
-
+	
 -----------------------------------------------------------
 -- ADC Instantiation
 -----------------------------------------------------------

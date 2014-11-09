@@ -22,6 +22,7 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TestHet.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="BatHet_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestHet_bench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestHet_bench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestHet_bench_isim_beh.wdb"/>
@@ -40,24 +41,24 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414009259" xil_pn:in_ck="1488095163586281776" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414009259">
+    <transform xil_pn:end_ts="1414950309" xil_pn:in_ck="6928976940643777208" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414950309">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="BatDither.vhd"/>
       <outfile xil_pn:name="BatHet.vhd"/>
       <outfile xil_pn:name="BatRandom.vhd"/>
+      <outfile xil_pn:name="BatScaleDither.vhd"/>
       <outfile xil_pn:name="TestHet.vhd"/>
       <outfile xil_pn:name="lfsr_pkg.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1413612935" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5755273197450370506" xil_pn:start_ts="1413612935">
+    <transform xil_pn:end_ts="1414949411" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-5755273197450370506" xil_pn:start_ts="1414949411">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1413612935" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5610592274722054836" xil_pn:start_ts="1413612935">
+    <transform xil_pn:end_ts="1414949411" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5610592274722054836" xil_pn:start_ts="1414949411">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1413718490" xil_pn:in_ck="-4996281453603797242" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7577062037314049988" xil_pn:start_ts="1413718489">
+    <transform xil_pn:end_ts="1414948442" xil_pn:in_ck="-4996281453603797242" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="7577062037314049988" xil_pn:start_ts="1414948442">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/HDFilter.ngc"/>
@@ -67,18 +68,19 @@
       <outfile xil_pn:name="ipcore_dir/HetMult.ngc"/>
       <outfile xil_pn:name="ipcore_dir/HetMult.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1414009259" xil_pn:in_ck="1488095163586281776" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414009259">
+    <transform xil_pn:end_ts="1414950309" xil_pn:in_ck="6928976940643777208" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414950309">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="BatDither.vhd"/>
       <outfile xil_pn:name="BatHet.vhd"/>
       <outfile xil_pn:name="BatRandom.vhd"/>
+      <outfile xil_pn:name="BatScaleDither.vhd"/>
       <outfile xil_pn:name="TestHet.vhd"/>
       <outfile xil_pn:name="lfsr_pkg.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1414009270" xil_pn:in_ck="2226465057246046846" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1809497755199973708" xil_pn:start_ts="1414009259">
+    <transform xil_pn:end_ts="1414950320" xil_pn:in_ck="6928976940643777208" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1809497755199973708" xil_pn:start_ts="1414950309">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TestHet_bench_beh.prj"/>
@@ -88,9 +90,10 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1414009271" xil_pn:in_ck="417398183490558415" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3377800092360169" xil_pn:start_ts="1414009270">
+    <transform xil_pn:end_ts="1414950320" xil_pn:in_ck="-9092750210029272650" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="3377800092360169" xil_pn:start_ts="1414950320">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="TestHet_bench_isim_beh.wdb"/>

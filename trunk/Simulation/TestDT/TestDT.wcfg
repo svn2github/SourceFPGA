@@ -15,5 +15,57 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="0" />
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/testdt_bench/uut/i_dt_usrclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dt_usrclk</obj_property>
+      <obj_property name="ObjectShortName">i_dt_usrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/i_dt_nd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dt_nd</obj_property>
+      <obj_property name="ObjectShortName">i_dt_nd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/i_dt_rand1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dt_rand1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dt_rand1[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/i_dt_rand2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dt_rand2[8:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dt_rand2[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/i_dt_d" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dt_d[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dt_d[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/i_dt_q" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_dt_q[15:0]</obj_property>
+      <obj_property name="ObjectShortName">i_dt_q[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/c_dt_dbits" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_dt_dbits</obj_property>
+      <obj_property name="ObjectShortName">c_dt_dbits</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/c_dt_qbits" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_dt_qbits</obj_property>
+      <obj_property name="ObjectShortName">c_dt_qbits</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/c_dt_truncate" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_dt_truncate</obj_property>
+      <obj_property name="ObjectShortName">c_dt_truncate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/c_dt_tpdf" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_dt_tpdf</obj_property>
+      <obj_property name="ObjectShortName">c_dt_tpdf</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/c_dt_fulllsb" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_dt_fulllsb</obj_property>
+      <obj_property name="ObjectShortName">c_dt_fulllsb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/ditherbits" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">ditherbits</obj_property>
+      <obj_property name="ObjectShortName">ditherbits</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdt_bench/uut/tempbits" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">tempbits</obj_property>
+      <obj_property name="ObjectShortName">tempbits</obj_property>
+   </wvobject>
 </wave_config>

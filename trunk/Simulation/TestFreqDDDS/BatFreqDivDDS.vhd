@@ -120,21 +120,23 @@ component FDFilter
 	);
 end component;
 
-component BatDither 
+component BatScaleDither 
 	generic (
-		c_DT_DBits						: integer;										-- size of input data
-		c_DT_QBits						: integer										-- size of output data
+		c_DT_DBits					: integer;											-- size of input data
+		c_DT_QBits					: integer;											-- size of output data
+		c_DT_ScaleBits				: integer;											-- number of bits to scale
+		c_DT_Truncate				: integer;											-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf					: integer;											-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB				: integer											-- 1: LSB dither, 0: 0.5 LSB dither
 	);
 	port (
-		i_DT_USRCLK						: in std_logic;
-		i_DT_Nd							: in std_logic;
-		i_DT_Bypass						: in std_logic;
-		i_DT_Tpdf						: in std_logic;
+		i_DT_USRCLK					: in std_logic;
+		i_DT_Nd						: in std_logic;
 
-		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
-		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
+		i_DT_Rand1					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D						: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q						: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
 
@@ -181,7 +183,6 @@ signal	s_calc_cnt						: integer range 0 to 31 := 0;			-- cycle counter for divi
 signal	s_MultEn							: std_logic := '0';						-- Enable signal for Multiplier
 signal	s_Amplitude						: unsigned(23 downto 0) := (others => '0');				-- current amplitude value for multiplier
 signal	s_Mult							: std_logic_vector(41 downto 0) := (others => '0');	-- result of multiplication
-signal	s_Mult_scaled					: std_logic_vector(40 downto 0) := (others => '0');	-- scaled result of multiplication
 signal	s_MCycleCnt						: integer range 0 to 15	:= 0;			-- count cycles
 
 -- Filter
@@ -210,7 +211,6 @@ signal	s_MultDith						: std_logic_vector(23 downto 0) := (others => '0');	-- Ou
 
 -- Dither2
 signal	s_Dith2Nd						: std_logic := '0';												-- inform dither new data
-signal	s_DithIn							: signed(47 downto 0) := (others => '0');					-- the dither input
 signal	s_FilterOutDith				: std_logic_vector(23 downto 0) := (others => '0');	-- dithered result of filter
 signal	s_FilterOutReg					: std_logic_vector(23 downto 0) := (others => '0');	-- dithered result of filter
 
@@ -275,40 +275,44 @@ inst_FDMult: FDMult
 		p									=> s_Mult
 	);
 
-inst_FDDither1 : BatDither 
+inst_FDDither1 : BatScaleDither 
 	generic map(
-		c_DT_DBits						=> s_Mult_scaled'length,
-		c_DT_QBits						=> s_MultDith'length
+		c_DT_DBits						=> s_Mult'length,
+		c_DT_QBits						=> s_MultDith'length,
+		c_DT_ScaleBits					=> 1,												-- number of bits to scale result
+		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf						=> 1,												-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB					=> 1												-- 1: LSB dither, 0: 0.5 LSB dither
 	)
 	port map (
 		i_DT_USRCLK						=> i_FD_USRCLK,
 		i_DT_Nd							=> s_Dith1Nd,
-		i_DT_Bypass						=> '0',
-		i_DT_Tpdf						=> '1',
 
-		i_DT_Rand1						=> signed(i_FD_Random1(s_Mult_scaled'length - s_MultDith'length downto 0)),
-		i_DT_Rand2						=> signed(i_FD_Random2(s_Mult_scaled'length - s_MultDith'length downto 0)),
-		i_DT_D							=> signed(s_Mult_scaled),
-		i_DT_Q							=>	s_MultDith
+		i_DT_Rand1						=> signed(i_FD_Random1(s_Mult'length - s_MultDith'length downto 0)),
+		i_DT_Rand2						=> signed(i_FD_Random2(s_Mult'length - s_MultDith'length downto 0)),
+		i_DT_D							=> signed(s_Mult),
+		i_DT_Q							=> s_MultDith
 	);
 
-inst_FDDither2 : BatDither 
+inst_FDDither2 : BatScaleDither 
 	generic map(
-		c_DT_DBits						=> s_DithIn'length,
-		c_DT_QBits						=> s_FilterOutDith'length
+		c_DT_DBits						=> s_FilterOut'length,
+		c_DT_QBits						=> s_FilterOutDith'length,
+		c_DT_ScaleBits					=> 1,												-- number of bits to scale result
+		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf						=> 1,												-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB					=> 1												-- 1: LSB dither, 0: 0.5 LSB dither
 	)
 	port map (
 		i_DT_USRCLK						=> i_FD_USRCLK,
 		i_DT_Nd							=> s_Dith2Nd,
-		i_DT_Bypass						=> '0',
-		i_DT_Tpdf						=> '1',
 
-		i_DT_Rand1						=> signed(i_FD_Random1(s_DithIn'length - s_FilterOutDith'length downto 0)),
-		i_DT_Rand2						=> signed(i_FD_Random2(s_DithIn'length - s_FilterOutDith'length downto 0)),
-		i_DT_D							=> s_DithIn,
-		i_DT_Q							=>	s_FilterOutDith
+		i_DT_Rand1						=> signed(i_FD_Random1(s_FilterOut'length - s_FilterOutDith'length downto 0)),
+		i_DT_Rand2						=> signed(i_FD_Random2(s_FilterOut'length - s_FilterOutDith'length downto 0)),
+		i_DT_D							=> signed(s_FilterOut),
+		i_DT_Q							=> s_FilterOutDith
 	);
-
+	
 inst_FDFilter: FDFilter
 	port map (
 		clk								=>	i_FD_USRCLK,
@@ -571,6 +575,7 @@ begin
 			s_MultEN <= '0';																-- disable multiplier
 			s_DRState <= St_DR0;
 		else 
+			s_Dith1Nd <= '0';
 			case s_DRState is
 				when St_DR0 =>
 					if s_DDSClk = '1' and s_DDSRdy = '1' then						-- be sure that DDS is ready
@@ -590,12 +595,6 @@ begin
 					end if;
 				when St_DR1 =>
 					if s_MCycleCnt = 6 then												-- now we have the calculated value in s_Mult
-						-- scale output of multiplier. 
-						if s_Mult(41) = '0' and s_Mult(40) = '1' then			-- when positive and bit 40 indicates the special case
-							s_Mult_scaled <= "0" & (s_Mult_scaled'high-1 downto 0 =>'1');	-- use highest positive number for s_Mult_scaled
-						else																	-- no overrun, use scaled result
-							s_Mult_scaled <= s_Mult(41) & s_Mult(39 downto 0);	-- scaled it
-                  end if;
 						s_Dith1Nd <= '1';
                  	s_DRState <= St_DR2;												-- next step
 				   else
@@ -603,7 +602,6 @@ begin
 						s_DRState <= St_DR1;												-- keep state
 					end if;
 				when St_DR2 =>
-						s_Dith1Nd <= '0';
 						s_DRState <= St_DR3;												-- keep state
 				when St_DR3 =>
 					if s_DDSChannel = "0" then
@@ -682,21 +680,7 @@ begin
 			case s_FDRState is
 				when St_FDR0 =>
 			   	if s_FilterRdy = '1' and s_ChanOut = "0" then				-- now we have the filtered value in s_FilterOut, sync on channel 0
-						-- handle overrun
-						if s_FilterOut(s_FilterOut'high) = '0' then				-- result is positive
-							if s_FilterOut(s_FilterOut'high-1) = '1' then		-- overrun occured
-								s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
-							else																-- no overrun
-								s_DithIn <= signed(s_FilterOut(s_FilterOut'high) & s_FilterOut((s_FilterOut'high-2) downto 0));	-- use original value
-							end if;
-						else																	-- negative result
-							if s_FilterOut(s_FilterOut'high-1) = '0' then		-- overrun occured
-								s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');	-- set to min value
-							else
-								s_DithIn <= signed(s_FilterOut(s_FilterOut'high) & s_FilterOut((s_FilterOut'high-2) downto 0));	-- use original value
-							end if;
-						end if;		
-  						s_Dith2Nd <= '1';
+						s_Dith2Nd <= '1';
 						s_FDRState <= St_FDR1;											-- next state
 			   	else
 						s_FDRState <= St_FDR0;                               	-- keep state
@@ -708,19 +692,6 @@ begin
 		   		s_FDRState <= St_FDR3;												-- next state
 				when St_FDR3 =>															-- wait for Filter ready to disappear
 			   	if s_FilterRdy = '1' then											-- this can only be channel 1
-						if s_FilterOut(s_FilterOut'high) = '0' then				-- result is positive
-							if s_FilterOut(s_FilterOut'high-1) = '1' then		-- overrun occured
-								s_DithIn <= '0' & (s_DithIn'high-1 downto 0 =>'1');		-- set to max value
-							else																-- no overrun
-								s_DithIn <= signed(s_FilterOut(s_FilterOut'high) & s_FilterOut((s_FilterOut'high-2) downto 0));	-- use original value
-							end if;
-						else																	-- negative result
-							if s_FilterOut(s_FilterOut'high-1) = '0' then		-- overrun occured
-								s_DithIn <= '1' & (s_DithIn'high-1 downto 0 =>'0');	-- set to min value
-							else
-								s_DithIn <= signed(s_FilterOut(s_FilterOut'high) & s_FilterOut((s_FilterOut'high-2) downto 0));	-- use original value
-							end if;
-						end if;		
        				s_Dith2Nd <= '1';
 						s_FDRState <= St_FDR4;											-- next state
 			   	else

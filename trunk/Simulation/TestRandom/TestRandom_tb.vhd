@@ -32,12 +32,12 @@ constant	c_GenTPDF					: integer := 1;								-- 0: RPDF output, 1: TPDF output
 -- Component Declaration for the Unit Under Test (UUT)
 component BatRandom
 	generic (
-		width								: integer
+		c_RD_Width						: integer
 	);
 	port (
 		i_RD_USRCLK						: in	std_logic;
-		i_RD_Random1					: out	std_logic_vector (width-1 downto 0);	--output vector
-		i_RD_Random2					: out	std_logic_vector (width-1 downto 0)		--output vector
+		i_RD_Random1					: out	std_logic_vector (c_RD_Width-1 downto 0);	--output vector
+		i_RD_Random2					: out	std_logic_vector (c_RD_Width-1 downto 0)	--output vector
 	);
 end component;
 
@@ -61,7 +61,7 @@ BEGIN
 
 uut : BatRandom
 	generic map (
-		width  							=> c_RndSz
+		c_RD_Width						=> c_RndSz
 	)
 	port map (
 		i_RD_USRCLK						=> s_tb_clk,

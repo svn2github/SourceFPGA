@@ -116,8 +116,8 @@ WARNING:NgdBuild:443 - SFF primitive
 WARNING:NgdBuild:443 - SFF primitive
    'inst_BatHet/inst_HDFilter/blk00000003/blk00000045' has unconnected output
    pin
-WARNING:NgdBuild:452 - logical net 'N599' has no driver
-WARNING:NgdBuild:452 - logical net 'N603' has no driver
+WARNING:NgdBuild:452 - logical net 'N597' has no driver
+WARNING:NgdBuild:452 - logical net 'N601' has no driver
 
 Partition Implementation Status
 -------------------------------
@@ -130,7 +130,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  21
 
-Total memory usage is 253904 kilobytes
+Total memory usage is 252816 kilobytes
 
 Writing NGD file "BatListener.ngd" ...
 Total REAL time to NGDBUILD completion:  8 sec

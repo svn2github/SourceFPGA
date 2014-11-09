@@ -195,23 +195,26 @@ component FftMult
 	);
 end component;
 
-component BatDither 
+component BatScaleDither 
 	generic (
-		c_DT_DBits						: integer;										-- size of input data
-		c_DT_QBits						: integer										-- size of output data
+		c_DT_DBits					: integer;											-- size of input data
+		c_DT_QBits					: integer;											-- size of output data
+		c_DT_ScaleBits				: integer;											-- number of bits to scale
+		c_DT_Truncate				: integer;											-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf					: integer;											-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB				: integer											-- 1: LSB dither, 0: 0.5 LSB dither
 	);
 	port (
-		i_DT_USRCLK						: in std_logic;
-		i_DT_Nd							: in std_logic;
-		i_DT_Bypass						: in std_logic;
-		i_DT_Tpdf						: in std_logic;
+		i_DT_USRCLK					: in std_logic;
+		i_DT_Nd						: in std_logic;
 
-		i_DT_Rand1						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_Rand2						: in signed((c_DT_DBits - c_DT_QBits) downto 0);
-		i_DT_D							: in signed(c_DT_DBits - 1 downto 0);
-		i_DT_Q							: out std_logic_vector(c_DT_QBits - 1 downto 0)
+		i_DT_Rand1					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_Rand2					: in signed((c_DT_DBits - c_DT_QBits) downto 0);
+		i_DT_D						: in signed(c_DT_DBits - 1 downto 0);
+		i_DT_Q						: out std_logic_vector(c_DT_QBits - 1 downto 0)
 	);
 end component;
+
 
 --##################################################################################
 --#	Signals
@@ -415,21 +418,23 @@ inst_MultTmp_i: FftMult
 		p => s_tmp_ii
 	);
 
-inst_FFTDither : BatDither 
+inst_FFTDither : BatScaleDither 
 	generic map(
 		c_DT_DBits						=> s_pMultLutD'length,
-		c_DT_QBits						=> s_WinVal'length
+		c_DT_QBits						=> s_WinVal'length,
+		c_DT_ScaleBits					=> 0,												-- number of bits to scale result
+		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
+		c_DT_Tpdf						=> 1,												-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB					=> 1												-- 1: LSB dither, 0: 0.5 LSB dither
 	)
 	port map (
 		i_DT_USRCLK						=> i_FFT_USRCLK,
 		i_DT_Nd							=> s_DithNd,
-		i_DT_Bypass						=> '0',
-		i_DT_Tpdf						=> '1',
 
 		i_DT_Rand1						=> signed(i_FFT_Random1(s_pMultLutD'length - s_WinVal'length downto 0)),
-		i_DT_Rand2						=> signed(i_FFT_Random2(s_pMultLutD'length - s_WinVal'length downto 0)),
+		i_DT_Rand2						=> signed(i_FFT_Random1(s_pMultLutD'length - s_WinVal'length downto 0)),
 		i_DT_D							=> signed(s_pMultLutD),
-		i_DT_Q							=>	s_WinVal
+		i_DT_Q							=> s_WinVal
 	);
 	
 -----------------------------------------------------------

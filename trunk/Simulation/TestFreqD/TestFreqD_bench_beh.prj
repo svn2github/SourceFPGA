@@ -1,6 +1,6 @@
 vhdl work "ipcore_dir/FDFilter.vhd"
 vhdl work "lfsr_pkg.vhd"
-vhdl work "BatDither.vhd"
+vhdl work "BatScaleDither.vhd"
 vhdl work "BatRandom.vhd"
 vhdl work "BatFreqDiv.vhd"
 vhdl work "TestFreqD_tb.vhd"
