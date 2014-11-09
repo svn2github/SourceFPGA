@@ -1,0 +1,4 @@
+vhdl isim_temp "lfsr_pkg.vhd"
+vhdl isim_temp "BatRandom.vhd"
+vhdl isim_temp "BatDither.vhd"
+vhdl isim_temp "TestDT_tb.vhd"
