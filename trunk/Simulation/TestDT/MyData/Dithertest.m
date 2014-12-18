@@ -57,7 +57,7 @@ ylim([0 Scale])
 xlim([0 Fs/2]) 
 xlabel('Frequency (Hz)') 
 ylabel('Amplitude') 
-title('Frequency Response Dither TPDF  24->16 Bits');
+title('Frequency Response TPDF 1LSB 24->16 Bits');
 % print -dpng Res.png
 
 %Plot dithered Sound File in Frequency Domain 

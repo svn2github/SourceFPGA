@@ -170,18 +170,20 @@ constant	REG_DAC_DIV					: std_logic_vector(4 downto 0):= "00110";		-- 12		W	DAC
 constant	REG_DAC_INS					: std_logic_vector(4 downto 0):= "00111";		-- 14		W	DAC Command: Instruction and command in higher and lower byte
 constant	REG_DAC_RADDRL				: std_logic_vector(4 downto 0):= "01000";		-- 16		RW	DAC Read address: from which address the DAC is reading for play
 constant	REG_DAC_RADDRH				: std_logic_vector(4 downto 0):= "01001";		-- 18		RW	DAC Read address: from which address the DAC is reading for play
-constant	REG_DAC_EADDRL				: std_logic_vector(4 downto 0):= "01010";		-- 20		RW	DAC End address of play back data
+constant	REG_DAC_EADDRL				: std_logic_vector(4 downto 0):= "01010";		-- 20		RW	DAC End address of play back data, RADDR is set together with EADDR after during write
 constant	REG_DAC_EADDRH				: std_logic_vector(4 downto 0):= "01011";		-- 22		RW	DAC End address of play back data 
-constant	REG_FD_THRES				: std_logic_vector(4 downto 0):= "01100";		-- 24		W	Threshold for Frequency Divider
-constant	REG_HET_FREQ				: std_logic_vector(4 downto 0):= "01101";		-- 26		W	Phase Step for HET DDS: Val = (F/312500)*65535
-constant	REG_FFT_BEXP				: std_logic_vector(4 downto 0):= "01110";		-- 28		R	Block Exponent from FFT
-constant	REG_FFT_MAXVALL			: std_logic_vector(4 downto 0):= "01111";		-- 30		R	Max Value FFT, low word
-constant	REG_FFT_MAXVALH			: std_logic_vector(4 downto 0):= "10000";		-- 32		R	Max Value FFT, high word
-constant	REG_FFT_MAXVALINDEX		: std_logic_vector(4 downto 0):= "10001";		-- 34		R	Max Value Index FFT
-constant	REG_FFT_RMSVALL			: std_logic_vector(4 downto 0):= "10010";		-- 36		R	RMS Value FFT, low word
-constant	REG_FFT_RMSVALH			: std_logic_vector(4 downto 0):= "10011";		-- 38		R	RMS Value FFT, high word
-constant	REG_FFT_MAXAMPL			: std_logic_vector(4 downto 0):= "10100";		-- 40		R	MAX amplitude of block
-constant	REG_BEEP_TIME				: std_logic_vector(4 downto 0):= "10101";		-- 42		W	upper byte: beep time (ms/2)), lower byte: beep volume, writing start beep
+constant	REG_DAC_EADDRL_ONLY		: std_logic_vector(4 downto 0):= "01100";		-- 24		RW	DAC End address of play back data, RADDR is left unmodified during write
+constant	REG_DAC_EADDRH_ONLY		: std_logic_vector(4 downto 0):= "01101";		-- 26		RW	DAC End address of play back data 
+constant	REG_FD_THRES				: std_logic_vector(4 downto 0):= "01110";		-- 28		W	Threshold for Frequency Divider
+constant	REG_HET_FREQ				: std_logic_vector(4 downto 0):= "01111";		-- 30		W	Phase Step for HET DDS: Val = (F/312500)*65535
+constant	REG_FFT_BEXP				: std_logic_vector(4 downto 0):= "10000";		-- 32		R	Block Exponent from FFT
+constant	REG_FFT_MAXVALL			: std_logic_vector(4 downto 0):= "10001";		-- 34		R	Max Value FFT, low word
+constant	REG_FFT_MAXVALH			: std_logic_vector(4 downto 0):= "10010";		-- 36		R	Max Value FFT, high word
+constant	REG_FFT_MAXVALINDEX		: std_logic_vector(4 downto 0):= "10011";		-- 38		R	Max Value Index FFT
+constant	REG_FFT_RMSVALL			: std_logic_vector(4 downto 0):= "10100";		-- 40		R	RMS Value FFT, low word
+constant	REG_FFT_RMSVALH			: std_logic_vector(4 downto 0):= "10101";		-- 42		R	RMS Value FFT, high word
+constant	REG_FFT_MAXAMPL			: std_logic_vector(4 downto 0):= "10110";		-- 44		R	MAX amplitude of block
+constant	REG_BEEP_TIME				: std_logic_vector(4 downto 0):= "10111";		-- 46		W	upper byte: beep time (ms/2)), lower byte: beep volume, writing start beep
 
 -- For BatRandom
 constant	c_RndSz						: integer := 32;								-- size of random values to be created
@@ -233,7 +235,7 @@ component BatDAC
 		i_DA_DATAL						: in  std_logic_vector(23 downto 0);
 		i_DA_DATAR						: in  std_logic_vector(23 downto 0);
 
-		i_DA_RATE						: in	std_logic;
+		i_DA_RATE						: in	std_logic_vector(7 downto 0);
 		
 		i_DA_WCmd						: in	std_logic_vector(15 downto 0);
 		i_DA_WE							: in	std_logic;
@@ -544,6 +546,7 @@ signal s_DacEAddr						: std_logic_vector(C_MEMADDR_SIZE downto 0);				-- actual
 signal s_BufDacRAddr					: std_logic_vector(C_MEMADDR_SIZE downto 0);				-- actual read addr for DAC data
 signal s_BufDacEAddr					: std_logic_vector(C_MEMADDR_SIZE downto 0);				-- actual end address for DAC data
 signal s_DacBuf_WE					: std_logic;
+signal s_DacBuf_EADDR_WE			: std_logic;
 signal s_BufDacBuf					: std_logic_vector(15 downto 0);								-- for atomic operation
 
 -- FSMC Statemachine states
@@ -584,7 +587,7 @@ signal s_DA_REMPTY					: std_logic;
 signal s_DA_DATAL						: std_logic_vector(23 downto 0) := (others => '0');
 signal s_DA_DATAR						: std_logic_vector(23 downto 0) := (others => '0');
 
-signal s_DA_RATE						: std_logic := '0';							-- 0 is 62500Hz, 1 is 31250 DAC rate
+signal s_DA_RATE						: std_logic_vector(7 downto 0) := "00000000";			-- Divider for DAC rate generation
 
 signal s_DA_DataMem					: std_logic_vector(23 downto 0) := (others => '0');
 signal s_DA_R_DataFreqDiv			: std_logic_vector(23 downto 0) := (others => '0');
@@ -1029,6 +1032,7 @@ begin
 
 			s_DA_WE <= '0';																-- reset DAC Write request by default
 			s_DacBuf_WE <= '0';															-- reset
+			s_DacBuf_EADDR_WE <= '0';													-- reset
 			s_AD_WE <= '0';																-- reset
 			s_REG_Ctrl <= (others => '0');											-- reset Control Reg
 			
@@ -1038,6 +1042,7 @@ begin
 		
 			-- clear DAC Buf write flag 
 			s_DacBuf_WE <= '0';															-- reset DAC Buf Write
+			s_DacBuf_EADDR_WE <= '0';													-- reset DAC Buf Write of EADDR
 			s_Beep_Start <= '0'; 			                                 -- reset start of beep
 			
 			-- clear DAC WE flag when write has been detected by DAC 
@@ -1081,14 +1086,15 @@ begin
 					when REG_CTRL =>														-- Control command
 						s_REG_Ctrl <= p_FSMC_D;											-- set control command
 					when REG_DAC_DIV =>													-- copmbined divisor for DAC
-						s_DA_RATE <= p_FSMC_D(0);										-- set divisor
+						s_DA_RATE <= p_FSMC_D(7 downto 0);							-- set divisor
 					when REG_DAC_INS =>													-- Command for DAC
 						s_DA_WCmd <= p_FSMC_D;											-- set command
 						s_DA_WE <= '1';													-- indicate write request to DAC
 					--
 					when REG_DAC_RADDRL =>												-- Address for DAC
-						s_DacRAddr(15 downto 0) <= p_FSMC_D;						-- set Address
+						s_BufDacBuf <= p_FSMC_D;										-- save address
 					when REG_DAC_RADDRH =>												-- Address for DAC
+					    s_DacRAddr(15 downto 0) <= s_BufDacBuf;						-- set Address
 						s_DacRAddr(C_MEMADDR_SIZE downto 16) <= p_FSMC_D(10 downto 0);		-- set Address
 					--
 					when REG_DAC_EADDRL =>												-- Play end address for DAC
@@ -1097,6 +1103,13 @@ begin
 						s_DacEAddr(15 downto 0) <= s_BufDacBuf;					-- set end address for playback
 						s_DacEAddr(C_MEMADDR_SIZE downto 16) <= p_FSMC_D(10 downto 0); 
 						s_DacBuf_WE <= '1';												-- indicate new 
+					--
+					when REG_DAC_EADDRL_ONLY =>										-- Play end address for DAC
+						s_BufDacBuf <= p_FSMC_D;										-- set end address for playback
+					when REG_DAC_EADDRH_ONLY =>										-- Play end address for DAC
+						s_DacEAddr(15 downto 0) <= s_BufDacBuf;					-- set end address for playback
+						s_DacEAddr(C_MEMADDR_SIZE downto 16) <= p_FSMC_D(10 downto 0);
+						s_DacBuf_EADDR_WE <= '1';										-- indicate new 
 					--
 					when REG_FD_THRES =>													-- Threshold for frequency divider
 						s_FD_Thresh <= p_FSMC_D;										-- set threshold
@@ -1133,6 +1146,13 @@ begin
 								when REG_DAC_EADDRH =>									-- High part of DAC end address
 									s_RdData <= s_BufDacBuf;							-- provide saved high part
 								when REG_DAC_EADDRL =>									-- Low part of  DAC end address
+									s_BufDacBuf(15 downto 11) <= (others => '0');
+									s_BufDacBuf(10 downto 0) <= s_BufDacEAddr(C_MEMADDR_SIZE downto 16);
+									s_RdData <= s_BufDacEAddr(15 downto 0);		-- low part of DAC end address
+								--
+								when REG_DAC_EADDRH_ONLY =>							-- High part of DAC end address
+									s_RdData <= s_BufDacBuf;							-- provide saved high part
+								when REG_DAC_EADDRL_ONLY =>							-- Low part of  DAC end address
 									s_BufDacBuf(15 downto 11) <= (others => '0');
 									s_BufDacBuf(10 downto 0) <= s_BufDacEAddr(C_MEMADDR_SIZE downto 16);
 									s_RdData <= s_BufDacEAddr(15 downto 0);		-- low part of DAC end address
@@ -1443,6 +1463,9 @@ begin
 			-- reset Write address for DAC
 			if s_DacBuf_WE = '1' then
 				s_BufDacRAddr <= s_DacRAddr;											-- take over new address
+				s_BufDacEAddr <= s_DacEAddr;											-- take over new end address
+			end if;
+			if s_DacBuf_EADDR_WE = '1' then
 				s_BufDacEAddr <= s_DacEAddr;											-- take over new end address
 			end if;
 

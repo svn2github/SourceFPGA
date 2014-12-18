@@ -59,7 +59,7 @@ entity BatDAC is
 		i_DA_DATAL						: in  std_logic_vector(23 downto 0);
 		i_DA_DATAR						: in  std_logic_vector(23 downto 0);
 		
-		i_DA_RATE						: in	std_logic;
+		i_DA_RATE						: in	std_logic_vector(7 downto 0);
 				
 		i_DA_WCmd						: in 	std_logic_vector(15 downto 0);
 		i_DA_WE							: in 	std_logic;
@@ -87,13 +87,16 @@ architecture Behavioral of BatDAC is
 --#
 --##################################################################################
 
+constant	DIV_SCLK			: integer := 5;			-- SCLK = USERCLK/10	= (100/10) = 10 MHz (max 27 MHz)
+
 -- Dividers for 62500 Hz DAC Sample rate
-constant	DIV_SCLK1		: integer := 5;			-- SCLK = USERCLK/10	= (100/10) = 10 MHz (max 27 MHz)
-constant	DIV_LRCK1		: integer := 80;			-- divisor for LRCK of 160, taken from SCLK
+-- constant	DIV_LRCK1		: integer := 80;			-- divisor for LRCK of 160, taken from SCLK
 
 -- Dividers for 31250 Hz DAC Sample rate
-constant	DIV_SCLK2		: integer := 5;			-- SCLK = USERCLK/10	= (100/10) = 10 MHz (max 27 MHz)
-constant	DIV_LRCK2		: integer := 160;			-- divisor for LRCK of 320, taken from SCLK
+-- constant	DIV_LRCK2		: integer := 160;			-- divisor for LRCK of 320, taken from SCLK
+
+-- Dividers for 31847 Hz DAC Sample rate
+-- constant	DIV_LRCK3		: integer := 157;			-- divisor for LRCK of 314, taken from SCLK
 
 constant	DIV_CCLK	 		: integer := 10;			-- CCLK = USERCLK/20	(100/20)= 5 MHz (max 6 MHz)
 constant	DIV_CSDEL		: integer := 4;			-- delay between command transmissions
@@ -147,9 +150,9 @@ begin
 
 -----------------------------------------------------------
 -- Setting counter values
----------------------------------------------------------
-s_DCnt_Max 		<=	(DIV_SCLK1-1) when i_DA_RATE = '0' else (DIV_SCLK2-1);
-s_DivCnt_Max 	<=	(DIV_LRCK1-1) when i_DA_RATE = '0' else (DIV_LRCK2-1);
+-----------------------------------------------------------
+s_DCnt_Max <= (DIV_SCLK-1);
+s_DivCnt_Max <= ((to_integer(unsigned(i_DA_RATE)))-1);
 
 -- route Reset from STM to DAC route 		
 DA_RST <= i_DA_STMRES when i_DA_RESET = '0' else '0';

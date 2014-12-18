@@ -11,5 +11,14 @@
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqD/BatFreqDiv.vhd&quot; into library work</arg>
 </msg>
 
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqD/BatRandom.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqD/BatScaleDither.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFreqD/lfsr_pkg.vhd&quot; into library work</arg>
+</msg>
+
 </messages>
 

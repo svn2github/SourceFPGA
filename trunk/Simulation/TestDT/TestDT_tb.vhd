@@ -87,7 +87,7 @@ uut : BatScaleDither
 	generic map(
 		c_DT_DBits						=> s_in_data'length,
 		c_DT_QBits						=> s_out_data'length,
-		c_DT_ScaleBits					=> 1,												-- number of bits to scale result
+		c_DT_ScaleBits					=> 0,												-- number of bits to scale result
 		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
 		c_DT_Tpdf						=> 1,												-- 1: TPDF random, 0: RPDF random
 		c_DT_FullLSB					=> 1												-- 1: LSB dither, 0: 0.5 LSB dither

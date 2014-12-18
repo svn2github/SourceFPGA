@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: BatListener.prj
 
@@ -144,6 +144,7 @@ Parsing architecture <BatInpBR_a> of entity <batinpbr>.
 Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BatOutpBR.vhd" into library work
 Parsing entity <BatOutpBR>.
 Parsing architecture <BatOutpBR_a> of entity <batoutpbr>.
+Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BatFFT.vhd" into library work
 Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\HetMult.vhd" into library work
 Parsing entity <HetMult>.
 Parsing architecture <HetMult_a> of entity <hetmult>.
@@ -168,7 +169,6 @@ Parsing architecture <HDFilter_a> of entity <hdfilter>.
 Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\lfsr_pkg.vhd" into library work
 Parsing package <lfsr_pkg>.
 Parsing package body <lfsr_pkg>.
-Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BatFFT.vhd" into library work
 Parsing VHDL file "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatScaleDither.vhd" into library work
 Parsing entity <BatScaleDither>.
 Parsing architecture <Behavioral> of entity <batscaledither>.
@@ -289,8 +289,8 @@ WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir
 WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7075: Comparison between arrays of unequal length always returns FALSE.
 WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7086: Comparison between arrays of unequal length always returns FALSE.
 WARNING:HDLCompiler:321 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_raw_wrapper.vhd" Line 7091: Comparison between arrays of unequal length always returns FALSE.
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" Line 1359. Case statement is complete. others clause is never selected
-INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" Line 1564. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" Line 1379. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" Line 1587. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -298,26 +298,26 @@ INFO:HDLCompiler:679 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.v
 
 Synthesizing Unit <BatListener>.
     Related source file is "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd".
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p0_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 861: Output port <c3_p1_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_wr_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_rd_count> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p0_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_cmd_empty> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_cmd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_wr_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_wr_underrun> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_wr_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_rd_full> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_rd_overflow> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" line 864: Output port <c3_p1_rd_error> of the instance <inst_BigMem> is unconnected or connected to loadless signal.
     Found 2-bit register for signal <s_ResetSync2>.
     Found 1-bit register for signal <s_ResetUserClk>.
     Found 3-bit register for signal <s_FSMC_NWE_a>.
@@ -332,19 +332,20 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" lin
     Found 1-bit register for signal <s_P0_CMD_EN>.
     Found 1-bit register for signal <s_P0_WR_EN>.
     Found 1-bit register for signal <s_P0_RD_EN>.
-    Found 16-bit register for signal <p_FSMC_D[15]_dff_104_OUT>.
+    Found 16-bit register for signal <p_FSMC_D[15]_dff_107_OUT>.
     Found 1-bit register for signal <p_FSMC_NWAIT>.
     Found 1-bit register for signal <s_DA_WE>.
     Found 1-bit register for signal <s_DacBuf_WE>.
+    Found 1-bit register for signal <s_DacBuf_EADDR_WE>.
     Found 1-bit register for signal <s_AD_WE>.
     Found 16-bit register for signal <s_REG_Ctrl>.
     Found 1-bit register for signal <s_Beep_Start>.
     Found 1-bit register for signal <s_HD_WE>.
     Found 32-bit register for signal <s_AD_WCmd>.
-    Found 1-bit register for signal <s_DA_RATE>.
+    Found 8-bit register for signal <s_DA_RATE>.
     Found 16-bit register for signal <s_DA_WCmd>.
-    Found 27-bit register for signal <s_DacRAddr>.
     Found 16-bit register for signal <s_BufDacBuf>.
+    Found 27-bit register for signal <s_DacRAddr>.
     Found 27-bit register for signal <s_DacEAddr>.
     Found 16-bit register for signal <s_FD_Thresh>.
     Found 16-bit register for signal <s_HD_Freq>.
@@ -357,22 +358,22 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" lin
     Found 30-bit register for signal <s_P0_CMD_ADR>.
     Found 32-bit register for signal <s_P0_WR_DATA>.
     Found 4-bit register for signal <s_P0_WR_MASK>.
-    Found 1-bit register for signal <GND_1035_o_s_UserClk_DFF_542>.
-    Found 1-bit register for signal <GND_1037_o_s_UserClk_DFF_543>.
-    Found 1-bit register for signal <GND_1039_o_s_UserClk_DFF_544>.
-    Found 1-bit register for signal <GND_1041_o_s_UserClk_DFF_545>.
-    Found 1-bit register for signal <GND_1043_o_s_UserClk_DFF_546>.
-    Found 1-bit register for signal <GND_1045_o_s_UserClk_DFF_547>.
-    Found 1-bit register for signal <GND_1047_o_s_UserClk_DFF_548>.
-    Found 1-bit register for signal <GND_1049_o_s_UserClk_DFF_549>.
-    Found 1-bit register for signal <GND_1051_o_s_UserClk_DFF_550>.
-    Found 1-bit register for signal <GND_1053_o_s_UserClk_DFF_551>.
-    Found 1-bit register for signal <GND_1055_o_s_UserClk_DFF_552>.
-    Found 1-bit register for signal <GND_1057_o_s_UserClk_DFF_553>.
-    Found 1-bit register for signal <GND_1059_o_s_UserClk_DFF_554>.
-    Found 1-bit register for signal <GND_1061_o_s_UserClk_DFF_555>.
-    Found 1-bit register for signal <GND_1063_o_s_UserClk_DFF_556>.
-    Found 1-bit register for signal <GND_1065_o_s_UserClk_DFF_557>.
+    Found 1-bit register for signal <GND_1030_o_s_UserClk_DFF_542>.
+    Found 1-bit register for signal <GND_1032_o_s_UserClk_DFF_543>.
+    Found 1-bit register for signal <GND_1034_o_s_UserClk_DFF_544>.
+    Found 1-bit register for signal <GND_1036_o_s_UserClk_DFF_545>.
+    Found 1-bit register for signal <GND_1038_o_s_UserClk_DFF_546>.
+    Found 1-bit register for signal <GND_1040_o_s_UserClk_DFF_547>.
+    Found 1-bit register for signal <GND_1042_o_s_UserClk_DFF_548>.
+    Found 1-bit register for signal <GND_1044_o_s_UserClk_DFF_549>.
+    Found 1-bit register for signal <GND_1046_o_s_UserClk_DFF_550>.
+    Found 1-bit register for signal <GND_1048_o_s_UserClk_DFF_551>.
+    Found 1-bit register for signal <GND_1050_o_s_UserClk_DFF_552>.
+    Found 1-bit register for signal <GND_1052_o_s_UserClk_DFF_553>.
+    Found 1-bit register for signal <GND_1054_o_s_UserClk_DFF_554>.
+    Found 1-bit register for signal <GND_1056_o_s_UserClk_DFF_555>.
+    Found 1-bit register for signal <GND_1058_o_s_UserClk_DFF_556>.
+    Found 1-bit register for signal <GND_1060_o_s_UserClk_DFF_557>.
     Found 16-bit register for signal <s_REG_Status>.
     Found 27-bit register for signal <s_AdcWAddr>.
     Found 1-bit register for signal <s_P1_CMD_EN>.
@@ -467,80 +468,80 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatListener.vhd" lin
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 27-bit adder for signal <s_AdcWAddr[26]_GND_5_o_add_127_OUT> created at line 1241.
     Found 27-bit adder for signal <s_AdcWAddr[26]_GND_5_o_add_131_OUT> created at line 1241.
-    Found 27-bit adder for signal <s_BufDacRAddr[26]_GND_5_o_add_236_OUT> created at line 1241.
-    Found 27-bit adder for signal <s_BufDacRAddr[26]_GND_5_o_add_253_OUT> created at line 1241.
-    Found 9-bit subtractor for signal <GND_5_o_GND_5_o_sub_346_OUT<8:0>> created at line 1308.
-    Found 8-bit subtractor for signal <GND_5_o_GND_5_o_sub_347_OUT<7:0>> created at line 1308.
-    Found 8-bit subtractor for signal <s_Beep_VolFsmc[7]_unary_minus_343_OUT<7:0>> created at line 0.
-    Found 4x4-bit Read Only RAM for signal <s_AdcWAddr[1]_GND_5_o_wide_mux_129_OUT>
-    Found 32x2-bit Read Only RAM for signal <_n1809>
-    Found 1-bit 3-to-1 multiplexer for signal <s_WState[1]_GND_5_o_Mux_66_o> created at line 1185.
-    Found 1-bit 4-to-1 multiplexer for signal <s_RState[1]_PWR_5_o_Mux_73_o> created at line 1236.
-    Found 1-bit 3-to-1 multiplexer for signal <s_RState[1]_s_WState[1]_Mux_76_o> created at line 1236.
-    Found 32-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_AD_R_DataADC[7]_wide_mux_128_OUT> created at line 1342.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[7]_Mux_146_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[6]_Mux_147_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[5]_Mux_148_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[4]_Mux_149_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[3]_Mux_150_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[2]_Mux_151_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[1]_Mux_152_o> created at line 1387.
-    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[0]_Mux_153_o> created at line 1387.
-    Found 24-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[23]_wide_mux_249_OUT> created at line 1523.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[23]_Mux_270_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[22]_Mux_271_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[21]_Mux_272_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[20]_Mux_273_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[19]_Mux_274_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[18]_Mux_275_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[17]_Mux_276_o> created at line 1588.
-    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[16]_Mux_277_o> created at line 1588.
-    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[5]_s_DA_R_DataFreqDiv[23]_wide_mux_330_OUT> created at line 1650.
-    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[1]_GND_5_o_wide_mux_336_OUT> created at line 1644.
-    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[1]_GND_5_o_wide_mux_337_OUT> created at line 1644.
-    Found 24-bit 4-to-1 multiplexer for signal <_n1093> created at line 1523.
-    Found 24-bit 4-to-1 multiplexer for signal <_n1097> created at line 1523.
-    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 1008
-    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 1016
-    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 1016
-    Found 27-bit comparator equal for signal <n0383> created at line 1474
+    Found 27-bit adder for signal <s_AdcWAddr[26]_GND_5_o_add_135_OUT> created at line 1241.
+    Found 27-bit adder for signal <s_BufDacRAddr[26]_GND_5_o_add_241_OUT> created at line 1241.
+    Found 27-bit adder for signal <s_BufDacRAddr[26]_GND_5_o_add_258_OUT> created at line 1241.
+    Found 9-bit subtractor for signal <GND_5_o_GND_5_o_sub_351_OUT<8:0>> created at line 1308.
+    Found 8-bit subtractor for signal <GND_5_o_GND_5_o_sub_352_OUT<7:0>> created at line 1308.
+    Found 8-bit subtractor for signal <s_Beep_VolFsmc[7]_unary_minus_348_OUT<7:0>> created at line 0.
+    Found 4x4-bit Read Only RAM for signal <s_AdcWAddr[1]_GND_5_o_wide_mux_133_OUT>
+    Found 32x3-bit Read Only RAM for signal <_n1825>
+    Found 1-bit 3-to-1 multiplexer for signal <s_WState[1]_GND_5_o_Mux_68_o> created at line 1205.
+    Found 1-bit 4-to-1 multiplexer for signal <s_RState[1]_PWR_5_o_Mux_75_o> created at line 1256.
+    Found 1-bit 3-to-1 multiplexer for signal <s_RState[1]_s_WState[1]_Mux_78_o> created at line 1256.
+    Found 32-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_AD_R_DataADC[7]_wide_mux_132_OUT> created at line 1362.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[7]_Mux_150_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[6]_Mux_151_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[5]_Mux_152_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[4]_Mux_153_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[3]_Mux_154_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[2]_Mux_155_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[1]_Mux_156_o> created at line 1407.
+    Found 1-bit 4-to-1 multiplexer for signal <s_AdcWAddr[1]_s_P1_WR_DATA[0]_Mux_157_o> created at line 1407.
+    Found 24-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[23]_wide_mux_254_OUT> created at line 1546.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[23]_Mux_275_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[22]_Mux_276_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[21]_Mux_277_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[20]_Mux_278_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[19]_Mux_279_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[18]_Mux_280_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[17]_Mux_281_o> created at line 1611.
+    Found 1-bit 4-to-1 multiplexer for signal <s_BufDacRAddr[1]_s_DA_DataMem[16]_Mux_282_o> created at line 1611.
+    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[5]_s_DA_R_DataFreqDiv[23]_wide_mux_335_OUT> created at line 1673.
+    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[1]_GND_5_o_wide_mux_341_OUT> created at line 1667.
+    Found 24-bit 4-to-1 multiplexer for signal <s_REG_Ctrl[1]_GND_5_o_wide_mux_342_OUT> created at line 1667.
+    Found 24-bit 4-to-1 multiplexer for signal <_n1121> created at line 1546.
+    Found 24-bit 4-to-1 multiplexer for signal <_n1125> created at line 1546.
+    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 1011
+    Found 1-bit tristate buffer for signal <p_FSMC_D<15>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<14>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<13>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<12>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<11>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<10>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<9>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<8>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<7>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<6>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<5>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<4>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<3>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<2>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<1>> created at line 1019
+    Found 1-bit tristate buffer for signal <p_FSMC_D<0>> created at line 1019
+    Found 27-bit comparator equal for signal <n0388> created at line 1497
     Summary:
 	inferred   2 RAM(s).
 	inferred   6 Adder/Subtractor(s).
-	inferred 657 D-type flip-flop(s).
+	inferred 665 D-type flip-flop(s).
 	inferred   1 Comparator(s).
-	inferred 221 Multiplexer(s).
+	inferred 222 Multiplexer(s).
 	inferred  32 Tristate(s).
 	inferred   5 Finite State Machine(s).
 Unit <BatListener> synthesized.
@@ -681,18 +682,19 @@ Synthesizing Unit <BatDAC>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 8-bit adder for signal <s_DivCnt[7]_GND_13_o_add_20_OUT> created at line 222.
-    Found 8-bit adder for signal <s_Dcnt[7]_GND_13_o_add_47_OUT> created at line 243.
-    Found 5-bit adder for signal <CommandProc.v_cnt_wr[4]_GND_13_o_add_54_OUT> created at line 298.
-    Found 2-bit adder for signal <s_DivCsDel[1]_GND_13_o_add_58_OUT> created at line 311.
-    Found 4-bit adder for signal <s_cnt[3]_GND_13_o_add_88_OUT> created at line 349.
-    Found 5-bit subtractor for signal <GND_13_o_GND_13_o_sub_5_OUT<4:0>> created at line 193.
-    Found 1-bit 24-to-1 multiplexer for signal <GND_13_o_X_12_o_Mux_5_o> created at line 195.
-    Found 1-bit 24-to-1 multiplexer for signal <GND_13_o_X_12_o_Mux_6_o> created at line 197.
-    Found 8-bit comparator equal for signal <s_DivCnt_Max[7]_s_DivCnt[7]_equal_3_o> created at line 179
-    Found 5-bit comparator greater for signal <n0091> created at line 294
+    Found 8-bit adder for signal <s_DivCnt[7]_GND_13_o_add_20_OUT> created at line 225.
+    Found 8-bit adder for signal <s_Dcnt[7]_GND_13_o_add_47_OUT> created at line 246.
+    Found 5-bit adder for signal <CommandProc.v_cnt_wr[4]_GND_13_o_add_54_OUT> created at line 301.
+    Found 2-bit adder for signal <s_DivCsDel[1]_GND_13_o_add_58_OUT> created at line 314.
+    Found 4-bit adder for signal <s_cnt[3]_GND_13_o_add_88_OUT> created at line 352.
+    Found 8-bit subtractor for signal <s_DivCnt_Max> created at line 130.
+    Found 5-bit subtractor for signal <GND_13_o_GND_13_o_sub_5_OUT<4:0>> created at line 196.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_13_o_X_12_o_Mux_5_o> created at line 198.
+    Found 1-bit 24-to-1 multiplexer for signal <GND_13_o_X_12_o_Mux_6_o> created at line 200.
+    Found 8-bit comparator equal for signal <s_DivCnt_Max[7]_s_DivCnt[7]_equal_3_o> created at line 182
+    Found 5-bit comparator greater for signal <n0090> created at line 297
     Summary:
-	inferred   6 Adder/Subtractor(s).
+	inferred   7 Adder/Subtractor(s).
 	inferred 116 D-type flip-flop(s).
 	inferred   2 Comparator(s).
 	inferred  24 Multiplexer(s).
@@ -813,8 +815,8 @@ WARNING:Xst:647 - Input <i_FD_Random2<31:26>> is never used. This port will be p
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <s_NullCnt_R[3]_GND_22_o_add_8_OUT> created at line 230.
-    Found 4-bit adder for signal <s_NullCnt_L[3]_GND_22_o_add_37_OUT> created at line 278.
+    Found 4-bit adder for signal <s_NullCnt_R[3]_GND_17_o_add_8_OUT> created at line 230.
+    Found 4-bit adder for signal <s_NullCnt_L[3]_GND_17_o_add_37_OUT> created at line 278.
     Found 24-bit subtractor for signal <s_MaxPos_R[23]_unary_minus_7_OUT<23:0>> created at line 0.
     Found 24-bit subtractor for signal <s_MaxPos_L[23]_unary_minus_36_OUT<23:0>> created at line 0.
     Found 1-bit 3-to-1 multiplexer for signal <s_FState[1]_X_16_o_Mux_66_o> created at line 308.
@@ -916,7 +918,7 @@ WARNING:Xst:647 - Input <i_HD_Random2<31:26>> is never used. This port will be p
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <s_CycleCnt[3]_GND_26_o_add_7_OUT> created at line 345.
+    Found 4-bit adder for signal <s_CycleCnt[3]_GND_21_o_add_7_OUT> created at line 345.
     Found 1-bit 3-to-1 multiplexer for signal <s_FState[1]_X_19_o_Mux_31_o> created at line 372.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -1091,15 +1093,15 @@ INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\BatFFTMod.vhd" line 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 4-bit adder for signal <s_MultLutCycleCnt[3]_GND_32_o_add_19_OUT> created at line 548.
-    Found 10-bit adder for signal <s_InAddr[9]_GND_32_o_add_29_OUT> created at line 1241.
-    Found 10-bit adder for signal <s_InAddr1[9]_GND_32_o_add_30_OUT> created at line 1241.
+    Found 4-bit adder for signal <s_MultLutCycleCnt[3]_GND_27_o_add_19_OUT> created at line 548.
+    Found 10-bit adder for signal <s_InAddr[9]_GND_27_o_add_29_OUT> created at line 1241.
+    Found 10-bit adder for signal <s_InAddr1[9]_GND_27_o_add_30_OUT> created at line 1241.
     Found 48-bit adder for signal <s_tmp_rr[47]_s_tmp_ii[47]_add_129_OUT> created at line 739.
-    Found 5-bit adder for signal <s_MultCycleCnt[4]_GND_32_o_add_133_OUT> created at line 745.
-    Found 9-bit adder for signal <s_MaxAmpIdx[8]_GND_32_o_add_186_OUT> created at line 1241.
-    Found 5-bit adder for signal <s_SqrtCycleCnt[4]_GND_32_o_add_187_OUT> created at line 810.
+    Found 5-bit adder for signal <s_MultCycleCnt[4]_GND_27_o_add_133_OUT> created at line 745.
+    Found 9-bit adder for signal <s_MaxAmpIdx[8]_GND_27_o_add_186_OUT> created at line 1241.
+    Found 5-bit adder for signal <s_SqrtCycleCnt[4]_GND_27_o_add_187_OUT> created at line 810.
     Found 58-bit adder for signal <_n0648> created at line 741.
-    Found 58-bit adder for signal <s_RMSquads[57]_GND_32_o_add_131_OUT> created at line 741.
+    Found 58-bit adder for signal <s_RMSquads[57]_GND_27_o_add_131_OUT> created at line 741.
     Found 24-bit shifter logical left for signal <s_FFTOutVal_r[15]_s_BlkExp[4]_shift_left_88_OUT> created at line 2973
     Found 24-bit shifter logical left for signal <s_FFTOutVal_i[15]_s_BlkExp[4]_shift_left_89_OUT> created at line 2973
     Found 24-bit shifter logical left for signal <s_FFTOutVal_r[15]_s_BlkExp_save[4]_shift_left_121_OUT> created at line 2973
@@ -1520,8 +1522,8 @@ WARNING:Xst:647 - Input <MCB_UOCMDREADY> is never used. This port will be preser
 WARNING:Xst:647 - Input <MCB_UO_CAL_START> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" line 583: Output port <DRP_BKST> of the instance <iodrp_controller_inst> is unconnected or connected to loadless signal.
 INFO:Xst:3210 - "E:\Source\BatDroidV2\SourceFPGA\BatDroidV2\ipcore_dir\BigMem\user_design\rtl\mcb_soft_calibration.vhd" line 601: Output port <read_data> of the instance <iodrp_mcb_controller_inst> is unconnected or connected to loadless signal.
-    Register <MCB_UIUDQSINC> equivalent to <MCB_UILDQSINC> has been removed
     Register <MCB_UIUDQSDEC> equivalent to <MCB_UILDQSDEC> has been removed
+    Register <MCB_UIUDQSINC> equivalent to <MCB_UILDQSINC> has been removed
     Found 1-bit register for signal <Block_Reset>.
     Found 1-bit register for signal <SELFREFRESH_MCB_MODE_R1>.
     Found 1-bit register for signal <SELFREFRESH_MCB_MODE_R2>.
@@ -1596,37 +1598,37 @@ INFO:Xst:1799 - State 111010 is never reached in FSM <STATE>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit adder for signal <WAIT_200us_COUNTER[15]_GND_88_o_add_13_OUT> created at line 632.
-    Found 10-bit adder for signal <RstCounter[9]_GND_88_o_add_17_OUT> created at line 694.
-    Found 4-bit adder for signal <pre_sysrst_cnt[3]_GND_88_o_add_23_OUT> created at line 761.
-    Found 8-bit adder for signal <WaitTimer[7]_GND_88_o_add_32_OUT> created at line 936.
-    Found 6-bit adder for signal <count[5]_GND_88_o_add_40_OUT> created at line 958.
-    Found 6-bit adder for signal <P_Term[5]_GND_88_o_add_54_OUT> created at line 1134.
-    Found 7-bit adder for signal <N_Term[6]_GND_88_o_add_85_OUT> created at line 1187.
-    Found 8-bit adder for signal <counter_inc[7]_GND_88_o_add_331_OUT> created at line 1699.
-    Found 8-bit adder for signal <DQS_DELAY[7]_GND_88_o_add_334_OUT> created at line 1705.
-    Found 8-bit adder for signal <counter_dec[7]_GND_88_o_add_344_OUT> created at line 1724.
+    Found 16-bit adder for signal <WAIT_200us_COUNTER[15]_GND_83_o_add_13_OUT> created at line 632.
+    Found 10-bit adder for signal <RstCounter[9]_GND_83_o_add_17_OUT> created at line 694.
+    Found 4-bit adder for signal <pre_sysrst_cnt[3]_GND_83_o_add_23_OUT> created at line 761.
+    Found 8-bit adder for signal <WaitTimer[7]_GND_83_o_add_32_OUT> created at line 936.
+    Found 6-bit adder for signal <count[5]_GND_83_o_add_40_OUT> created at line 958.
+    Found 6-bit adder for signal <P_Term[5]_GND_83_o_add_54_OUT> created at line 1134.
+    Found 7-bit adder for signal <N_Term[6]_GND_83_o_add_85_OUT> created at line 1187.
+    Found 8-bit adder for signal <counter_inc[7]_GND_83_o_add_331_OUT> created at line 1699.
+    Found 8-bit adder for signal <DQS_DELAY[7]_GND_83_o_add_334_OUT> created at line 1705.
+    Found 8-bit adder for signal <counter_dec[7]_GND_83_o_add_344_OUT> created at line 1724.
     Found 8-bit subtractor for signal <Max_Value_Delta_Up> created at line 433.
     Found 8-bit subtractor for signal <Max_Value_Delta_Dn> created at line 435.
-    Found 6-bit subtractor for signal <GND_88_o_GND_88_o_sub_72_OUT<5:0>> created at line 1139.
-    Found 7-bit subtractor for signal <GND_88_o_GND_88_o_sub_179_OUT<6:0>> created at line 1197.
-    Found 8-bit subtractor for signal <GND_88_o_GND_88_o_sub_348_OUT<7:0>> created at line 1730.
+    Found 6-bit subtractor for signal <GND_83_o_GND_83_o_sub_72_OUT<5:0>> created at line 1139.
+    Found 7-bit subtractor for signal <GND_83_o_GND_83_o_sub_179_OUT<6:0>> created at line 1197.
+    Found 8-bit subtractor for signal <GND_83_o_GND_83_o_sub_348_OUT<7:0>> created at line 1730.
     Found 15-bit adder for signal <_n0871> created at line 501.
-    Found 15-bit adder for signal <n0749> created at line 501.
-    Found 15-bit adder for signal <n0497> created at line 501.
-    Found 15-bit adder for signal <_n0880> created at line 501.
-    Found 15-bit adder for signal <n0478> created at line 501.
-    Found 15-bit adder for signal <_n0886> created at line 501.
     Found 15-bit adder for signal <n0486[14:0]> created at line 501.
     Found 15-bit adder for signal <n0488> created at line 501.
     Found 15-bit adder for signal <n0549> created at line 501.
+    Found 15-bit adder for signal <_n0883> created at line 501.
+    Found 15-bit adder for signal <n0749> created at line 501.
+    Found 15-bit adder for signal <n0497> created at line 501.
+    Found 15-bit adder for signal <_n0892> created at line 501.
+    Found 15-bit adder for signal <n0478> created at line 501.
     Found 1-bit 3-to-1 multiplexer for signal <IODRP_SDO> created at line 982.
-    Found 10-bit comparator greater for signal <RstCounter[9]_PWR_47_o_LessThan_17_o> created at line 692
+    Found 10-bit comparator greater for signal <RstCounter[9]_PWR_48_o_LessThan_17_o> created at line 692
     Found 8-bit comparator greater for signal <Dec_Flag> created at line 946
     Found 8-bit comparator greater for signal <Inc_Flag> created at line 947
     Found 6-bit comparator equal for signal <n0166> created at line 1205
     Found 7-bit comparator equal for signal <n0175> created at line 1237
-    Found 6-bit comparator greater for signal <count[5]_PWR_47_o_LessThan_307_o> created at line 1642
+    Found 6-bit comparator greater for signal <count[5]_PWR_48_o_LessThan_307_o> created at line 1642
     Found 8-bit comparator greater for signal <Max_Value_int[7]_Max_Value_Previous[7]_LessThan_313_o> created at line 1675
     Found 8-bit comparator greater for signal <n0256> created at line 1675
     Found 8-bit comparator greater for signal <Max_Value_Previous[7]_Max_Value_int[7]_LessThan_318_o> created at line 1679
@@ -1671,7 +1673,7 @@ Synthesizing Unit <iodrp_controller>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_cnt[2]_GND_89_o_add_12_OUT> created at line 238.
+    Found 3-bit adder for signal <bit_cnt[2]_GND_84_o_add_12_OUT> created at line 238.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  40 D-type flip-flop(s).
@@ -1710,7 +1712,7 @@ WARNING:Xst:647 - Input <drp_ioi_addr> is never used. This port will be preserve
     | Encoding           | gray                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_cnt[2]_GND_91_o_add_13_OUT> created at line 372.
+    Found 3-bit adder for signal <bit_cnt[2]_GND_86_o_add_13_OUT> created at line 372.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  41 D-type flip-flop(s).
@@ -1723,9 +1725,9 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 32x2-bit single-port Read Only RAM                    : 1
+ 32x3-bit single-port Read Only RAM                    : 1
  4x4-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 65
+# Adders/Subtractors                                   : 66
  10-bit adder                                          : 3
  15-bit adder                                          : 9
  16-bit adder                                          : 1
@@ -1749,10 +1751,10 @@ Macro Statistics
  7-bit subtractor                                      : 1
  8-bit adder                                           : 5
  8-bit addsub                                          : 1
- 8-bit subtractor                                      : 4
+ 8-bit subtractor                                      : 5
  9-bit adder                                           : 3
  9-bit subtractor                                      : 1
-# Registers                                            : 322
+# Registers                                            : 323
  1-bit register                                        : 147
  10-bit register                                       : 4
  16-bit register                                       : 15
@@ -1771,7 +1773,7 @@ Macro Statistics
  6-bit register                                        : 7
  64-bit register                                       : 1
  7-bit register                                        : 4
- 8-bit register                                        : 24
+ 8-bit register                                        : 25
  9-bit register                                        : 26
 # Comparators                                          : 31
  10-bit comparator greater                             : 1
@@ -1787,18 +1789,18 @@ Macro Statistics
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 2
-# Multiplexers                                         : 500
- 1-bit 2-to-1 multiplexer                              : 198
+# Multiplexers                                         : 501
+ 1-bit 2-to-1 multiplexer                              : 199
  1-bit 24-to-1 multiplexer                             : 2
  1-bit 3-to-1 multiplexer                              : 6
  1-bit 4-to-1 multiplexer                              : 17
  10-bit 2-to-1 multiplexer                             : 3
- 16-bit 2-to-1 multiplexer                             : 43
+ 16-bit 2-to-1 multiplexer                             : 44
  2-bit 2-to-1 multiplexer                              : 1
  23-bit 2-to-1 multiplexer                             : 1
  24-bit 2-to-1 multiplexer                             : 58
  24-bit 4-to-1 multiplexer                             : 6
- 27-bit 2-to-1 multiplexer                             : 8
+ 27-bit 2-to-1 multiplexer                             : 7
  3-bit 2-to-1 multiplexer                              : 7
  30-bit 2-to-1 multiplexer                             : 6
  32-bit 2-to-1 multiplexer                             : 8
@@ -1898,22 +1900,22 @@ INFO:Xst:2261 - The FF/Latch <RandomProc.rand_temp_24> in Unit <inst_BatRandom> 
 INFO:Xst:2261 - The FF/Latch <RandomProc.rand_temp_26> in Unit <inst_BatRandom> is equivalent to the following FF/Latch, which will be removed : <i_RD_Random1_26> 
 INFO:Xst:2261 - The FF/Latch <s_DDS_WE> in Unit <inst_BatHet> is equivalent to the following FF/Latch, which will be removed : <i_HD_WRPending> 
 WARNING:Xst:1710 - FF/Latch <s_P0_CMD_INS_2> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1039_o_s_UserClk_DFF_544> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1035_o_s_UserClk_DFF_542> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1037_o_s_UserClk_DFF_543> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1045_o_s_UserClk_DFF_547> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1041_o_s_UserClk_DFF_545> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1043_o_s_UserClk_DFF_546> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1047_o_s_UserClk_DFF_548> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1049_o_s_UserClk_DFF_549> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1055_o_s_UserClk_DFF_552> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1051_o_s_UserClk_DFF_550> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1053_o_s_UserClk_DFF_551> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1057_o_s_UserClk_DFF_553> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1059_o_s_UserClk_DFF_554> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1065_o_s_UserClk_DFF_557> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1061_o_s_UserClk_DFF_555> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1063_o_s_UserClk_DFF_556> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1032_o_s_UserClk_DFF_543> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1030_o_s_UserClk_DFF_542> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1038_o_s_UserClk_DFF_546> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1034_o_s_UserClk_DFF_544> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1036_o_s_UserClk_DFF_545> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1044_o_s_UserClk_DFF_549> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1040_o_s_UserClk_DFF_547> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1042_o_s_UserClk_DFF_548> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1046_o_s_UserClk_DFF_550> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1048_o_s_UserClk_DFF_551> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1054_o_s_UserClk_DFF_554> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1050_o_s_UserClk_DFF_552> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1052_o_s_UserClk_DFF_553> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1056_o_s_UserClk_DFF_555> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1058_o_s_UserClk_DFF_556> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1060_o_s_UserClk_DFF_557> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_REG_Status_11> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_REG_Status_12> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_REG_Status_13> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
@@ -2022,7 +2024,7 @@ The following registers are absorbed into counter <s_InAddr1>: 1 register on sig
 Unit <BatFFTMod> synthesized (advanced).
 
 Synthesizing (advanced) Unit <BatListener>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <s_AdcWAddr> prevents it from being combined with the RAM <Mram_s_AdcWAddr[1]_GND_5_o_wide_mux_129_OUT> for implementation as read-only block RAM.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <s_AdcWAddr> prevents it from being combined with the RAM <Mram_s_AdcWAddr[1]_GND_5_o_wide_mux_133_OUT> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -2033,12 +2035,12 @@ INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the 
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1809> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n1825> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 32-word x 2-bit                     |          |
+    |     aspect ratio   | 32-word x 3-bit                     |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <p_FSMC_A<4:0>> |          |
     |     diA            | connected to signal <GND>           |          |
@@ -2070,9 +2072,9 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 2
- 32x2-bit single-port distributed Read Only RAM        : 1
+ 32x3-bit single-port distributed Read Only RAM        : 1
  4x4-bit single-port distributed Read Only RAM         : 1
-# Adders/Subtractors                                   : 45
+# Adders/Subtractors                                   : 46
  10-bit adder                                          : 3
  11-bit adder                                          : 1
  24-bit subtractor                                     : 2
@@ -2092,7 +2094,7 @@ Macro Statistics
  7-bit adder                                           : 1
  7-bit subtractor                                      : 1
  8-bit adder                                           : 2
- 8-bit subtractor                                      : 4
+ 8-bit subtractor                                      : 5
  9-bit adder                                           : 6
  9-bit subtractor                                      : 1
 # Counters                                             : 20
@@ -2105,8 +2107,8 @@ Macro Statistics
  6-bit up counter                                      : 3
  8-bit up counter                                      : 5
  8-bit updown counter                                  : 1
-# Registers                                            : 2657
- Flip-Flops                                            : 2657
+# Registers                                            : 2665
+ Flip-Flops                                            : 2665
 # Comparators                                          : 31
  10-bit comparator greater                             : 1
  10-bit comparator lessequal                           : 2
@@ -2121,13 +2123,13 @@ Macro Statistics
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 8
  8-bit comparator lessequal                            : 2
-# Multiplexers                                         : 608
- 1-bit 2-to-1 multiplexer                              : 325
+# Multiplexers                                         : 567
+ 1-bit 2-to-1 multiplexer                              : 282
  1-bit 24-to-1 multiplexer                             : 2
  1-bit 3-to-1 multiplexer                              : 6
  1-bit 4-to-1 multiplexer                              : 17
  10-bit 2-to-1 multiplexer                             : 1
- 16-bit 2-to-1 multiplexer                             : 42
+ 16-bit 2-to-1 multiplexer                             : 44
  23-bit 2-to-1 multiplexer                             : 1
  24-bit 2-to-1 multiplexer                             : 57
  24-bit 4-to-1 multiplexer                             : 6
@@ -2183,22 +2185,22 @@ WARNING:Xst:1293 - FF/Latch <s_REG_Status_14> has a constant value of 0 in block
 WARNING:Xst:1293 - FF/Latch <s_REG_Status_13> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_REG_Status_12> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_REG_Status_11> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1065_o_s_UserClk_DFF_557> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1063_o_s_UserClk_DFF_556> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1061_o_s_UserClk_DFF_555> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1057_o_s_UserClk_DFF_553> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1055_o_s_UserClk_DFF_552> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1059_o_s_UserClk_DFF_554> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1051_o_s_UserClk_DFF_550> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1049_o_s_UserClk_DFF_549> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1053_o_s_UserClk_DFF_551> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1045_o_s_UserClk_DFF_547> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1043_o_s_UserClk_DFF_546> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1047_o_s_UserClk_DFF_548> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1041_o_s_UserClk_DFF_545> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1039_o_s_UserClk_DFF_544> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1035_o_s_UserClk_DFF_542> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <GND_1037_o_s_UserClk_DFF_543> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1060_o_s_UserClk_DFF_557> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1056_o_s_UserClk_DFF_555> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1054_o_s_UserClk_DFF_554> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1058_o_s_UserClk_DFF_556> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1050_o_s_UserClk_DFF_552> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1048_o_s_UserClk_DFF_551> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1052_o_s_UserClk_DFF_553> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1044_o_s_UserClk_DFF_549> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1042_o_s_UserClk_DFF_548> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1046_o_s_UserClk_DFF_550> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1040_o_s_UserClk_DFF_547> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1038_o_s_UserClk_DFF_546> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1034_o_s_UserClk_DFF_544> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1032_o_s_UserClk_DFF_543> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1036_o_s_UserClk_DFF_545> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <GND_1030_o_s_UserClk_DFF_542> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_P0_CMD_INS_2> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <s_P0_CMD_INS_1> (without init value) has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_P0_CMD_ADR_29> has a constant value of 0 in block <BatListener>. This FF/Latch will be trimmed during the optimization process.
@@ -2768,8 +2770,8 @@ Unit <BatListener> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2633
- Flip-Flops                                            : 2633
+# Registers                                            : 2641
+ Flip-Flops                                            : 2641
 # Shift Registers                                      : 31
  2-bit shift register                                  : 24
  3-bit shift register                                  : 6
@@ -2796,33 +2798,33 @@ Top Level Output File Name         : BatListener.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 12364
+# BELS                             : 12323
 #      GND                         : 81
 #      INV                         : 216
 #      LUT1                        : 314
-#      LUT2                        : 1344
-#      LUT3                        : 1370
-#      LUT4                        : 1254
-#      LUT5                        : 651
-#      LUT6                        : 1506
+#      LUT2                        : 1345
+#      LUT3                        : 1328
+#      LUT4                        : 1236
+#      LUT5                        : 631
+#      LUT6                        : 1542
 #      MULT_AND                    : 535
 #      MUXCY                       : 2342
 #      MUXCY_D                     : 99
 #      MUXCY_L                     : 128
-#      MUXF7                       : 70
+#      MUXF7                       : 72
 #      MUXF8                       : 23
 #      VCC                         : 57
 #      XORCY                       : 2374
-# FlipFlops/Latches                : 6724
-#      FD                          : 846
+# FlipFlops/Latches                : 6732
+#      FD                          : 829
 #      FDC                         : 44
 #      FDC_1                       : 2
 #      FDCE                        : 42
 #      FDCE_1                      : 64
-#      FDE                         : 3184
+#      FDE                         : 3192
 #      FDP                         : 27
-#      FDR                         : 426
-#      FDRE                        : 2076
+#      FDR                         : 427
+#      FDRE                        : 2092
 #      FDS                         : 9
 #      FDSE                        : 4
 # RAMS                             : 168
@@ -2863,19 +2865,19 @@ Selected Device : 6slx45csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            6724  out of  54576    12%  
- Number of Slice LUTs:                 8171  out of  27288    29%  
-    Number used as Logic:              6655  out of  27288    24%  
+ Number of Slice Registers:            6732  out of  54576    12%  
+ Number of Slice LUTs:                 8128  out of  27288    29%  
+    Number used as Logic:              6612  out of  27288    24%  
     Number used as Memory:             1516  out of   6408    23%  
        Number used as RAM:              296
        Number used as SRL:             1220
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  11569
-   Number with an unused Flip Flop:    4845  out of  11569    41%  
-   Number with an unused LUT:          3398  out of  11569    29%  
-   Number of fully used LUT-FF pairs:  3326  out of  11569    28%  
-   Number of unique control sets:       171
+ Number of LUT Flip Flop pairs used:  11551
+   Number with an unused Flip Flop:    4819  out of  11551    41%  
+   Number with an unused LUT:          3423  out of  11551    29%  
+   Number of fully used LUT-FF pairs:  3309  out of  11551    28%  
+   Number of unique control sets:       175
 
 IO Utilization: 
  Number of IOs:                         117
@@ -2909,7 +2911,7 @@ Clock Information:
 -----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                                                                 | Load  |
 -----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-p_AD_SCO                           | PLL_ADV:CLKOUT2                                                                                                                                       | 7351  |
+p_AD_SCO                           | PLL_ADV:CLKOUT2                                                                                                                                       | 7359  |
 p_AD_SCO                           | IBUFG+BUFG                                                                                                                                            | 120   |
 p_AD_SCO                           | PLL_ADV:CLKOUT3                                                                                                                                       | 319   |
 inst_BatFFTMod/inst_BatFFTLut/N1   | NONE(inst_BatFFTMod/inst_BatFFTLut/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)| 1     |
@@ -2926,8 +2928,8 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 40.913ns (Maximum Frequency: 24.442MHz)
-   Minimum input arrival time before clock: 9.727ns
-   Maximum output required time after clock: 7.083ns
+   Minimum input arrival time before clock: 8.957ns
+   Maximum output required time after clock: 7.081ns
    Maximum combinational path delay: 6.677ns
 
 Timing Details:
@@ -2937,7 +2939,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'p_AD_SCO'
   Clock period: 40.913ns (frequency: 24.442MHz)
-  Total number of paths / destination ports: 2237017 / 17956
+  Total number of paths / destination ports: 2240644 / 17985
 -------------------------------------------------------------------------
 Delay:               8.183ns (Levels of Logic = 53)
   Source:            inst_BatFFTMod/inst_Sqrt/blk00000454 (FF)
@@ -3033,34 +3035,34 @@ Delay:               3.715ns (Levels of Logic = 0)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'p_AD_SCO'
-  Total number of paths / destination ports: 3598 / 790
+  Total number of paths / destination ports: 4180 / 806
 -------------------------------------------------------------------------
-Offset:              9.727ns (Levels of Logic = 7)
+Offset:              8.957ns (Levels of Logic = 7)
   Source:            p_FSMC_A<0> (PAD)
-  Destination:       s_RdData_10 (FF)
+  Destination:       s_RdData_12 (FF)
   Destination Clock: p_AD_SCO rising 5.0X
 
-  Data Path: p_FSMC_A<0> to s_RdData_10
+  Data Path: p_FSMC_A<0> to s_RdData_12
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           114   1.328   2.480  p_FSMC_A_0_IBUF (p_FSMC_A_0_IBUF)
-     LUT3:I0->O           25   0.235   1.403  s_FFTState<1>231 (s_FFTState<1>23)
-     LUT6:I5->O            1   0.254   0.910  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT23 (Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT22)
-     LUT6:I3->O            1   0.235   0.682  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT24 (Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT23)
-     LUT6:I5->O            1   0.254   0.682  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT27_SW0 (N523)
-     LUT6:I5->O            1   0.254   0.682  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT27 (Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT26)
-     LUT6:I5->O            1   0.254   0.000  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_79_OUT28 (s_RState[1]_s_FFTState[1]_wide_mux_79_OUT<10>)
-     FDE:D                     0.074          s_RdData_10
+     IBUF:I->O            83   1.328   2.353  p_FSMC_A_0_IBUF (p_FSMC_A_0_IBUF)
+     LUT4:I0->O           16   0.254   1.410  s_FFTState<1>31731 (s_FFTState<1>3173)
+     LUT4:I1->O            2   0.235   0.726  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT42 (Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT41)
+     LUT5:I4->O            1   0.254   0.000  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT44_G (N557)
+     MUXF7:I1->O           1   0.175   0.958  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT44 (Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT43)
+     LUT6:I2->O            1   0.254   0.682  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT45 (Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT44)
+     LUT6:I5->O            1   0.254   0.000  Mmux_s_RState[1]_s_FFTState[1]_wide_mux_81_OUT46 (s_RState[1]_s_FFTState[1]_wide_mux_81_OUT<12>)
+     FDE:D                     0.074          s_RdData_12
     ----------------------------------------
-    Total                      9.727ns (2.888ns logic, 6.839ns route)
-                                       (29.7% logic, 70.3% route)
+    Total                      8.957ns (2.828ns logic, 6.129ns route)
+                                       (31.6% logic, 68.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'p_AD_SCO'
   Total number of paths / destination ports: 331 / 230
 -------------------------------------------------------------------------
-Offset:              7.083ns (Levels of Logic = 2)
+Offset:              7.081ns (Levels of Logic = 2)
   Source:            s_ResetUserClk (FF)
   Destination:       p_DA_RST (PAD)
   Source Clock:      p_AD_SCO rising 5.0X
@@ -3069,11 +3071,11 @@ Offset:              7.083ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q           1403   0.525   2.711  s_ResetUserClk (s_ResetUserClk)
+     FDE:C->Q           1397   0.525   2.709  s_ResetUserClk (s_ResetUserClk)
      LUT2:I1->O            1   0.254   0.681  inst_BatDAC/Mmux_DA_RST11 (p_DA_RST_OBUF)
      OBUF:I->O                 2.912          p_DA_RST_OBUF (p_DA_RST)
     ----------------------------------------
-    Total                      7.083ns (3.691ns logic, 3.392ns route)
+    Total                      7.081ns (3.691ns logic, 3.390ns route)
                                        (52.1% logic, 47.9% route)
 
 =========================================================================
@@ -3115,18 +3117,18 @@ Clock to Setup on destination clock p_AD_SCO
 Source Clock         |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------------+---------+---------+---------+---------+
 inst_BatHet/s_DDS_CLK|    4.311|         |         |         |
-p_AD_SCO             |    8.631|    4.063|    5.624|         |
+p_AD_SCO             |    8.723|    4.063|    5.624|         |
 ---------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 42.76 secs
+Total REAL time to Xst completion: 47.00 secs
+Total CPU time to Xst completion: 47.49 secs
  
 --> 
 
-Total memory usage is 393192 kilobytes
+Total memory usage is 392488 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  363 (   0 filtered)
