@@ -22,7 +22,7 @@
 --    devices, or systems.  Use in such applications are expressly            --
 --    prohibited.                                                             --
 --                                                                            --
---    (c) Copyright 1995-2014 Xilinx, Inc.                                    --
+--    (c) Copyright 1995-2015 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
 
@@ -51,10 +51,10 @@
 COMPONENT FftMult
   PORT (
     clk : IN STD_LOGIC;
-    a : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
-    b : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    a : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
+    b : IN STD_LOGIC_VECTOR(25 DOWNTO 0);
     ce : IN STD_LOGIC;
-    p : OUT STD_LOGIC_VECTOR(47 DOWNTO 0)
+    p : OUT STD_LOGIC_VECTOR(50 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------

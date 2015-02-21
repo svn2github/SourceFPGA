@@ -22,7 +22,7 @@
 --    devices, or systems.  Use in such applications are expressly            --
 --    prohibited.                                                             --
 --                                                                            --
---    (c) Copyright 1995-2014 Xilinx, Inc.                                    --
+--    (c) Copyright 1995-2015 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ END COMPONENT;
       c_architecture => 2,
       c_coarse_rotate => 0,
       c_cordic_function => 6,
-      c_data_format => 1,
+      c_data_format => 2,
       c_family => "spartan6",
       c_has_ce => 0,
       c_has_clk => 1,

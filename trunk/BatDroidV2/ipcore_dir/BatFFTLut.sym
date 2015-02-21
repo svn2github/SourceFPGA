@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="BatFFTLut">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-6-29T18:20:33</timestamp>
+    <timestamp>2015-2-16T18:15:57</timestamp>
     <pin polarity="Input" x="0" y="80" name="addra[8:0]" />
     <pin polarity="Input" x="0" y="144" name="ena" />
     <pin polarity="Input" x="0" y="272" name="clka" />

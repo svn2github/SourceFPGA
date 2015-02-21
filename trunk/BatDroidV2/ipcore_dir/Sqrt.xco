@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Sun Jun 29 18:31:38 2014
+# Date: Mon Feb 16 18:22:46 2015
 #
 ##############################################################
 #
@@ -44,7 +44,7 @@ CSET ce=false
 CSET coarse_rotation=false
 CSET compensation_scaling=No_Scale_Compensation
 CSET component_name=Sqrt
-CSET data_format=UnsignedFraction
+CSET data_format=UnsignedInteger
 CSET functional_selection=Square_Root
 CSET input_width=48
 CSET iterations=0
@@ -66,4 +66,4 @@ CSET y_out=false
 MISC pkg_timestamp=2013-10-13T18:14:49Z
 # END Extra information
 GENERATE
-# CRC: 77c140ee
+# CRC: 263349a8
