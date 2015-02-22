@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestMaxVol/TestMaxVol_bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="mult_gen_pkg_v11_2" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testmaxvol_bench" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/testmaxvol_bench/s_tb_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_reset</obj_property>
+      <obj_property name="ObjectShortName">s_tb_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_tb_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_clk</obj_property>
+      <obj_property name="ObjectShortName">s_tb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_tb_block_av" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_block_av</obj_property>
+      <obj_property name="ObjectShortName">s_tb_block_av</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_tb_data_av" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_data_av</obj_property>
+      <obj_property name="ObjectShortName">s_tb_data_av</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_in_data_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_in_data_r[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_in_data_r[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_in_data_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_in_data_l[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_in_data_l[23:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_out_data_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_out_data_r[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_out_data_r[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testmaxvol_bench/s_out_data_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_out_data_l[7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_out_data_l[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>
