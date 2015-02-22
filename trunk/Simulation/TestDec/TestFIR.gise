@@ -22,82 +22,9 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="TestFIR.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestFIR_bench_beh.prj"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestFIR_bench_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestFIR_bench_isim_beh.wdb"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/Decimator.vho" xil_pn:origination="imported"/>
-    <file xil_pn:fileType="FILE_USERDOC" xil_pn:name="ipcore_dir/Decimator_readme.txt"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1413611863" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1413611863">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1414930296" xil_pn:in_ck="9184220398615628879" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414930296">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="BatDecimator.vhd"/>
-      <outfile xil_pn:name="BatRandom.vhd"/>
-      <outfile xil_pn:name="BatScaleDither.vhd"/>
-      <outfile xil_pn:name="TestFIR.vhd"/>
-      <outfile xil_pn:name="lfsr_pkg.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1413611864" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="7392917283487323638" xil_pn:start_ts="1413611864">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1413611864" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6255010256913295756" xil_pn:start_ts="1413611864">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1414929182" xil_pn:in_ck="5351814005481060063" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-5692445309027953952" xil_pn:start_ts="1414929182">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/Decimator.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/Decimator.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1414930296" xil_pn:in_ck="6031275506660952774" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414930296">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="BatDecimator.vhd"/>
-      <outfile xil_pn:name="BatRandom.vhd"/>
-      <outfile xil_pn:name="BatScaleDither.vhd"/>
-      <outfile xil_pn:name="TestFIR.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/Decimator.vhd"/>
-      <outfile xil_pn:name="lfsr_pkg.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1416066912" xil_pn:in_ck="6031275506660952774" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-617496831743383348" xil_pn:start_ts="1416066903">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TestFIR_bench_beh.prj"/>
-      <outfile xil_pn:name="TestFIR_bench_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
-    </transform>
-    <transform xil_pn:end_ts="1416068281" xil_pn:in_ck="-8025057010667948657" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3547323000598944407" xil_pn:start_ts="1416068281">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TestFIR_bench_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-    </transform>
-    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-  </transforms>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
 </generated_project>
