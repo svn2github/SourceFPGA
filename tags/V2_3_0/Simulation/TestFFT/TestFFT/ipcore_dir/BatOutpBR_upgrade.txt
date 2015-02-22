@@ -1,0 +1,5 @@
+Mon May 20 12:50:10 2013
+
+Upgraded BatOutpBR from Block Memory Generator 7.2 to Block Memory Generator 7.3
+
+No changes made to parameter values.

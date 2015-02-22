@@ -1,0 +1,15 @@
+# Output products list for <FdDds>
+FdDds.asy
+FdDds.gise
+FdDds.ngc
+FdDds.sym
+FdDds.vhd
+FdDds.vho
+FdDds.xco
+FdDds.xise
+FdDds\doc\dds_compiler_v4_0_vinfo.html
+FdDds\doc\dds_ds558.pdf
+FdDds_flist.txt
+FdDds_readme.txt
+FdDds_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestADC/ADCTestbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="adctestbench" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/adctestbench/uut/i_ad_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_reset</obj_property>
+      <obj_property name="ObjectShortName">i_ad_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_phys_res" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_phys_res</obj_property>
+      <obj_property name="ObjectShortName">i_ad_phys_res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_res" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_res</obj_property>
+      <obj_property name="ObjectShortName">ad_res</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_usrclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_usrclk</obj_property>
+      <obj_property name="ObjectShortName">i_ad_usrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_sco" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_sco</obj_property>
+      <obj_property name="ObjectShortName">ad_sco</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_drdy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_drdy</obj_property>
+      <obj_property name="ObjectShortName">ad_drdy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_r_sdo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_r_sdo</obj_property>
+      <obj_property name="ObjectShortName">ad_r_sdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_l_sdo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_l_sdo</obj_property>
+      <obj_property name="ObjectShortName">ad_l_sdo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/s_adval" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_adval[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_adval[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_r_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_r_data[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ad_r_data[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_l_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_l_data[23:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ad_l_data[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_status" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_status[7:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ad_status[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/s_dataav" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_dataav</obj_property>
+      <obj_property name="ObjectShortName">s_dataav</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_datardy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_datardy</obj_property>
+      <obj_property name="ObjectShortName">i_ad_datardy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_wcmd" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_wcmd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i_ad_wcmd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_we" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_we</obj_property>
+      <obj_property name="ObjectShortName">i_ad_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/i_ad_wrpending" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">i_ad_wrpending</obj_property>
+      <obj_property name="ObjectShortName">i_ad_wrpending</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_r_fsi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_r_fsi</obj_property>
+      <obj_property name="ObjectShortName">ad_r_fsi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_r_sdi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_r_sdi</obj_property>
+      <obj_property name="ObjectShortName">ad_r_sdi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_l_fsi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_l_fsi</obj_property>
+      <obj_property name="ObjectShortName">ad_l_fsi</obj_property>
+   </wvobject>
+   <wvobject fp_name="/adctestbench/uut/ad_l_sdi" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ad_l_sdi</obj_property>
+      <obj_property name="ObjectShortName">ad_l_sdi</obj_property>
+   </wvobject>
+</wave_config>

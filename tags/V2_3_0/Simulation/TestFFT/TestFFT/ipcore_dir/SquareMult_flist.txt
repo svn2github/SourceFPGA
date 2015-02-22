@@ -1,0 +1,15 @@
+# Output products list for <SquareMult>
+SquareMult.asy
+SquareMult.gise
+SquareMult.ngc
+SquareMult.sym
+SquareMult.vhd
+SquareMult.vho
+SquareMult.xco
+SquareMult.xise
+SquareMult\doc\mult_gen_ds255.pdf
+SquareMult\doc\mult_gen_v11_2_readme.txt
+SquareMult\doc\mult_gen_v11_2_vinfo.html
+SquareMult_flist.txt
+SquareMult_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

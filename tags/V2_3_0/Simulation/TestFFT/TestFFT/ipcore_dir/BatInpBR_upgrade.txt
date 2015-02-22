@@ -1,0 +1,5 @@
+Mon May 20 12:48:42 2013
+
+Upgraded BatInpBR from Block Memory Generator 7.2 to Block Memory Generator 7.3
+
+No changes made to parameter values.

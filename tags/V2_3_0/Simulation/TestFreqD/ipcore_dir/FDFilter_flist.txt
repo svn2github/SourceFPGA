@@ -1,0 +1,18 @@
+# Output products list for <FDFilter>
+FDFilter.asy
+FDFilter.gise
+FDFilter.mif
+FDFilter.mif_0
+FDFilter.mif_1
+FDFilter.ngc
+FDFilter.sym
+FDFilter.vhd
+FDFilter.vho
+FDFilter.xco
+FDFilter.xise
+FDFilterCOEFF_auto0_0.mif
+FDFilterCOEFF_auto1_0.mif
+FDFilter_flist.txt
+FDFilter_readme.txt
+FDFilter_xmdf.tcl
+FDFilterfilt_decode_rom.mif
