@@ -1,6 +1,0 @@
-vhdl work "ipcore_dir/Decimator.vhd"
-vhdl work "lfsr_pkg.vhd"
-vhdl work "BatScaleDither.vhd"
-vhdl work "BatRandom.vhd"
-vhdl work "BatDecimator.vhd"
-vhdl work "TestFIR.vhd"
