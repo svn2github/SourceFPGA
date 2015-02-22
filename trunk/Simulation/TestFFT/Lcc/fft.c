@@ -318,7 +318,7 @@ static	bool							b_firstBlock = true;					// do a special treatment for first b
 	s_FFTOut.u16_RMSValue = (uint16_t) (u64_tmp >> 5);							// 5 scale bits (as for outVal)
 
 	// fill the rest of the output structure
-	s_FFTOut.u16_MaxAmplitude = s32_MaxAmpl>>8;									// the maximum amplitude, scaled to 16 bits
+	s_FFTOut.u16_MaxAmplitude = s32_MaxAmpl>>7;									// the maximum amplitude, scaled to 16 bits
 
 	s_FFTOut.u16_MaxFFTOutVal = u16_MaxFFTVal;									// the value of the peak frequency
 	s_FFTOut.u16_MaxFFTOutIdx = u16_MaxFFTValIdx;								// the index of the peak frequency

@@ -311,25 +311,17 @@ int main(int argc,char *argv[]){
 // Defines for FFT TASK
 #define	FFT_SAMPLES_PER_BLOCK	1024											// number of FFT samples per block. We get half of it
 #define	FFT_SAMPLES				(FFT_SAMPLES_PER_BLOCK/2)						// number of samples to be retrieved (half table offered by FPGA)
+#define	FFT_RESULTSIZE	 		(FFT_SAMPLES/2)									// number of samples to be retrieved (half table offered by FPGA)
 #define	FFT_SAMPLE_FREQUENCY	312500											// sample frequency
 #define	FFT_FREQ_PER_INDEX		((float)((float)FFT_SAMPLE_FREQUENCY/(float)FFT_SAMPLES_PER_BLOCK))	// frequency per index
-
-// Trigger parameters
-const uint8_t	C_U8_CREST		= 6;											// minimum crest factor to trigger
-const uint8_t	C_U16_MINRMS	= 20;											// minimum enery to trigger
-const uint32_t	C_U32_MINFREQ	= 15000;										// minimum frequency to trigger
-const uint32_t	C_U32_MAXFREQ	= 130000;										// maximum frequency to trigger
-
-const int	C_CALL_DURATION		= 2000;											// max call length
-const int	C_WAIT_TIME			= 3000;											// waiting time
-const int	C_CALL_GAP			= 450;											// call gap
+#define FFT_MAX_VOLUME          60000                                           // volume above this level are considered to have distortion
 
 // statistical data for a call sequence
-static uint16_t					StMinFreq, StMaxFreq, StPeakFreq, StLastMax;
-static uint16_t					StNumCalls, StCallDist, StCallLength, StMaxAmpl;
+static uint16_t					StMinFreq, StMaxFreq, StMaxAmpl;
 static uint8_t					WhichTable;
 static uint32_t					NumFFTBlocks;
-static uint32_t					FFTTable[2][FFT_SAMPLES/2];
+static uint8_t					FFTBuf[FFT_RESULTSIZE];
+static uint32_t					FFTTable[2][FFT_RESULTSIZE];
 
 //********************************************************/
 // ClearStats
@@ -340,13 +332,16 @@ static uint32_t					FFTTable[2][FFT_SAMPLES/2];
 //********************************************************/
 void ClearStats(void)
 {
-	uint16_t	ii;
 
-	StMinFreq = StMaxFreq = StPeakFreq = StLastMax = 0;
-	StNumCalls = StCallDist = StCallLength = StMaxAmpl= 0;
-	// reset fft analyze
-	WhichTable ^= 1; NumFFTBlocks = 0;
-	for(ii=0;ii<(FFT_SAMPLES/2);ii++) FFTTable[WhichTable][ii] = 0l;
+	uint16_t    ii;
+
+    StMinFreq = StMaxFreq = 0;
+    StMaxAmpl = 0;
+
+    // reset fft analysis
+    WhichTable ^= 1;
+    NumFFTBlocks = 0;
+    for(ii=0;ii<FFT_RESULTSIZE;ii++) FFTTable[WhichTable][ii] = 0l;
 }
 
 
@@ -357,41 +352,31 @@ void ClearStats(void)
 // Parameters:
 // none
 //********************************************************/
-void UpdateStats(uint8_t NewCall, FFT_out_s *FFTResult)
+void UpdateStats(FFT_out_s *FFTResult)
 {
-	uint16_t		ii, tmp;
 
-	if (NewCall) {
-		StNumCalls++;
-	}
+    uint16_t        ii;
 
-	if(StMinFreq == 0) {
-		StMinFreq = StMaxFreq = StPeakFreq = FFTResult->u16_MaxFFTOutIdx;
-	} else {
+
+    // find min and max frequencies
+    if(StMinFreq == 0) {
+        StMinFreq = StMaxFreq = FFTResult->u16_MaxFFTOutIdx;
+    } else {
 		if(FFTResult->u16_MaxFFTOutIdx < StMinFreq) StMinFreq = FFTResult->u16_MaxFFTOutIdx;
 		if(FFTResult->u16_MaxFFTOutIdx > StMaxFreq) StMaxFreq = FFTResult->u16_MaxFFTOutIdx;
-	}
-	if(FFTResult->u16_MaxFFTOutVal > StLastMax) {
-		StLastMax = FFTResult->u16_MaxFFTOutVal;
-		StPeakFreq = FFTResult->u16_MaxFFTOutIdx;
-	}
+    }
 
-	if(FFTResult->u16_MaxAmplitude > StMaxAmpl) {
-		StMaxAmpl = FFTResult->u16_MaxAmplitude;
-	}
 
-	// Update FFT analyze
-	for(ii=0;ii<(FFT_SAMPLES/2);ii++) {
-		if(FFTResult->u16_OutVal[ii*2] > FFTResult->u16_OutVal[(ii*2)+1]) {
-			tmp = FFTResult->u16_OutVal[ii*2];
-		} else {
-			tmp = FFTResult->u16_OutVal[(ii*2)+1];
-		}
+  	// find maximum amplitude
+    if(FFTResult->u16_MaxAmplitude > StMaxAmpl) {
+        StMaxAmpl = FFTResult->u16_MaxAmplitude;
+    }
 
-		FFTTable[WhichTable][ii] += tmp;
-	}
-
-	NumFFTBlocks++;
+     // update FFT analysis
+    for(ii=0;ii<FFT_RESULTSIZE;ii++) {
+        FFTTable[WhichTable][ii] += FFTBuf[ii];
+    }
+    NumFFTBlocks++;
 }
 
 
@@ -405,12 +390,24 @@ void UpdateStats(uint8_t NewCall, FFT_out_s *FFTResult)
 void SendStats(FILE *fpOutFile, uint16_t u16_Crest)
 {
 	float			f_freq;
-	int				ii;
+	int				ii, idx;
 	uint32_t		u32_freqInt;
-	uint32_t		div_res;
+	uint32_t		div_res, highF;
 
 	// Get peak frequency
-	f_freq = ((FFT_FREQ_PER_INDEX)*(StPeakFreq + 1));				// calculate frequency and round
+	fprintf(fpOutFile, "%d\n", 0);
+	div_res = highF = FFTTable[WhichTable][1] / NumFFTBlocks;       // calculate average of first value
+	fprintf(fpOutFile, "%d\n", div_res);
+	for(ii=2;ii<FFT_RESULTSIZE;ii++) {
+		div_res = FFTTable[WhichTable][ii] / NumFFTBlocks;			// calculate average
+		if (div_res > highF) {                                                      // find peak frequency index
+            highF = div_res;
+            idx = ii;
+        }
+		fprintf(fpOutFile, "%d\n", div_res);
+	}
+
+	f_freq = ((FFT_FREQ_PER_INDEX*2)*(idx + 1));				// calculate frequency and round
 	u32_freqInt = (unsigned int)floor(f_freq+0.5f);					// convert to integer
 
 	fprintf(fpOutFile, "=======================================================\n\n");
@@ -419,13 +416,82 @@ void SendStats(FILE *fpOutFile, uint16_t u16_Crest)
 
 	printf("Peak: %dHz\n", u32_freqInt);
 
-	for(ii=0;ii<(FFT_SAMPLES/2);ii++) {
-		div_res = FFTTable[WhichTable][ii] / NumFFTBlocks;			// calculate average
-		fprintf(fpOutFile, "%d\n", div_res);
-	}
 	fprintf(fpOutFile, "=======================================================\n\n");
 }
 
+
+//********************************************************/
+// GetScaleDiv
+// Calculates the number of bits to shift right
+// to scale a uint16_t (0-65535) value to uint8_t (0 to 255)
+//
+// Parameters:
+// none
+//********************************************************/
+uint8_t GetScaleDiv(uint16_t MaxVal)
+{
+    if(MaxVal >= 32768) {
+        return 8;
+    } else
+    if(MaxVal >= 16384) {
+        return 7;
+    } else
+    if(MaxVal >= 8192) {
+        return 6;
+    } else
+    if(MaxVal >= 4096) {
+        return 5;
+    } else
+    if(MaxVal >= 2048) {
+        return 4;
+    } else
+    if(MaxVal >= 1024) {
+        return 3;
+    } else
+    if(MaxVal >= 512) {
+        return 2;
+    } else
+    if(MaxVal >= 256) {
+        return 1;
+    } else
+        return 0;
+}
+
+
+//********************************************************/
+// GetScaledResults
+// Gets the scaled individual values of the FFT
+//
+// Parameters:
+// none
+//********************************************************/
+void GetScaledResults(uint16_t MaxVal, FFT_out_s *FFTResult)
+{
+    uint8_t             scale;
+    uint16_t            ii, buf, buf1;
+
+    scale = GetScaleDiv(MaxVal);     	                                            // get scaling factor
+    // get the individual FFT values
+    for(ii=0;ii<FFT_RESULTSIZE;ii++) {                                              // take only the larger one of a pair of 2
+		buf =  FFTResult->u16_OutVal[(ii*2)];
+		buf1 = FFTResult->u16_OutVal[(ii*2) + 1];
+        FFTBuf[ii] = (uint8_t) (((buf1>buf)?buf1:buf)>>scale);                      // take higher value and scale it
+    }
+}
+
+
+
+// Trigger parameters
+const uint16_t	C_U16_CREST		= 6;											// minimum crest factor to trigger
+const uint16_t	C_U16_MINFFTVAL	= 800;											// minimum FFT value to trigger
+const uint16_t	C_U16_MINRMS	= 100;											// minimum enery to trigger
+const uint32_t	C_U32_MINFREQ	= 15000;										// minimum frequency to trigger
+const uint32_t	C_U32_MAXFREQ	= 130000;										// maximum frequency to trigger
+const uint16_t	C_U16_MINSNDLEV	= 10;											// minumum sound level
+
+const int	C_CALL_DURATION		= 5000;											// max call length
+const int	C_WAIT_TIME			= 3000;											// waiting time
+const int	C_CALL_GAP			= 450;											// call gap
 
 
 /*
@@ -438,37 +504,38 @@ and is checking trigger conditions.
 */
 int HandleFFTResult(FILE *fpOutFile, FFT_out_s *FFTResult) {
 	static enum 		{st_WaitForTrigger, st_ReTrigger, st_Finish} e_state = st_WaitForTrigger;
-	static bool 		b_newCall = false;
 	static uint64_t		u64_xLastWakeTime, u64_xStartRetrigger;
-
 	bool				b_triggered;
-	uint16_t			u16_Crest;
+	uint16_t			u16_Crest, u16_minSndLev;
 	int					ii;
 	uint32_t			u32_peakFreq;
 
+
 	printf("Time: %.3fms\r", xTaskGetTickCountPrec());
-
-	// calculate crest factor
-	if(FFTResult->u16_RMSValue) {												// avoid division by zero
-		u16_Crest = FFTResult->u16_MaxFFTOutVal/FFTResult->u16_RMSValue;		// Crest-factor calculation
-	} else {
-		u16_Crest = 0;
-	}
-
 	// calculate peak frequency
-	u32_peakFreq = (uint32_t)((FFT_FREQ_PER_INDEX)*(FFTResult->u16_MaxFFTOutIdx + 1));	//
+	u32_peakFreq = (uint32_t)floor(((FFT_FREQ_PER_INDEX)*(FFTResult->u16_MaxFFTOutIdx + 1))+0.5f);
 
-	// check trigger condition
-	if(	(u16_Crest >= C_U8_CREST) &&											// suffucient crest factor
-   		(FFTResult->u16_RMSValue > C_U16_MINRMS) &&								// sufficient signal energy
-		(u32_peakFreq > C_U32_MINFREQ) && (u32_peakFreq < C_U32_MAXFREQ)) {		// peak frequency in bat range ?
-		b_triggered = true;														// indicate trigger condition fulfilled
-	} else {
-		b_triggered = false;													// trigger condition not fulfilled
-	}
+	if (FFTResult->u16_RMSValue == 0) FFTResult->u16_RMSValue = 1;				// avoid division by 0
+	u16_Crest = (FFTResult->u16_MaxFFTOutVal/FFTResult->u16_RMSValue);
+
+	// check if we have a trigger condition
+    if( (FFTResult->u16_MaxAmplitude <= FFT_MAX_VOLUME) &&                  // avoid trigger on frames with potential distortion
+        (u32_peakFreq >= C_U32_MINFREQ) &&          						// in valid frequency range
+	    (FFTResult->u16_RMSValue >= C_U16_MINRMS) &&                        // RMS value high enough
+        (FFTResult->u16_MaxFFTOutVal >= C_U16_MINFFTVAL) &&                 // max FFT value high enough
+        (u32_peakFreq <= C_U32_MAXFREQ) &&      			                // still frequency range
+        (u16_Crest >= C_U16_CREST)) {     // keep it last condition to avoid unneccessary divisions
+        // initial trigger condition fulfilled!
+		b_triggered = true;
+    } else {
+     	b_triggered = false;
+    }
 
 	// some debug prints
 	fprintf(fpOutFile,"Time: %.3fms\n", xTaskGetTickCountPrec());
+	if(b_triggered) {
+		fprintf(fpOutFile,"Initial trigger!\n");
+	}
 	fprintf(fpOutFile,"Crest: %d\n", u16_Crest);
 	fprintf(fpOutFile,"Frequency: %d\n", u32_peakFreq);
 	fprintf(fpOutFile,"MaxFFTVal: %d\n", FFTResult->u16_MaxFFTOutVal);
@@ -482,37 +549,42 @@ int HandleFFTResult(FILE *fpOutFile, FFT_out_s *FFTResult) {
 	switch (e_state) {
 		case st_WaitForTrigger:
 			if(b_triggered) {
-				printf("Time: %.3fms, First trigger!\n", xTaskGetTickCountPrec());
+				printf("Time: %.3fms, Initial trigger!\n", xTaskGetTickCountPrec());
+				GetScaledResults(FFTResult->u16_MaxFFTOutVal, FFTResult);      	// fetch the FFT values
 				ClearStats();                                   				// re-initialize the statistics
-				UpdateStats(1, FFTResult);										// update statistics
-				b_newCall = false;
+				UpdateStats(FFTResult);											// update statistics
 				u64_xStartRetrigger = u64_xLastWakeTime = xTaskGetTickCount();	// remember the time when triggered, usually every 100ms there is another call
 				e_state = st_ReTrigger;      				                    // wait for additional trigger now
 			}
 			break;
 		case st_ReTrigger:
-			if (xTaskGetTickCount() > (u64_xStartRetrigger + C_CALL_DURATION)) { // max 5 seconds retrigger (to deal with constant signals)
-				printf("Time: %.3fms, Continous Trigger ended!\n", xTaskGetTickCountPrec());
-				SendStats(fpOutFile, u16_Crest);								// call ended. Do final calculations
-				u64_xLastWakeTime = xTaskGetTickCount();						// remember the time when finished
-				e_state = st_Finish;  		                					// ignore further calls for a while
-				break;
-			}
+			u16_minSndLev = 655*C_U16_MINSNDLEV;
+			if(b_triggered || (
+               (FFTResult->u16_MaxAmplitude <= FFT_MAX_VOLUME) &&          		// lower conditions for re-triggering
+               (u32_peakFreq >= C_U32_MINFREQ) &&    		             		// in valid frequency range
+			   (u32_peakFreq <= C_U32_MAXFREQ) &&      			                // still frequency range
+               (FFTResult->u16_MaxAmplitude > (655*C_U16_MINSNDLEV)))) {  		// enough volume?
+
+            	GetScaledResults(FFTResult->u16_MaxFFTOutVal, FFTResult);       // fetch the FFT values
+                UpdateStats(FFTResult);                                       	// handle more calculations of FFT
+				fprintf(fpOutFile,"Re-trigger!\n");
+            }
 			if(b_triggered) {
-				printf("Time: %.3fms, Re-triggered!\n", xTaskGetTickCountPrec());
-		    	u64_xLastWakeTime = xTaskGetTickCount();						// still triggering
-				UpdateStats(b_newCall, FFTResult);                 				// handle more calculations of FFT
-				b_newCall = false;
-			} else {
-				if (xTaskGetTickCount() > (u64_xLastWakeTime + C_CALL_GAP)) {
-					printf("Time: %.3f, Trigger ended!\n", xTaskGetTickCountPrec());
-					SendStats(fpOutFile, u16_Crest);                   			// call ended. Do final calculations
+                u64_xLastWakeTime = xTaskGetTickCount();                        // still triggering
+            } else {
+				if (xTaskGetTickCount() > (u64_xStartRetrigger + C_CALL_GAP	)) {
+					printf("Time: %.3fms, Continous Trigger ended!\n", xTaskGetTickCountPrec());
+					SendStats(fpOutFile, u16_Crest);							// call ended. Do final calculations
 					u64_xLastWakeTime = xTaskGetTickCount();					// remember the time when finished
-					e_state = st_Finish;  						                // ignore further calls for a while
-				} else {                                        				// we are still in gap time, do nothing until we find a long gap
-					b_newCall = true;
+					e_state = st_Finish;  		                				// ignore further calls for a while
+					break;
 				}
 			}
+            if (xTaskGetTickCount() > (u64_xStartRetrigger + C_CALL_DURATION) ) { // max 5 seconds retrigger (to deal with constant signals)
+               SendStats(fpOutFile, u16_Crest);                                 // call ended. Do final calculations
+               u64_xLastWakeTime = xTaskGetTickCount();                        	// remember the time when finished
+               e_state = st_Finish;                                          	// ignore further calls for a while
+            }
 			break;
 		case st_Finish:
 			if (xTaskGetTickCount() > (u64_xLastWakeTime + C_WAIT_TIME)) {
