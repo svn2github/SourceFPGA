@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-01-25T12:57:42</DateModified>
+  <DateModified>2015-02-22T08:14:31</DateModified>
   <ModuleName>BatADC</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestADC/iseconfig/BatADC.xreport</SavedFilePath>
