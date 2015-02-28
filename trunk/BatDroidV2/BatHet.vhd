@@ -151,6 +151,7 @@ signal	s_MultEN						: std_logic := '0';												-- Enable signal for Multipl
 signal	s_FiltEN						: std_logic := '0';												-- Enable signal for Filter 
 																													
 signal	s_InVal						: std_logic_vector(23 downto 0) := (others => '0');	-- current input value from ADC
+signal	s_InVal1						: std_logic_vector(23 downto 0) := (others => '0');	-- current input value from ADC
 
 signal	s_Mult						: std_logic_vector(47 downto 0) := (others => '0');	-- result of multiplication
 signal	s_MultDithLeft				: std_logic_vector(23 downto 0) := (others => '0');	-- result of dithering
@@ -319,11 +320,12 @@ begin
 				when St_Het1 =>															-- prepare multiplication
 						s_MultEN <= '1';													-- enable multiplier
 					   s_InVal <= i_HD_R_DataIn;										-- provide right input data to multiplier
+                  s_InVal1 <= i_HD_L_DataIn;										-- get left input at same time
 						s_CycleCnt <= 0;													-- reset cycle counter for next usage
 						s_HetState <= St_Het2;											-- next step
 				when St_Het2 =>															-- wait for result of multiplication
 					if s_CycleCnt = (c_MULTCYC) then									-- now we have the calculated value in s_Mult
-						s_InVal <= i_HD_L_DataIn;										-- provide left input data to multiplier, sinus remains same
+						s_InVal <= s_InVal1;		      								-- provide left input data to multiplier, sinus remains same
 						s_Dith1Nd <= '1';
                  	s_HetState <= St_Het3;											-- next step
 				   else
