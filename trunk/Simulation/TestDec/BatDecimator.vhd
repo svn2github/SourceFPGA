@@ -118,6 +118,7 @@ end component;
 -- Decimator divider --
 -----------------------
 signal	s_FilterIn						: signed(23 downto 0);					-- the filter input
+signal	s_FilterInSave					: signed(23 downto 0);					-- the filter input
 signal	s_DC_Out							: std_logic_vector(49 downto 0) := (others => '0');	-- of filtering
 signal	s_DC_OutDith					: std_logic_vector(23 downto 0) := (others => '0');	-- dithered version of filtering
 signal	s_DC_OutReg						: std_logic_vector(23 downto 0) := (others => '0');	-- save result of first channel until second channel is ready
@@ -163,8 +164,8 @@ inst_DecDither : BatScaleDither
 		c_DT_QBits						=> s_DC_OutDith'length,
 		c_DT_ScaleBits					=> 2,												-- number of bits to scale result
 		c_DT_Truncate					=> 0,												-- 1: just truncate, no dither, 0: do the dither
-		c_DT_Tpdf						=> 0,												-- 1: TPDF random, 0: RPDF random
-		c_DT_FullLSB					=> 0												-- 1: LSB dither, 0: 0.5 LSB dither
+		c_DT_Tpdf						=> 1,												-- 1: TPDF random, 0: RPDF random
+		c_DT_FullLSB					=> 1												-- 1: LSB dither, 0: 0.5 LSB dither
 	)
 	port map (
 		i_DT_USRCLK						=> i_DC_USRCLK,
@@ -203,11 +204,12 @@ begin
 					end if;
 				when St_F1 =>
 					s_FilterIn <= signed(i_DC_R_DataIn);							-- feed with right channel
+               s_FilterInSave <= signed(i_DC_L_DataIn);                 -- get both samples at the same time
 					s_ND <= '1';															-- take over data to filter
 					s_FState <= St_F2;  		                               	-- keep state
 				when St_F2 =>
 					if s_RdyForData = '1' and s_ChanIn = "1" then				-- Filter ready to accept data?
-						s_FilterIn <= signed(i_DC_L_DataIn);						-- feed with left channel
+						s_FilterIn <= s_FilterInSave;          					-- feed with left channel
 						s_ND <= '1';														-- take over data to filter
 						s_FState <= St_F0;                                 	-- default state
 					else

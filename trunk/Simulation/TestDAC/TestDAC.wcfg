@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestDAC/TestDAC_bench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="testdac_bench" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/testdac_bench/s_tb_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_reset</obj_property>
+      <obj_property name="ObjectShortName">s_tb_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/s_tb_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_clk</obj_property>
+      <obj_property name="ObjectShortName">s_tb_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/s_tb_data_rq" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_data_rq</obj_property>
+      <obj_property name="ObjectShortName">s_tb_data_rq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/s_tb_in_data_l" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_in_data_l[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_in_data_l[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/s_tb_in_data_r" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_in_data_r[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_in_data_r[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_cs" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_cs</obj_property>
+      <obj_property name="ObjectShortName">da_cs</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_cdin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_cdin</obj_property>
+      <obj_property name="ObjectShortName">da_cdin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_cclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_cclk</obj_property>
+      <obj_property name="ObjectShortName">da_cclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_lrck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_lrck</obj_property>
+      <obj_property name="ObjectShortName">da_lrck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_sclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_sclk</obj_property>
+      <obj_property name="ObjectShortName">da_sclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_sdin" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_sdin</obj_property>
+      <obj_property name="ObjectShortName">da_sdin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testdac_bench/uut/da_rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">da_rst</obj_property>
+      <obj_property name="ObjectShortName">da_rst</obj_property>
+   </wvobject>
+</wave_config>
