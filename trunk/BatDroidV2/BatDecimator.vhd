@@ -118,6 +118,7 @@ end component;
 -- Decimator divider --
 -----------------------
 signal	s_FilterIn						: signed(23 downto 0);					-- the filter input
+signal	s_FilterInSave					: signed(23 downto 0);					-- the filter input
 signal	s_DC_Out							: std_logic_vector(49 downto 0) := (others => '0');	-- of filtering
 signal	s_DC_OutDith					: std_logic_vector(23 downto 0) := (others => '0');	-- dithered version of filtering
 signal	s_DC_OutReg						: std_logic_vector(23 downto 0) := (others => '0');	-- save result of first channel until second channel is ready
@@ -203,11 +204,12 @@ begin
 					end if;
 				when St_F1 =>
 					s_FilterIn <= signed(i_DC_R_DataIn);							-- feed with right channel
+               s_FilterInSave <= signed(i_DC_L_DataIn);                 -- get both samples at the same time
 					s_ND <= '1';															-- take over data to filter
 					s_FState <= St_F2;  		                               	-- keep state
 				when St_F2 =>
 					if s_RdyForData = '1' and s_ChanIn = "1" then				-- Filter ready to accept data?
-						s_FilterIn <= signed(i_DC_L_DataIn);						-- feed with left channel
+						s_FilterIn <= s_FilterInSave;          					-- feed with left channel
 						s_ND <= '1';														-- take over data to filter
 						s_FState <= St_F0;                                 	-- default state
 					else

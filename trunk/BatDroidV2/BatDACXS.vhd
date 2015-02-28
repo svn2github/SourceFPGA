@@ -125,6 +125,10 @@ signal   s_Dcnt_Max					: integer range 0 to 255;					-- counter for division
 signal   s_Dce							: std_logic;
 signal   s_SCLK						: std_logic := '0';
 signal   s_LRCK						: std_logic := '0';
+signal   s_SDIN		   			: std_logic := '0';
+signal   s_SCLK1						: std_logic := '0';
+signal   s_LRCK1						: std_logic := '0';
+signal   s_SDIN1		   			: std_logic := '0';
 
 signal	s_DivCnt						: integer range 0 to 255;					-- counter for LRCK division
 signal	s_DivCnt_Max				: integer range 0 to 255;					-- counter for LRCK division
@@ -167,8 +171,7 @@ begin
 	if rising_edge(i_DA_USRCLK) then
 		-- Reset
 		if i_DA_RESET = '1' then
-			DA_SDIN <= '0';																-- set data line to defined state			
-			DA_LRCK <= '1';																-- reset LRCK
+			s_SDIN <= '0';		   														-- set data line to defined state			
 			s_LRCK <= '1';
 			s_WDataState <= St_Idle;													-- init state machine
 			s_DivCnt <= 0;																	-- re-initialize divisor
@@ -178,14 +181,14 @@ begin
 			i_DA_REMPTY <= '0';															-- this will be overwritten, when new data is requested
 		-- Clock
 			if s_Dce='1' then																-- here we are working at 10MHz
-				if s_SCLK = '0' then														-- align to falling SCLK
+				if s_SCLK = '1' then														-- align to falling SCLK
 					if s_DivCnt = s_DivCnt_Max then									-- change LR line
 						if s_LRCK = '0' then												-- change to 1?
-							DA_LRCK <= '1';												-- put clock to pi
-							DA_SDIN <= s_DAC_DATAL(23);								-- prepare first bit
+							s_LRCK <= '1';		   										-- put clock to pi
+							s_SDIN <= s_DAC_DATAL(23); 								-- prepare first bit
 						else
-							DA_LRCK <= '0';												-- put clock to pi
-							DA_SDIN <= s_DAC_DATAR(23);								-- prepare first bit					
+							s_LRCK <= '0';	   											-- put clock to pi
+							s_SDIN <= s_DAC_DATAR(23);		   						-- prepare first bit					
 						end if;
 						s_WDataState <= St_ColData;									-- start shifting data out
 						v_cnt_wr := 23;													-- initialize bit counter
@@ -195,9 +198,9 @@ begin
 						if s_WDataState = St_ColData then
 							v_cnt_wr := v_cnt_wr - 1;
 							if s_LRCK = '1' then											-- we are one change behind...
-								DA_SDIN <= s_DAC_DataL(v_cnt_wr);
+								s_SDIN <= s_DAC_DataL(v_cnt_wr);
 							else
-								DA_SDIN <= s_DAC_DataR(v_cnt_wr);
+								s_SDIN <= s_DAC_DataR(v_cnt_wr);
 							end if;
 							if v_cnt_wr = 0 then
 								s_WDataState <= St_GetData;
@@ -210,29 +213,41 @@ begin
 								s_DAC_DataR <= i_DA_DATAR;								-- get fresh data
 							end if;	
 							s_WDataState <= St_ReqData;
-							DA_SDIN <= '0';												-- set data to 0 for remaining LSB bits
+							s_SDIN <= '0';		   										-- set data to 0 for remaining LSB bits
 						elsif s_WDataState = St_ReqData then
 							if s_LRCK = '0' then
 								i_DA_REMPTY <= '1';										-- request new data
 							end if;
 							s_WDataState <= St_Idle;
-							DA_SDIN <= '0';												-- set data to 0 for remaining LSB bits
+							s_SDIN <= '0';		   										-- set data to 0 for remaining LSB bits
 						else
-							DA_SDIN <= '0';												-- set data to 0 for remaining LSB bits
+							s_SDIN <= '0';		   										-- set data to 0 for remaining LSB bits
 							s_WDataState <= St_Idle;									-- keep state
 						end if;
-						DA_LRCK <= s_LRCK;												-- put clock to pin
 						s_DivCnt <= s_DivCnt+1;
 					end if;
 				end if;
 				s_SCLK <= not s_SCLK;													-- generate clock
-				DA_SCLK <= s_SCLK;														-- put clock to pin
 			end if;
 		end if;	
 	end if;
 end process DataProc;
 
+-- Outout sync for data interface
+-- This is to prevent glitches on output lines
+DataOutProc: process(i_DA_USRCLK)
+begin
+	if rising_edge(i_DA_USRCLK) then
+      s_SCLK1 <= s_SCLK;
+      DA_SCLK <= s_SCLK1;
 
+      s_LRCK1 <= s_LRCK;
+      DA_LRCK <= s_LRCK1;
+
+      s_SDIN1 <= s_SDIN;
+      DA_SDIN <= s_SDIN1;
+	end if;
+end process DataOutProc;
 
 -- Clock Enable Generator for data interface
 DataClockProc: process(i_DA_USRCLK)
