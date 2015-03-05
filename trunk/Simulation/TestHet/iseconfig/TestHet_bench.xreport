@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-02-28T16:57:20</DateModified>
+  <DateModified>2015-03-04T18:50:30</DateModified>
   <ModuleName>TestHet_bench</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>E:/Source/BatDroidV2/SourceFPGA/Simulation/TestHet/iseconfig/TestHet_bench.xreport</SavedFilePath>
