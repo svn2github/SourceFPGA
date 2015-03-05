@@ -147,7 +147,8 @@ entity BatFFTMod is
       i_FFT_MaxFFTVal            : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Max FFT value for that frame
       i_FFT_MaxFFTValInd         : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Index of max FFT value (defining peak frequency)
       i_FFT_RMSValue             : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- RMS value of that frame
-      i_FFT_MaxAmpl              : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Max amplitude value of that frame   
+      i_FFT_MaxAmpl              : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Max amplitude value of that frame
+      i_FFT_Var                  : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Variance value (interger) for reported block                                                                      
       i_FFT_DataRdy              : out STD_LOGIC;                       -- indicates: FFT has new data
       i_FFT_Random1              : in  std_logic_vector(31 downto 0);   -- Random data
       i_FFT_Random2              : in  std_logic_vector(31 downto 0)    -- Random data
@@ -170,6 +171,7 @@ architecture Behavioral of BatFFTMod is
 constant c_MULTCYC               : integer := 6;                        -- Number of MULT cycles for square calculation
 constant c_MULTCYC_LUT           : integer := 5;                        -- Number of MULT cycles for LUT calculation
 constant c_SQRTCYC               : integer := 13;                       -- Number of SQRT cycles
+constant c_VARMULTCYC            : integer := 4;                        -- Number of variance multiplier cycles
 
 --##################################################################################
 --#   Components
@@ -197,6 +199,20 @@ COMPONENT BatInpBR                                                      -- Block
       enb                     : IN  STD_LOGIC;     
       addrb                   : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);       -- addresses for 1024 values
       doutb                   : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)       -- signed 16 bit each
+   );
+END COMPONENT;
+
+COMPONENT BatVarBR                                                      -- BlockRam storing times (in no of smaples) between zero crossings in that block
+   PORT (                                                               -- two of these are used to realize 50% overlap
+      clka                    : IN  STD_LOGIC;
+      ena                     : IN  STD_LOGIC;
+      wea                     : IN  STD_LOGIC_VECTOR(0 DOWNTO 0);
+      addra                   : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);       -- addresses for 1024 values
+      dina                    : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);       -- unsigned 10 bit each
+      clkb                    : IN  STD_LOGIC;
+      enb                     : IN  STD_LOGIC;     
+      addrb                   : IN  STD_LOGIC_VECTOR(9 DOWNTO 0);       -- addresses for 1024 values
+      doutb                   : OUT STD_LOGIC_VECTOR(9 DOWNTO 0)        -- unsigned 16 bit each
    );
 END COMPONENT;
 
@@ -266,6 +282,27 @@ component FftMult                                                       -- multi
    );
 end component;
 
+component VarDiv
+   port (
+      clk                     : in std_logic;
+      ce                      : in std_logic;
+      rfd                     : out std_logic;
+      dividend                : in std_logic_vector(19 downto 0);
+      divisor                 : in std_logic_vector(9 downto 0);
+      quotient                : out std_logic_vector(19 downto 0);
+      fractional              : out std_logic_vector(9 downto 0));
+end component;
+
+component VarMult                                                       -- multiplier for square calculation of variance part 
+   port (
+      clk                     : in  std_logic;
+      ce                      : in  std_logic;
+      a                       : in  std_logic_vector(10 DOWNTO 0);      -- 11 bits signed input 
+      b                       : in  std_logic_vector(10 DOWNTO 0);      -- 11 bits signed input 
+      p                       : out std_logic_vector(20 DOWNTO 0)       -- 21 bits unsigned output (reduced value under assumption that result is always positive)
+   );
+end component;
+
 component BatScaleDither 
    generic (
       c_DT_DBits              : integer;                                -- size of input data
@@ -285,7 +322,6 @@ component BatScaleDither
       i_DT_Q                  : out std_logic_vector(c_DT_QBits - 1 downto 0)
    );
 end component;
-
 
 --##################################################################################
 --#   Signals
@@ -316,6 +352,37 @@ signal   s_s24_MaxAmpl0          : std_logic_vector(23 downto 0)  := (others => 
 signal   s_s24_MaxAmpl1          : std_logic_vector(23 downto 0)  := (others => '0');  -- Maximum amplitude in BR1 frame
 signal   s_s24_MaxAmplSave       : std_logic_vector(23 downto 0)  := (others => '0');  -- Maximum amplitude
 
+----------------------------------------
+-- Input variance BR0 and BR1 signals --
+----------------------------------------
+signal   s_InpVarWE0             : std_logic_vector(0 downto 0)   := (others => '0');  -- Write Enable signal for Input VarBR 0
+signal   s_InpVarWE1             : std_logic_vector(0 downto 0)   := (others => '0');  -- Write Enable signal for Input VarBR 1
+signal   s_u10_InVarAddr0        : unsigned(9 downto 0)           := (others => '0');  -- input VarBR0 address
+signal   s_u10_InVarAddr1        : unsigned(9 downto 0)           := (others => '0');  -- input VarBR1 address
+signal   s_BRVarEnb0             : std_logic                      := '0';              -- VarBR0 output port clock enable
+signal   s_BRVarEnb1             : std_logic                      := '0';              -- VarBR1 output port clock enable
+signal   s_VarSign0              : std_logic                      := '1';              -- 0 = negative, 1 = positive
+signal   s_VarSign1              : std_logic                      := '1';              -- 0 = negative, 1 = positive
+signal   s_VarSCnt0              : unsigned(9 downto 0)           := (others => '0');  -- sample counter
+signal   s_VarSCnt1              : unsigned(9 downto 0)           := (others => '0');  -- sample counter
+signal   s_u10_NumVal0           : unsigned(9 downto 0)           := (others => '0');  -- number of values
+signal   s_u10_NumVal1           : unsigned(9 downto 0)           := (others => '0');  -- number of values
+signal   s_u10_NumValSave        : unsigned(9 downto 0)           := (others => '0');  -- number of values
+signal   s_u20_SumVal0           : unsigned(19 downto 0)          := (others => '0');  -- sum of values to generate average
+signal   s_u20_SumValSave0       : unsigned(19 downto 0)          := (others => '0');  -- sum of values to generate average
+signal   s_u20_SumValSave1       : unsigned(19 downto 0)          := (others => '0');  -- sum of values to generate average
+signal   s_u20_SumVal1           : unsigned(19 downto 0)          := (others => '0');  -- sum of values to generate average
+signal   s_u10_OutVarAddr        : unsigned(9 downto 0)           := (others => '0');  -- output VarBR address
+signal   s_u10_NumSampOut0       : std_logic_vector(9 downto 0)   := (others => '0');  -- output number of values
+signal   s_u10_NumSampOut1       : std_logic_vector(9 downto 0)   := (others => '0');  -- output number of values
+
+signal   s_s11_Avg               : signed(10 downto 0)            := (others => '0');  -- average of all values in var BRx
+signal   s_s11_VarDiv            : signed(10 downto 0)            := (others => '0');  -- difference between actual value and average 
+signal   s_u21_VarSquare         : std_logic_vector(20 downto 0)  := (others => '0');  -- square of difference          
+signal   s_u21_VarSum            : unsigned(20 downto 0)          := (others => '0');  -- sum of all squares         
+signal   s_VarMultCycleCnt       : integer range 0 to (c_VARMULTCYC) := 0;             -- count Var MULT cycles
+signal   s_VarMult_en            : std_logic                      := '0';              -- var multiplier enable
+signal   s_FFT_Var               : std_logic_vector(15 downto 0)  := (others => '0');  -- output variance 
 ---------------------------
 -- Window LUT multiplier --
 ---------------------------
@@ -360,6 +427,16 @@ signal   s_u9_OutpBRIndex        : std_logic_vector(8 downto 0)   := (others => 
 signal   s_u16_OutpBRValIn       : std_logic_vector(15 downto 0)  := (others => '0');  -- value to store in output BR
 
 -------------------------
+-- Divider            ---
+-------------------------
+signal   s_dividend                 : std_logic_vector(19 downto 0);                   -- this will be divided
+signal   s_divisor                  : std_logic_vector(9 downto 0);                    -- by this
+signal   s_div_res                  : std_logic_vector(19 downto 0);                   -- this is the integer result
+signal   s_div_ce                   : std_logic := '0';                                -- enable for divider, to save some power
+signal   s_div_rfd                  : std_logic;                                       -- when is new data sampled?
+signal   s_calc_cnt                 : integer range 0 to 31 := 0;                      -- cycle counter for divider
+
+-------------------------
 -- Other signals       --
 -------------------------
 signal   s_MultLutCycleCnt       : integer range 0 to (c_MULTCYC_LUT+5)  := 0;         -- count MULT cycles for windowing calculation
@@ -394,6 +471,10 @@ signal   s_GetState              : GETFFT_TYPE := St_Get0;
 -- output calculation statemachine
 TYPE     OUTSTATE_TYPE IS (St_Out0, St_Out1, St_Out2, St_Out3, St_Out4);
 signal   s_OutState              : OUTSTATE_TYPE := St_Out0;
+
+-- variance calculation statemachine
+TYPE     VARSTATE_TYPE IS (St_Var0, St_Var1, St_Var2, St_Var3, St_Var4, St_Var5, St_Var6, St_Var7, St_Var8, St_Var9, St_Var10, St_Var11);
+signal   s_VarState              : VARSTATE_TYPE := St_Var0;
 
 --##################################################################################
 --#   Architecture Body
@@ -434,6 +515,32 @@ inst_BatInpBR1: BatInpBR
       enb                        => s_BR1Enb,
       addrb                      => s_u10_FFTInIndex,
       doutb                      => s_s16_FFTInVal1
+  );
+
+inst_BatVarBR0: BatVarBR
+   PORT MAP (
+      clka                       => i_FFT_USRCLK,
+      ena                        => s_BREna,
+      wea                        => s_InpVarWE0,
+      addra                      => std_logic_vector(s_u10_InVarAddr0),
+      dina                       => std_logic_vector(s_VarSCnt0),
+      clkb                       => i_FFT_USRCLK,
+      enb                        => s_BRVarEnb0,
+      addrb                      => std_logic_vector(s_u10_OutVarAddr),
+      doutb                      => s_u10_NumSampOut0
+  );
+
+inst_BatVarBR1: BatVarBR
+   PORT MAP (
+      clka                       => i_FFT_USRCLK,
+      ena                        => s_BREna,
+      wea                        => s_InpVarWE1,
+      addra                      => std_logic_vector(s_u10_InVarAddr1),
+      dina                       => std_logic_vector(s_VarSCnt1),
+      clkb                       => i_FFT_USRCLK,
+      enb                        => s_BRVarEnb1,
+      addrb                      => std_logic_vector(s_u10_OutVarAddr),
+      doutb                      => s_u10_NumSampOut1
   );
 
 inst_BatFFT: BatFFT
@@ -506,6 +613,26 @@ inst_MultTmp_i: FftMult
       p                          => s_u51_tmp_ii
    );
 
+inst_VarDiv : VarDiv
+   port map (
+      clk                        => i_FFT_USRCLK,
+      ce                         => s_div_ce,                           -- enable to save some power...
+      rfd                        => s_div_rfd,                          -- when is data sampled?
+      dividend                   => s_dividend,                         -- this will be divided
+      divisor                    => s_divisor,                          -- by this
+      quotient                   => s_div_res,                          -- integer result of division
+      fractional                 => open                                -- the rest (unused)          
+   );
+   
+ inst_VarSquare: VarMult
+   port map (
+      clk                        => i_FFT_USRCLK,
+      a                          => std_logic_vector(s_s11_VarDiv),
+      b                          => std_logic_vector(s_s11_VarDiv),
+      ce                         => s_VarMult_en,
+      p                          => s_u21_VarSquare
+   );  
+
 inst_FFTDither : BatScaleDither 
    generic map(
       c_DT_DBits                 => s_s40_ResultMultLut'length,
@@ -524,7 +651,7 @@ inst_FFTDither : BatScaleDither
       i_DT_D                     => signed(s_s40_ResultMultLut),
       i_DT_Q                     => s_s16_WinVal
    );
-   
+ 
 -----------------------------------------------------------
 -- Process for filling the input block RAMs and
 -- handling windowing calculations based on LUT
@@ -550,6 +677,19 @@ begin
          s_s24_MaxAmplSave <= (others => '0');                          -- to privide max amplitude of current block         
          s_DithNd <= '0';                                               -- stop dithering
          s_InpState <= St_Inp0;                                         -- initialise state machine
+         -- variance signals
+         s_VarSign0 <= '1';                                             -- 0 = negative, 1 = positive
+         s_VarSign1 <= '1';                                             -- 0 = negative, 1 = positive
+         s_VarSCnt0 <= (others => '0');                                 -- sample counter
+         s_VarSCnt1 <= (others => '0');                                 -- sample counter
+         s_u10_InVarAddr0 <= (others => '0');                           -- address in var BR 0
+         s_u10_InVarAddr1 <= (others => '0');                           -- address in var BR 1
+         s_u10_NumVal0 <= (others => '0');                              -- number of values in var BR 0
+         s_u10_NumVal1 <= (others => '0');                              -- number of values in var BR 1
+         s_u20_SumVal0 <= (others => '0');                              -- sum of values in var BR0
+         s_u20_SumVal1 <= (others => '0');                              -- sum of values in var BR1
+         s_u20_SumValSave0 <= (others => '0');                          -- save current sum of values
+         s_u20_SumValSave1 <= (others => '0');                          -- save current sum of values
       else
       -- Clock
          if s_FFTRfd = '1' then
@@ -558,13 +698,14 @@ begin
          case s_InpState is
             when St_Inp0 =>                                             -- wait for new data
                if i_FFT_DataAv = '1' then                               -- new data available
+                  -- FFT handling
                   s_LUTEna <= '1';                                      -- enable LUT
                   s_BREna <= '1';                                       -- enable both BRAM input ports
                   -- calculate the LUT address for BR 0
                   if s_u10_InAddr0 >= 512 then                          -- upper 512 words of frame
                      s_u10_LUTAddr <= not(std_logic_vector(s_u10_InAddr0(8 downto 0)));   -- get LUT in reverse order (511 - 0)
                   else
-                     s_u10_LUTAddr <= std_logic_vector(s_u10_InAddr0(8 downto 0));  -- get LUT in normal order (0 - 511)
+                     s_u10_LUTAddr <= std_logic_vector(s_u10_InAddr0(8 downto 0));        -- get LUT in normal order (0 - 511)
                   end if;
                   s_InpState <= St_Inp1;                                -- next state, we need to wait until LUT delivers value in next clock
                   if signed(i_FFT_DataIn) > signed(s_s24_MaxAmpl0) then -- collect the maximum amplitude (BR0)
@@ -573,12 +714,49 @@ begin
                   if signed(i_FFT_DataIn) > signed(s_s24_MaxAmpl1) then -- collect the maximum amplitude (BR1) 
                      s_s24_MaxAmpl1 <= i_FFT_DataIn;                    -- remember it
                   end if;
+                  -- Variance handling
+                  s_VarSCnt0 <= s_VarSCnt0 + 1;                         -- increment sample count
+                  s_VarSCnt1 <= s_VarSCnt1 + 1;                         -- increment sample count
+                  if signed(i_FFT_DataIn) >= 0 then                     -- input data positive
+                     if s_VarSign0 = '0' then                           -- previous sign was also positive
+                        s_VarSign0 <= '1';                              -- change current sign
+                        s_InpVarWE0(0) <= '1';                          -- write current s_VarSCnt0 to BR 0                      
+                     end if;   
+                     if s_VarSign1 = '0' then                           -- previous sign was also positive
+                        s_VarSign1 <= '1';                              -- change current sign
+                        s_InpVarWE1(0) <= '1';                          -- write current s_VarSCnt0 to BR 1
+                     end if;   
+                  else                                                  -- input data negative
+                     if s_VarSign0 = '1' then                           -- previous sign was also negative
+                        s_VarSign0 <= '0';                              -- change current sign
+                        s_InpVarWE0(0) <= '1';                          -- write current s_VarSCnt0 to BR 0                      
+                     end if;   
+                     if s_VarSign1 = '1' then                           -- previous sign was also negative
+                        s_VarSign1 <= '0';                              -- change current sign
+                        s_InpVarWE1(0) <= '1';                          -- write current s_VarSCnt0 to BR 1                      
+                     end if;   
+                  end if;                  
                else
                   s_InpState <= St_Inp0;                                -- no new sample, stay in this state
                end if;
             when St_Inp1 =>                                             -- wait another cycle to get LUT value out of LUT BRAM
                s_InpState <= St_Inp2;
             when St_Inp2 =>                                             -- wait another cycle to get LUT value out of LUT BRAM
+               -- Variance handling
+               if s_InpVarWE0(0) = '1' then                             -- was writing on varBR0 active
+                  s_InpVarWE0(0) <= '0';                                -- deactivate wrting to BRAM
+                  s_u20_SumVal0 <= s_u20_SumVal0 + s_VarSCnt0;          -- build sum of values to create average
+                  s_VarSCnt0 <= (others => '0');                        -- reset sample counter
+                  s_u10_NumVal0 <= s_u10_InVarAddr0 + 1;                -- remember the number of valid entries
+                  s_u10_InVarAddr0 <= s_u10_InVarAddr0 + 1;             -- increment address in sample counter BRAM
+               end if;
+               if s_InpVarWE1(0) = '1' then                             -- was writing on varBR1 active
+                  s_InpVarWE1(0) <= '0';                                -- deactivate wrting to BRAM
+                  s_u20_SumVal1 <= s_u20_SumVal1 + s_VarSCnt1;          -- build sum of values to create average
+                  s_VarSCnt1 <= (others => '0');                        -- reset sample counter
+                  s_u10_NumVal1 <= s_u10_InVarAddr1 + 1;                -- remember the number of valid entries
+                  s_u10_InVarAddr1 <= s_u10_InVarAddr1 + 1;             -- increment address in sample counter BRAM
+               end if;
                s_InpState <= St_Inp3;
             when St_Inp3 =>                                             -- now we have LUT data for BR0
                -- calculate windowed value for BR 0
@@ -650,17 +828,25 @@ begin
                   s_s24_MaxAmplSave <= s_s24_MaxAmpl0;                  -- save current MaxAmp value
                   s_s24_MaxAmpl0 <= (others => '0');                    -- reset max amplitude
                   s_FFTWhich <= '0';                                    -- use BR0
-                  s_FFTStart <= '1';                                    -- start FFT
+                  s_FFTStart <= '1';                                    -- start FFT and variance handling
+                  -- variance handling
+                  s_u10_InVarAddr0 <= (others => '0');                  -- reset input address
+                  s_u20_SumValSave0 <= s_u20_SumVal0;                   -- save current sum of values
+                  s_u20_SumVal0 <= (others => '0');                     -- reset sum of values 
                elsif s_u10_InAddr1 = 1023 then                          -- InpBR1 is full, let us start FFT now
                   s_s24_MaxAmplSave <= s_s24_MaxAmpl1;                  -- save current MaxAmp value
                   s_s24_MaxAmpl1 <= (others => '0');                    -- reset max amplitude
                   s_FFTWhich <= '1';                                    -- use BR1
                   if s_FirstBlock = '0' then                            -- special case: first block is filled only half after reset, discard!
-                     s_FFTStart <= '1';                                 -- start FFT
+                     s_FFTStart <= '1';                                 -- start FFT and variance handling
                   else
                      s_FFTStart <= '0';                                 -- do not start FFT
                      s_FirstBlock <= '0';                               -- not the first block any more
                   end if;   
+                  -- variance handling
+                  s_u20_SumValSave1 <= s_u20_SumVal1;                   -- save current sum of values
+                  s_u20_SumVal1 <= (others => '0');                     -- reset sum of values 
+                  s_u10_InVarAddr1 <= (others => '0');                  -- reset input address
                end if;
                -- prepare next address
                s_u10_InAddr0 <= s_u10_InAddr0 + 1;                      -- prepare next addr, automatic overflow at 1023 -> 0
@@ -670,6 +856,129 @@ begin
       end if;
    end if;
 end process BatFFTModProc;
+
+-----------------------------------------------------------
+-- Process for calculating the variance
+-- with the data out of one of the input var BRs
+-- The following datapoints are already collected:
+--    s_u10_NumValx: contains the number of valid entries in buffer
+--    s_u20_SumValSavex: contains the sum of all values in var BRx
+--    var BRx: contain the individual values
+-- The complete calculation for the first value needs to be
+-- done with 1/312500 seconds = 320 USRCLK cycles
+-- After that time, the first value and s_u10_NumValx might get overwritten.
+
+-- First, build the average of all values in var BR:
+--    s_u10_Avg = s_u20_SumValSavex/s_u10_NumValx
+-- then build the first step of the variance (crossing - average)^2
+--    s_s11_VarDiv = signed(crossing(n)) - s_s11_Avg
+--    s_u21_VarSquare = s_s11_VarDiv * s_s11_VarDiv
+--    s_u21_VarSum = sum(s_u21_VarSquare)
+--    s_FFT_Var = s_u21_VarSum/s_u10_NumValx;     
+-----------------------------------------------------------
+BatVarProc: process(i_FFT_USRCLK)
+begin
+   if rising_edge(i_FFT_USRCLK) then
+      if i_FFT_RESET = '1' then
+         s_VarState <= St_Var0;
+         s_BRVarEnb0 <= '0';                                            -- disable var BRs
+         s_BRVarEnb1 <= '0';
+         s_s11_Avg <= (others => '0');  
+      else 
+         -- Clock
+         case s_VarState is
+            when St_Var0 =>  
+               if s_FFTStart = '1' then                                 -- data available in input BR
+                  s_div_ce <= '1';                                      -- enable divider
+                  s_u10_OutVarAddr <= (others => '0');                  -- reset ouput address
+                  s_u21_VarSum <= (others => '0');                      -- reset sum of squares
+                  s_VarMult_en <= '1';                                  -- enable multiplier 
+                  if s_FFTWhich = '0' then   
+                     s_BRVarEnb0 <= '1';                                -- enable BR0
+                     s_u10_NumValSave <= s_u10_NumVal0;                 -- save number of values for later
+                     s_divisor <= std_logic_vector(s_u10_NumVal0);      -- current sample count value for this channel
+                     s_dividend <= std_logic_vector(s_u20_SumValSave0); -- current sum of samples
+                  else
+                     s_BRVarEnb1 <= '1';                                -- enable BR1
+                     s_u10_NumValSave <= s_u10_NumVal1;                 -- save number of values for later
+                     s_divisor <= std_logic_vector(s_u10_NumVal1);      -- current sample count value for this channel
+                     s_dividend <= std_logic_vector(s_u20_SumValSave1); -- current sum of samples
+                  end if;
+                  s_VarState <= St_Var1;                                -- next step 
+               end if;
+            when St_Var1 =>
+               s_calc_cnt <= 0;                                         -- reset cycle counter
+               if s_div_rfd = '1' then                                  -- ready to count cycles
+                  s_VarState <= St_Var2;                                -- count cycles
+               else
+                  s_VarState <= St_Var1;                                -- keep state
+               end if;
+            when St_Var2 =>
+               if s_calc_cnt >= 22 then                                 -- result available? 22 is the number of cycles, the divider needs
+                  s_s11_Avg <= signed(s_div_res(10 downto 0));          -- save result of division: average value
+                  s_div_ce <= '0';                                      -- stop divider
+                  s_VarState <= St_Var3;                                -- next state
+               else
+                  s_calc_cnt <= s_calc_cnt + 1;                         -- increment cycle counter
+                  s_VarState <= St_Var2;                                -- keep state
+               end if;            
+            when St_Var3 =>                                             -- here we have the average value in place
+               s_VarState <= St_Var4;                                   -- wait until output value is available
+            when St_Var4 =>                                             -- wait for output available
+               s_VarState <= St_Var5;                                   -- wait until output value is available
+            when St_Var5 =>                                             -- wait for output available
+               if s_u10_OutVarAddr >= s_u10_NumValSave then             -- all valid values processed?
+                  s_BRVarEnb0 <= '0';                                   -- disable BRs again
+                  s_BRVarEnb1 <= '0';
+                  s_VarMult_en <= '0';                                  -- disable multiplier
+                  s_VarState <= St_Var9;                                -- final steps
+               else                                                     -- still values in output bR to handle
+                  s_VarState <= St_Var6;                                -- wait until output value is available
+               end if;
+            when St_Var6 =>                                             -- output is available here, calculate diff
+               if s_FFTWhich = '0' then
+                  s_s11_VarDiv <= signed(resize(unsigned(s_u10_NumSampOut0), 11)) - s_s11_Avg;   -- calculate the difference   
+               else
+                  s_s11_VarDiv <= signed(resize(unsigned(s_u10_NumSampOut1), 11)) - s_s11_Avg;   -- calculate the difference
+               end if;
+               s_u10_OutVarAddr <= s_u10_OutVarAddr + 1;                -- prepare next address
+               s_VarMultCycleCnt <= 0;                                  -- prepare multiplication to sqaure
+               s_VarState <= St_Var7;                                   -- next step
+            when St_Var7 =>                                             -- output is available here, calculate diff               
+               if s_VarMultCycleCnt = (c_VARMULTCYC-1) then             -- wait a number of cycles
+                  s_VarState <= St_Var8;                                -- ready now
+               else
+                  s_VarMultCycleCnt <= s_VarMultCycleCnt + 1;           -- count further on
+                  s_VarState <= St_Var7;                                -- keep state
+               end if;
+            when St_Var8 =>                                             -- result of multiplication available now
+               s_u21_VarSum <= s_u21_VarSum + unsigned(s_u21_VarSquare);   -- build sum of squares
+               s_VarState <= St_Var5;                                   -- loop until all values are built
+            when St_Var9 =>                                             -- all sums of squares are built
+               s_div_ce <= '1';                                         -- enable divider
+               s_divisor <= std_logic_vector(s_u10_NumValSave);         -- current sample count value
+               s_dividend <= std_logic_vector(s_u21_VarSum(19 downto 0));  -- sum of squares
+               s_VarState <= St_Var10;                                  -- next step
+            when St_Var10 =>
+               s_calc_cnt <= 0;                                         -- reset cycle counter
+               if s_div_rfd = '1' then                                  -- ready to count cycles
+                  s_VarState <= St_Var11;                               -- count cycles
+               else
+                  s_VarState <= St_Var10;                               -- keep state
+               end if;                
+            when St_Var11 =>
+                if s_calc_cnt >= 22 then                                -- result available? 22 is the number of cycles, the divider needs
+                  s_FFT_Var <= s_div_res(15 downto 0);                  -- save result of division: average value
+                  s_div_ce <= '0';                                      -- stop divider
+                  s_VarState <= St_Var0;                                -- next state
+               else
+                  s_calc_cnt <= s_calc_cnt + 1;                         -- increment cycle counter
+                  s_VarState <= St_Var11;                               -- keep state
+               end if;                       
+         end case;   
+      end if;
+   end if;
+end process BatVarProc;
 
 -----------------------------------------------------------
 -- Process for filling the FFT
@@ -760,7 +1069,8 @@ begin
          i_FFT_MaxFFTValInd <= (others => '0');
          i_FFT_RMSValue <= (others => '0');
          i_FFT_MaxAmpl <= (others => '0');
-         i_FFT_DataRdy <= '0';         
+         i_FFT_Var <= (others => '0');
+         i_FFT_DataRdy <= '0';
       else
       -- Clock
          if s_FFTBusy = '1' then                                        -- when FFT busy, then block exponent gets invalid soon
@@ -862,7 +1172,7 @@ begin
                      s_OutpBRWE(0) <= '0';                              -- disable write to outBR
                      s_OutpBREna <= '0';                                -- disable output BRAM
                      -- finalise calculation of RMS, divide by 512
-                     s_u57_RMSquads <= SHIFT_RIGHT(s_u57_RMSquads, 9);          -- 57-9 = 48 bits unsigned
+                     s_u57_RMSquads <= SHIFT_RIGHT(s_u57_RMSquads, 9);  -- 57-9 = 48 bits unsigned
                      s_SqrtCycleCnt <= 0;                               -- reset cycle counter
                      s_OutState <= St_Out3;                             -- finalise calculations
                   else
@@ -881,6 +1191,7 @@ begin
                   i_FFT_RMSValue <= std_logic_vector(RESIZE(SHIFT_RIGHT(unsigned(s_u25_SqrtOut),5), 16));
                   i_FFT_DataRdy <= '1';                                 -- indicate readyness for processor
                   i_FFT_MaxAmpl <= s_s24_MaxAmplSave(22 downto 7);      -- indicate max amplitude level, this is always positive so it can be scaled to full 16 bit unsigned range (0-65535)
+                  i_FFT_Var <= s_FFT_Var;                               -- variance value of block
                   s_u48_SqrtIn <= (others => '0');                      -- make sure that sqrt does not deliver anything in max calculation of next frame
                   s_OutState <= St_Out0;                                -- ready now
                else
