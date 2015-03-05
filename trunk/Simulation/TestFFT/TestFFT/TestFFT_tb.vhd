@@ -42,6 +42,7 @@ component BatFFTMod
 		i_FFT_MaxFFTValInd			: out	STD_LOGIC_VECTOR(15 DOWNTO 0);	-- Index of max FFT value (defining peak frequency)
 		i_FFT_RMSValue					: out	STD_LOGIC_VECTOR(15 DOWNTO 0);	-- RMS value of that frame
 		i_FFT_MaxAmpl					: out	STD_LOGIC_VECTOR(15 DOWNTO 0);	-- Max amplitude value of that frame	
+      i_FFT_Var                  : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Variance value (interger) for reported block                                                                      
 		i_FFT_DataRdy					: out STD_LOGIC;								-- indicates: FFT has new data
 		i_FFT_Random1              : in	std_logic_vector(31 downto 0);	-- Random data
 		i_FFT_Random2              : in	std_logic_vector(31 downto 0)		-- Random data
@@ -78,6 +79,7 @@ signal s_tb_maxfftval	   		: std_logic_vector(15 downto 0) := (others=>'0');
 signal s_tb_maxfftvalidx   		: std_logic_vector(15 downto 0) := (others=>'0');
 signal s_tb_rmsval   	   		: std_logic_vector(15 downto 0) := (others=>'0');
 signal s_tb_maxampl   	   		: std_logic_vector(15 downto 0) := (others=>'0');
+signal s_tb_variance   	   		: std_logic_vector(15 downto 0) := (others=>'0');
 
 ----------------------
 -- FFT Test--
@@ -104,7 +106,8 @@ uut : BatFFTMod
 		i_FFT_MaxFFTValInd         => s_tb_maxfftvalidx,
 		i_FFT_RMSValue             => s_tb_rmsval,
 		i_FFT_MaxAmpl              => s_tb_maxampl,
-		i_FFT_DataRdy              => s_tb_data_rdy,
+      i_FFT_Var                  => s_tb_variance,
+      i_FFT_DataRdy              => s_tb_data_rdy,
 		i_FFT_Random1              => s_tb_Random1,
 		i_FFT_Random2              => s_tb_Random2
 	);
