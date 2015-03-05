@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFFT/TestFFT/TestFFT_bench_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="E:/Source/BatDroidV2/SourceFPGA/Simulation/TestFFTV/TestFFT/TestFFT_bench_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="bip_utils_pkg_v2_0" />
             <top_module name="cordic_v4_0_pack" />
@@ -26,66 +26,105 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="13" />
-   <wvobject fp_name="/testfft_bench/uut/i_fft_usrclk" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_usrclk</obj_property>
-      <obj_property name="ObjectShortName">i_fft_usrclk</obj_property>
+   <WVObjectSize size="25" />
+   <wvobject fp_name="/testfft_bench/s_tb_reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_reset</obj_property>
+      <obj_property name="ObjectShortName">s_tb_reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_dataav" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_dataav</obj_property>
-      <obj_property name="ObjectShortName">i_fft_dataav</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_clk</obj_property>
+      <obj_property name="ObjectShortName">s_tb_clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_datain" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_datain[23:0]</obj_property>
-      <obj_property name="ObjectShortName">i_fft_datain[23:0]</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_data_av" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_data_av</obj_property>
+      <obj_property name="ObjectShortName">s_tb_data_av</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_maxfftval" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_maxfftval[15:0]</obj_property>
-      <obj_property name="ObjectShortName">i_fft_maxfftval[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_data_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_data_in[23:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_maxfftvalind" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_maxfftvalind[15:0]</obj_property>
-      <obj_property name="ObjectShortName">i_fft_maxfftvalind[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_random1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_random1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_random1[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_rmsvalue" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_rmsvalue[15:0]</obj_property>
-      <obj_property name="ObjectShortName">i_fft_rmsvalue[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_random2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_random2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_random2[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_maxampl" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_maxampl[15:0]</obj_property>
-      <obj_property name="ObjectShortName">i_fft_maxampl[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_data_rdy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_data_rdy</obj_property>
+      <obj_property name="ObjectShortName">s_tb_data_rdy</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/i_fft_datardy" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">i_fft_datardy</obj_property>
-      <obj_property name="ObjectShortName">i_fft_datardy</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_raddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_raddr[8:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_raddr[8:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/inst_BatFFT/xk_index" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">xk_index[9:0]</obj_property>
-      <obj_property name="ObjectShortName">xk_index[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_rdata" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_rdata[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_rdata[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/s_tmp_r" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_tmp_r[25:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tmp_r[25:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_maxfftval" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_maxfftval[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_maxfftval[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/s_tmp_i" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_tmp_i[25:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tmp_i[25:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_maxfftvalidx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_maxfftvalidx[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_maxfftvalidx[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/s_tmp_rr" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_tmp_rr[50:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tmp_rr[50:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_rmsval" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_rmsval[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_rmsval[15:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testfft_bench/uut/s_tmp_ii" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">s_tmp_ii[50:0]</obj_property>
-      <obj_property name="ObjectShortName">s_tmp_ii[50:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testfft_bench/s_tb_maxampl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_maxampl[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_maxampl[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/s_tb_variance" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_tb_variance[15:0]</obj_property>
+      <obj_property name="ObjectShortName">s_tb_variance[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/c_100mhz_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_100mhz_period</obj_property>
+      <obj_property name="ObjectShortName">c_100mhz_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/c_312khz" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_312khz</obj_property>
+      <obj_property name="ObjectShortName">c_312khz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/c_cycles" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_cycles</obj_property>
+      <obj_property name="ObjectShortName">c_cycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/c_rndsz" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">c_rndsz</obj_property>
+      <obj_property name="ObjectShortName">c_rndsz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/c_inpfilename" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_inpfilename[1:22]</obj_property>
+      <obj_property name="ObjectShortName">c_inpfilename[1:22]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/uut/s_u20_sumval0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_u20_sumval0[19:0]</obj_property>
+      <obj_property name="ObjectShortName">s_u20_sumval0[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/uut/s_u10_numval0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_u10_numval0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">s_u10_numval0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/uut/s_u20_sumval1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_u20_sumval1[19:0]</obj_property>
+      <obj_property name="ObjectShortName">s_u20_sumval1[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/uut/s_u10_numval1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_u10_numval1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">s_u10_numval1[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/uut/s_u20_sumvalsave1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_u20_sumvalsave1[19:0]</obj_property>
+      <obj_property name="ObjectShortName">s_u20_sumvalsave1[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testfft_bench/uut/s_u10_avg" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">s_u10_avg[9:0]</obj_property>
+      <obj_property name="ObjectShortName">s_u10_avg[9:0]</obj_property>
    </wvobject>
 </wave_config>
