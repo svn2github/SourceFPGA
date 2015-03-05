@@ -180,7 +180,8 @@ constant REG_FFT_MAXFFTVAL       : std_logic_vector(4 downto 0):= "10000";    --
 constant REG_FFT_MAXFFTVALIDX    : std_logic_vector(4 downto 0):= "10001";    -- 34    R  Max Value Index FFT
 constant REG_FFT_RMSVAL          : std_logic_vector(4 downto 0):= "10010";    -- 36    R  RMS Value FFT, high word
 constant REG_FFT_MAXAMPL         : std_logic_vector(4 downto 0):= "10011";    -- 38    R  MAX amplitude of block
-constant REG_BEEP_TIME           : std_logic_vector(4 downto 0):= "10100";    -- 40    W  upper byte: beep time (ms/2)), lower byte: beep volume, writing start beep
+constant REG_FFT_VARIANCE        : std_logic_vector(4 downto 0):= "10100";    -- 40    R  Period variance of FFT block
+constant REG_BEEP_TIME           : std_logic_vector(4 downto 0):= "10101";    -- 42    W  upper byte: beep time (ms/2)), lower byte: beep volume, writing start beep
 
 -- For BatRandom
 constant c_RndSz                 : integer := 32;                       -- size of random values to be created
@@ -323,7 +324,8 @@ component BatFFTMod
       i_FFT_MaxFFTVal            : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Max FFT value for that frame
       i_FFT_MaxFFTValInd         : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Index of max FFT value (defining peak frequency)
       i_FFT_RMSValue             : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- RMS value of that frame
-      i_FFT_MaxAmpl              : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Max amplitude value of that frame   
+      i_FFT_MaxAmpl              : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Max amplitude value of that frame
+      i_FFT_Var                  : out STD_LOGIC_VECTOR(15 DOWNTO 0);   -- Variance value (interger) for reported block                                                                            
       i_FFT_DataRdy              : out STD_LOGIC;                       -- indicates: FFT has new data
       i_FFT_Random1              : in  std_logic_vector(31 downto 0);   -- Random data
       i_FFT_Random2              : in  std_logic_vector(31 downto 0)    -- Random data
@@ -618,7 +620,8 @@ signal s_FFT_RData               : std_logic_vector(15 downto 0);       -- data 
 signal s_FFT_MaxValue            : std_logic_vector(15 DOWNTO 0);       -- Max Amplitude of that frame
 signal s_FFT_MaxValInd           : std_logic_vector(15 DOWNTO 0);       -- Max Amplitude index of that frame
 signal s_FFT_RMSValue            : std_logic_vector(15 DOWNTO 0);       -- RMS value of that frame 
-signal s_FFT_MaxAmpl             : std_logic_vector(15 DOWNTO 0);       -- Max Amplitude value of that frame   
+signal s_FFT_MaxAmpl             : std_logic_vector(15 DOWNTO 0);       -- Max Amplitude value of that frame
+signal s_FFT_Variance            : std_logic_vector(15 DOWNTO 0);       -- Max period variance of that frame   
 signal s_Interrupt               : std_logic := '0';                    -- Interrupt to STM32
 signal s_FFT_Disable             : std_logic := '1';                    -- Disable FFT by default            
 
@@ -847,7 +850,8 @@ port map(
       i_FFT_MaxFFTVal            => s_FFT_MaxValue,
       i_FFT_MaxFFTValInd         => s_FFT_MaxValInd,
       i_FFT_RMSValue             => s_FFT_RMSValue,
-      i_FFT_MaxAmpl              => s_FFT_MaxAmpl, 
+      i_FFT_MaxAmpl              => s_FFT_MaxAmpl,
+      i_FFT_Var                  => s_FFT_Variance, 
       i_FFT_DataRdy              => s_Interrupt,
       i_FFT_Random1              => s_Random1,
       i_FFT_Random2              => s_Random2
@@ -1167,6 +1171,8 @@ begin
                            s_RdData <= s_FFT_RMSValue;                  -- we should not need atomic operation here...
                         when REG_FFT_MAXAMPL =>
                            s_RdData <= s_FFT_MaxAmpl;                   -- we should not need atomic operation here...
+                        when REG_FFT_VARIANCE =>
+                           s_RdData <= s_FFT_Variance;                  -- we should not need atomic operation here...
                         -- 
                         when others =>
                            s_RdData <= (others => '0');                 -- address unknown-> return error
