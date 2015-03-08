@@ -1,0 +1,15 @@
+# Output products list for <VarMult>
+VarMult.asy
+VarMult.gise
+VarMult.ngc
+VarMult.sym
+VarMult.vhd
+VarMult.vho
+VarMult.xco
+VarMult.xise
+VarMult\doc\mult_gen_ds255.pdf
+VarMult\doc\mult_gen_v11_2_readme.txt
+VarMult\doc\mult_gen_v11_2_vinfo.html
+VarMult_flist.txt
+VarMult_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

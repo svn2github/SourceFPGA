@@ -1,0 +1,13 @@
+# Output products list for <VarDiv>
+VarDiv.asy
+VarDiv.gise
+VarDiv.ngc
+VarDiv.sym
+VarDiv.vhd
+VarDiv.vho
+VarDiv.xco
+VarDiv.xise
+VarDiv_flist.txt
+VarDiv_readme.txt
+VarDiv_xmdf.tcl
+_xmsgs\pn_parser.xmsgs
