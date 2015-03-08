@@ -15,24 +15,25 @@ clear;
 % filename to look for
 FileName = "TestSound";
 %FileName = "Abend";
+
 % trigger conditions for initial trigger
 C_CREST = 6;                                                    % minimum crest factor for trigger
 C_MINFFTVAL = 800;                                              % minimum FFT value to trigger
 C_MINRMS = 100;                                                 % minimum RMS value to trigger
 C_MINFREQ = 15000;                                              % minimum peak frequeny to trigger
-C_MAXFREQ = 130000;                                             % maximum peak frequency to trigger
-C_VARIANCE = 3;                                                 % maximum variance to trigger
+C_MAXFREQ = 120000;                                             % maximum peak frequency to trigger
+C_VARIANCE = 100;                                                 % maximum variance to trigger
 % soundevel for calculations after initial trigger (in %)
 C_MINSOUNDLEVEL = 10;
 % if CALLGAP (in ms) no trigger is seen, the call sequence ends
 C_CALLGAP = 450;                        
 
-% Detailed output into outputfile?
-C_DETAILED_OUTPUT = 1;                                          % 1 detailed output, 0 no output into file
 
+% program settings
+% Detailed output into outputfile?
+C_DETAILED_OUTPUT = 0;                                          % 1 detailed output, 0 no output into file
 % Variance to be calculated?
 C_VARIANCE_OUTPUT = 1;                                          % 1 variance calculated, 0 no variance calculated
-
 % other constants
 C_BLOCKSIZE = 1024;
 
@@ -214,15 +215,19 @@ if (C_DETAILED_OUTPUT == 1)
   fclose(OutFile);                                              % done with output file
 end
 % final calculations 
-AvgFFTRes = AvgFFTRes/NumBlocks;                                % calculate average result
+if (NumBlocks > 0)
+  AvgFFTRes = AvgFFTRes/NumBlocks;                              % calculate average result
+end
 [PeakVal, PeakValIdx] = max(AvgFFTRes);                         % search peak frequency in result
 PeakFreq = int32((Fs/(C_BLOCKSIZE/2))*PeakValIdx);              % calculate peak freqency of result
 
 TimeLine = ((1:length(AllSamples))/Fs)*1000;	                  % Time vector on x-axis
 TriggerPlot = linspace(0,0,length(TimeLine));                   % create a new vector with default value 0 to plot later 
-for ii = 1:length(TriggerTimes)                                 % patch the trigger times into the trigger plot
-  TriggerPlot(int32((TriggerTimes(ii)/(1/Fs)))) = -0.3;         % generate a value at all trigger times
-endfor
+if (exist("TriggerTimes", "var") == 1)
+  for ii = 1:length(TriggerTimes)                               % patch the trigger times into the trigger plot
+    TriggerPlot(int32((TriggerTimes(ii)/(1/Fs)))) = -0.3;       % generate a value at all trigger times
+  endfor
+end
 
 % plot the wav with trigger marks
 figure(1);                                                      % one figure used
@@ -233,15 +238,17 @@ xlim([1 (length(AllSamples)/Fs)*1000]);
 xlabel('Time (ms)');
 ylabel('Amplitude');  
 
-% plot the resulting average, scaled frequency resonse
-subplot (2, 1, 2);
-AvgTimeLine = (1:(length(AvgFFTRes)))*(Fs/(C_BLOCKSIZE/2)/1000);
-plot(AvgTimeLine, AvgFFTRes);
-title(sprintf("FFT (scaled) => Peak: %.1f kHz,      Min: %.1f kHz, Max: %.1f kHz", ...
-                double(PeakFreq)/1000, double(MinFreq)/1000, double(MaxFreq)/1000));
-xlim([1 length(AvgFFTRes)*(Fs/(C_BLOCKSIZE/2)/1000)]); 
-xlabel('Frequency (kHz)'); 
-ylabel('Amplitude'); 
+if (exist("TriggerTimes", "var") == 1)
+  % plot the resulting average, scaled frequency resonse
+  subplot (2, 1, 2);
+  AvgTimeLine = (1:(length(AvgFFTRes)))*(Fs/(C_BLOCKSIZE/2)/1000);
+  plot(AvgTimeLine, AvgFFTRes);
+  title(sprintf("FFT (scaled) => Peak: %.1f kHz,      Min: %.1f kHz, Max: %.1f kHz", ...
+                  double(PeakFreq)/1000, double(MinFreq)/1000, double(MaxFreq)/1000));
+  xlim([1 length(AvgFFTRes)*(Fs/(C_BLOCKSIZE/2)/1000)]); 
+  xlabel('Frequency (kHz)'); 
+  ylabel('Amplitude'); 
+end
 
 
 
